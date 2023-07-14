@@ -1,0 +1,124 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using Seguridad.Singleton;
+
+namespace TP_DIPLOMA
+{
+    public partial class LOGIN : Form
+    {
+        public LOGIN()
+        {
+            InitializeComponent();
+         
+        }
+
+        BE.Usuario user = new BE.Usuario();
+        BLL.Usuarios gestoruser = new BLL.Usuarios();
+        BLL.Bitacora gestorbitacora = new BLL.Bitacora();
+        BE.Bitacora BitacoraTemp;
+
+        
+        private void Btnlogin_Click(object sender, EventArgs e)
+        {
+            bool ok = true, oki = true;
+
+            foreach (Control ctr in this.Controls)
+            {
+                if (ctr is ControlUsuario)
+                {
+                    ok = ((ControlUsuario)ctr).Validar() && ok;
+
+                }
+                if (!ok)
+                {
+
+                }
+
+                if (ctr is CotrolPass)
+                {
+                    oki = ((CotrolPass)ctr).Validar() && oki;
+                }
+                if (!oki)
+                {
+
+                }
+
+               
+
+            }
+            if (ok != false && oki != false)
+            {
+                //MessageBox.Show(gestoruser.login(controlUsuario1.Texto, cotrolPass1.Texto), "Atención", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //if (SingletonSesion.Instancia.IsLogged())
+                //{
+                foreach (BE.Usuario item in gestoruser.Listar())
+                {
+                    if (item.Usuarios == controlUsuario1.Texto)
+                    {
+                        if (item.Estado == true)
+                        {
+                            user.Usuarios = controlUsuario1.Texto;
+                            user.Password = cotrolPass1.Texto;
+                            user.Estado = true;
+                        }
+                        else
+                        {
+                            user.Usuarios = controlUsuario1.Texto;
+                            user.Password = cotrolPass1.Texto;
+                            user.Estado = false;
+                        }
+                    }
+                    else
+                    {
+                        user.Estado = true;
+                    }
+                }
+
+                if (user.Estado==true)
+                {
+                    MessageBox.Show(gestoruser.login(controlUsuario1.Texto, cotrolPass1.Texto), "Atención", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    if (SingletonSesion.Instancia.IsLogged())
+                    {
+                        Administracion adm = new Administracion();
+                        adm.Show();
+                        this.Hide();
+                        CargarBitacora(user.Usuarios, "Inicio de sesion", "baja");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("el usuario esta bloqueado");
+                    CargarBitacora(user.Usuarios, "Inicio de sesion", "Medio");
+                }
+                
+                
+                    
+               
+            }
+        }
+
+        int cont = 0;
+
+        void CargarBitacora(string Nick, string Descripcion, string Criticidad)
+        {
+            BitacoraTemp = new BE.Bitacora();
+
+            BitacoraTemp.NickUsuario = Nick;
+            BitacoraTemp.Fecha = DateTime.Now;
+            BitacoraTemp.Descripcion = Descripcion;
+            BitacoraTemp.Criticidad = Criticidad;
+
+            gestorbitacora.InsertarBitacora(BitacoraTemp);
+        }
+
+        
+
+    }
+}

@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Seguridad.Backup_restore" Collapsed="true">
+    <Position X="8.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQQAAAAAAAAAAAACAAAAgAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Backup_restore.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Seguridad.Encriptador" Collapsed="true">
+    <Position X="10" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Encriptador.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Seguridad.Composite.Componente">
+    <Position X="1.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAgAAAAIAAAEAAAAgAAAAAEAAAAQAAAAAAAAAAA=</HashCode>
+      <FileName>Composite\Componente.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Seguridad.Composite.Familia">
+    <Position X="3.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAIAAAAAAAAAAAAAAEAAAAAAAAAAkAAAAA=</HashCode>
+      <FileName>Composite\Familia.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Patente" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Seguridad.Composite.Patente">
+    <Position X="0.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAIAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Composite\Patente.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Seguridad.Composite.Patente_Usuario">
+    <Position X="5.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAIkACAAgAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>Composite\Patente_Usuario.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Componente" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Seguridad.MultiIdioma.Etiqueta" BaseTypeListCollapsed="true">
+    <Position X="12" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MultiIdioma\Etiqueta.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Seguridad.MultiIdioma.Idiomas" BaseTypeListCollapsed="true">
+    <Position X="8.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAEAAAAoAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MultiIdioma\Idiomas.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Seguridad.MultiIdioma.Traduccion" BaseTypeListCollapsed="true">
+    <Position X="10.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAABAAAAAAAAQAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MultiIdioma\Traduccion.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Seguridad.Singleton.Sesion" Collapsed="true">
+    <Position X="11.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACACAAAAAACAAAAAAAAIAgAAEAJAAAAAEAAQAAAA=</HashCode>
+      <FileName>Singleton\Sesion.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Seguridad.Singleton.SingletonSesion" Collapsed="true">
+    <Position X="8.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAgACAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Singleton\SingletonSesion.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Seguridad.MultiIdioma.IdiomaObserver">
+    <Position X="8.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MultiIdioma\IdiomaObserver.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="Seguridad.Composite.Tipopatente">
+    <Position X="5.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACMAAAAAAAAABAACAIAAAABBIAJAAAAAAAABAIICAAA=</HashCode>
+      <FileName>Composite\Tipopatente.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

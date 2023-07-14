@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="TPMODELOSDataSet5" targetNamespace="http://tempuri.org/TPMODELOSDataSet5.xsd" xmlns:mstns="http://tempuri.org/TPMODELOSDataSet5.xsd" xmlns="http://tempuri.org/TPMODELOSDataSet5.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="TPMODELOSConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="TPMODELOSConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.TP_DIPLOMA.Properties.Settings.GlobalReference.Default.TPMODELOSConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="PedidocabTableAdapter" GeneratorDataComponentClassName="PedidocabTableAdapter" Name="Pedidocab" UserDataComponentName="PedidocabTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="TPMODELOSConnectionString (Settings)" DbObjectName="TPMODELOS.dbo.Pedidocab" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT ID_pedido, estado, fechagen, fechaact FROM dbo.Pedidocab</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ID_pedido" DataSetColumn="ID_pedido" />
+              <Mapping SourceColumn="estado" DataSetColumn="estado" />
+              <Mapping SourceColumn="fechagen" DataSetColumn="fechagen" />
+              <Mapping SourceColumn="fechaact" DataSetColumn="fechaact" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="TPMODELOSDataSet5" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="TPMODELOSDataSet5" msprop:Generator_UserDSName="TPMODELOSDataSet5">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Pedidocab" msprop:Generator_TableClassName="PedidocabDataTable" msprop:Generator_TableVarName="tablePedidocab" msprop:Generator_TablePropName="Pedidocab" msprop:Generator_RowDeletingName="PedidocabRowDeleting" msprop:Generator_RowChangingName="PedidocabRowChanging" msprop:Generator_RowEvHandlerName="PedidocabRowChangeEventHandler" msprop:Generator_RowDeletedName="PedidocabRowDeleted" msprop:Generator_UserTableName="Pedidocab" msprop:Generator_RowChangedName="PedidocabRowChanged" msprop:Generator_RowEvArgName="PedidocabRowChangeEvent" msprop:Generator_RowClassName="PedidocabRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID_pedido" msprop:Generator_ColumnVarNameInTable="columnID_pedido" msprop:Generator_ColumnPropNameInRow="ID_pedido" msprop:Generator_ColumnPropNameInTable="ID_pedidoColumn" msprop:Generator_UserColumnName="ID_pedido" type="xs:int" />
+              <xs:element name="estado" msprop:Generator_ColumnVarNameInTable="columnestado" msprop:Generator_ColumnPropNameInRow="estado" msprop:Generator_ColumnPropNameInTable="estadoColumn" msprop:Generator_UserColumnName="estado" type="xs:int" />
+              <xs:element name="fechagen" msprop:Generator_ColumnVarNameInTable="columnfechagen" msprop:Generator_ColumnPropNameInRow="fechagen" msprop:Generator_ColumnPropNameInTable="fechagenColumn" msprop:Generator_UserColumnName="fechagen" type="xs:dateTime" />
+              <xs:element name="fechaact" msprop:Generator_ColumnVarNameInTable="columnfechaact" msprop:Generator_ColumnPropNameInRow="fechaact" msprop:Generator_ColumnPropNameInTable="fechaactColumn" msprop:Generator_UserColumnName="fechaact" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="BE.Bitacora" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAACAAAgAEAACAAAAABAIIAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Bitacora.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BE.Etiquetas">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQAIAAAACAAAAAAAAAAAAAEAAAAAAAAA=</HashCode>
+      <FileName>Etiquetas.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BE.userauxiliar" Collapsed="true">
+    <Position X="6.75" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAQAAAAEAACAAAAAgAAgAAAAAAQCAAAAAwAgAgk=</HashCode>
+      <FileName>userauxiliar.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BE.Usuario" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAADAQAAIgEAACAAAAQgAAgIAAAAEQCCAAAAwAgAgk=</HashCode>
+      <FileName>Usuario.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="BE.Maestros.Clientes" Collapsed="true">
+    <Position X="11.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAgIACAACAAgAAAAAAAAAAAAAAAAgAAAAI=</HashCode>
+      <FileName>Maestros\Clientes.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BE.Maestros.Precios" Collapsed="true">
+    <Position X="6.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAQAAAAEEQAAABEAAQAAAAEAAAAAQ=</HashCode>
+      <FileName>Maestros\Precios.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BE.Maestros.Productos" Collapsed="true">
+    <Position X="4.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAABAEAAAAAAAAAQAAAAEAAAAAAAAAAAAAAAoAAAAQ=</HashCode>
+      <FileName>Maestros\Productos.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BE.Negocio.Carrito">
+    <Position X="2.25" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAGAAIQAgACEAAAAAAAAAAAAAAAAQAAAAEAAAAAA=</HashCode>
+      <FileName>Negocio\Carrito.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BE.Negocio.Estado">
+    <Position X="11.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgQAAA=</HashCode>
+      <FileName>Negocio\Estado.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BE.Negocio.Pedido_Cab" Collapsed="true">
+    <Position X="10.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAiAIAAgAAAAIAAAAgAAAAAAAAACAAAAAAAgAAAAo=</HashCode>
+      <FileName>Negocio\Pedido_Cab.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BE.Negocio.Pedido_det" Collapsed="true">
+    <Position X="10.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAgAMAIAAAACAAAAAgAAAAAAAAACAAAAAAAoAAAAA=</HashCode>
+      <FileName>Negocio\Pedido_det.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="BE.IEtiqueta">
+    <Position X="0.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IEtiqueta.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="BE.Iidioma">
+    <Position X="3.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Iidioma.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="BE.ITraduccion">
+    <Position X="5.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAABAAAAAAAAQAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ITraduccion.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="BE.IUsuario">
+    <Position X="3.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAEAAAAAAAAAAAAAAAAAAQAAAAAAgAAAAA=</HashCode>
+      <FileName>IUsuario.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
