@@ -134,6 +134,7 @@ namespace TP_DIPLOMA
             this.cambiarClaveToolStripMenuItem});
             this.usuarioToolStripMenuItem.Name = "usuarioToolStripMenuItem";
             this.usuarioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.usuarioToolStripMenuItem.Tag = "usuario";
             this.usuarioToolStripMenuItem.Text = "Usuario";
             // 
             // cambiarClaveToolStripMenuItem
@@ -182,6 +183,7 @@ namespace TP_DIPLOMA
             // 
             this.tsmabmusuarios.Name = "tsmabmusuarios";
             this.tsmabmusuarios.Size = new System.Drawing.Size(180, 22);
+            this.tsmabmusuarios.Tag = "abmusers";
             this.tsmabmusuarios.Text = "Gestion de usuarios";
             this.tsmabmusuarios.Click += new System.EventHandler(this.gestionDeUsuariosToolStripMenuItem_Click);
             // 
@@ -201,13 +203,15 @@ namespace TP_DIPLOMA
             this.ventasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.carritoToolStripMenuItem});
             this.ventasToolStripMenuItem.Name = "ventasToolStripMenuItem";
-            this.ventasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ventasToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+            this.ventasToolStripMenuItem.Tag = "venta";
             this.ventasToolStripMenuItem.Text = "Ventas";
             // 
             // carritoToolStripMenuItem
             // 
             this.carritoToolStripMenuItem.Name = "carritoToolStripMenuItem";
-            this.carritoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.carritoToolStripMenuItem.Size = new System.Drawing.Size(110, 22);
+            this.carritoToolStripMenuItem.Tag = "carrito";
             this.carritoToolStripMenuItem.Text = "Carrito";
             this.carritoToolStripMenuItem.Click += new System.EventHandler(this.carritoToolStripMenuItem_Click);
             // 
@@ -217,7 +221,8 @@ namespace TP_DIPLOMA
             this.facturasToolStripMenuItem,
             this.cobrosToolStripMenuItem});
             this.facturacionToolStripMenuItem.Name = "facturacionToolStripMenuItem";
-            this.facturacionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.facturacionToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+            this.facturacionToolStripMenuItem.Tag = "facturacion";
             this.facturacionToolStripMenuItem.Text = "Facturacion";
             this.facturacionToolStripMenuItem.Click += new System.EventHandler(this.facturacionToolStripMenuItem_Click);
             // 
@@ -225,6 +230,7 @@ namespace TP_DIPLOMA
             // 
             this.facturasToolStripMenuItem.Name = "facturasToolStripMenuItem";
             this.facturasToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
+            this.facturasToolStripMenuItem.Tag = "facturas";
             this.facturasToolStripMenuItem.Text = "Facturas";
             this.facturasToolStripMenuItem.Click += new System.EventHandler(this.facturasToolStripMenuItem_Click);
             // 
@@ -232,13 +238,14 @@ namespace TP_DIPLOMA
             // 
             this.cobrosToolStripMenuItem.Name = "cobrosToolStripMenuItem";
             this.cobrosToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
+            this.cobrosToolStripMenuItem.Tag = "pagos";
             this.cobrosToolStripMenuItem.Text = "Cobros";
             this.cobrosToolStripMenuItem.Click += new System.EventHandler(this.cobrosToolStripMenuItem_Click);
             // 
             // comprasToolStripMenuItem
             // 
             this.comprasToolStripMenuItem.Name = "comprasToolStripMenuItem";
-            this.comprasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.comprasToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
             this.comprasToolStripMenuItem.Text = "Compras";
             // 
             // maestrosToolStripMenuItem
@@ -249,6 +256,7 @@ namespace TP_DIPLOMA
             this.proveedoresToolStripMenuItem});
             this.maestrosToolStripMenuItem.Name = "maestrosToolStripMenuItem";
             this.maestrosToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
+            this.maestrosToolStripMenuItem.Tag = "Maestros";
             this.maestrosToolStripMenuItem.Text = "Maestros";
             // 
             // stockToolStripMenuItem
@@ -263,14 +271,14 @@ namespace TP_DIPLOMA
             // productosToolStripMenuItem
             // 
             this.productosToolStripMenuItem.Name = "productosToolStripMenuItem";
-            this.productosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.productosToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
             this.productosToolStripMenuItem.Text = "Productos";
             this.productosToolStripMenuItem.Click += new System.EventHandler(this.productosToolStripMenuItem_Click);
             // 
             // preciosToolStripMenuItem
             // 
             this.preciosToolStripMenuItem.Name = "preciosToolStripMenuItem";
-            this.preciosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.preciosToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
             this.preciosToolStripMenuItem.Text = "Precios";
             this.preciosToolStripMenuItem.Click += new System.EventHandler(this.preciosToolStripMenuItem_Click);
             // 
@@ -291,12 +299,14 @@ namespace TP_DIPLOMA
             // 
             this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
             this.reportesToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
+            this.reportesToolStripMenuItem.Tag = "Reportes";
             this.reportesToolStripMenuItem.Text = "Reportes";
             // 
             // ayudaToolStripMenuItem
             // 
             this.ayudaToolStripMenuItem.Name = "ayudaToolStripMenuItem";
             this.ayudaToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
+            this.ayudaToolStripMenuItem.Tag = "Ayuda";
             this.ayudaToolStripMenuItem.Text = "Ayuda";
             // 
             // statusStrip1

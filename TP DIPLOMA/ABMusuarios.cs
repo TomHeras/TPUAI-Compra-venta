@@ -145,16 +145,24 @@ namespace TP_DIPLOMA
                 {
                     item.Nombre = controlUsuario1.Texto;
                     item.Usuarios = controlUsuario2.Texto;
-                    item.Password = usaux.Password; /*Encriptador.Hash(controlUsuario3.Texto)*/
+                    item.Password = Encriptador.Hash(controlUsuario3.Texto);
                     item.Mail = controlUsuario4.Texto;
                     item.Idioma2 = comboBox1.SelectedIndex + 1;
-                    if (comboBox1.SelectedItem.ToString()=="Activo")
+                    try
                     {
-                        item.Estado = true;
+                        if (comboBox2.SelectedItem.ToString() == "Activo")
+                        {
+                            item.Estado = true;
+                        }
+                        else
+                        {
+                            item.Estado = false;
+                        }
                     }
-                    else
+                    catch (Exception)
                     {
-                        item.Estado = false;
+
+                        throw;
                     }
 
                     gestorusuarios.EditarUsuario_estado(item);
