@@ -29,6 +29,7 @@ namespace TP_DIPLOMA
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PermisosUsuarios));
             this.cmdGuardar = new System.Windows.Forms.Button();
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.grpPatentes = new System.Windows.Forms.GroupBox();
@@ -66,6 +67,7 @@ namespace TP_DIPLOMA
             // 
             // grpPatentes
             // 
+            this.grpPatentes.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("grpPatentes.BackgroundImage")));
             this.grpPatentes.Controls.Add(this.cmbusers);
             this.grpPatentes.Controls.Add(this.btnagregarfamilia);
             this.grpPatentes.Controls.Add(this.cboFamilias);
