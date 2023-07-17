@@ -242,31 +242,57 @@ namespace TP_DIPLOMA
             //if (mnugesusu.Tag != null && traducciones.ContainsKey(mnugesusu.Tag.ToString()))
             //    this.mnugesusu.Text = traducciones[mnugesusu.Tag.ToString()].Texto;
 
+            
             if (negocioToolStripMenuItem.Tag != null && traducciones.ContainsKey(negocioToolStripMenuItem.Tag.ToString()))
             this.negocioToolStripMenuItem.Text = traducciones[negocioToolStripMenuItem.Tag.ToString()].Texto;
+            
             if (clientesToolStripMenuItem.Tag != null && traducciones.ContainsKey(clientesToolStripMenuItem.Tag.ToString()))
                 this.clientesToolStripMenuItem.Text = traducciones[clientesToolStripMenuItem.Tag.ToString()].Texto;
+            
             if (clientesToolStripMenuItem.Tag != null && traducciones.ContainsKey(clientesToolStripMenuItem.Tag.ToString()))
                 this.clientesToolStripMenuItem.Text = traducciones[clientesToolStripMenuItem.Tag.ToString()].Texto;
+            
             if (tooltrippermisos.Tag != null && traducciones.ContainsKey(tooltrippermisos.Tag.ToString()))
                 this.tooltrippermisos.Text = traducciones[tooltrippermisos.Tag.ToString()].Texto;
+            
             if (tooltrippermisousuario.Tag != null && traducciones.ContainsKey(tooltrippermisousuario.Tag.ToString()))
                 this.tooltrippermisousuario.Text = traducciones[tooltrippermisousuario.Tag.ToString()].Texto;
+            
             if (tsmabmusuarios.Tag != null && traducciones.ContainsKey(tsmabmusuarios.Tag.ToString()))  //no entro
                 this.tsmabmusuarios.Text = traducciones[tsmabmusuarios.Tag.ToString()].Texto;
+            
             if (ventasToolStripMenuItem.Tag != null && traducciones.ContainsKey(ventasToolStripMenuItem.Tag.ToString()))//no entro
                 this.ventasToolStripMenuItem.Text = traducciones[ventasToolStripMenuItem.Tag.ToString()].Texto;
+            
             if (carritoToolStripMenuItem.Tag != null && traducciones.ContainsKey(carritoToolStripMenuItem.Tag.ToString()))//no entro
                 this.carritoToolStripMenuItem.Text = traducciones[carritoToolStripMenuItem.Tag.ToString()].Texto;
+            
             if (facturacionToolStripMenuItem.Tag != null && traducciones.ContainsKey(facturacionToolStripMenuItem.Tag.ToString()))
                 this.facturacionToolStripMenuItem.Text = traducciones[facturacionToolStripMenuItem.Tag.ToString()].Texto;
+            
             if (facturasToolStripMenuItem.Tag != null && traducciones.ContainsKey(facturasToolStripMenuItem.Tag.ToString()))
                 this.facturasToolStripMenuItem.Text = traducciones[facturasToolStripMenuItem.Tag.ToString()].Texto;
+            
             if (cobrosToolStripMenuItem.Tag != null && traducciones.ContainsKey(cobrosToolStripMenuItem.Tag.ToString()))
                 this.cobrosToolStripMenuItem.Text = traducciones[cobrosToolStripMenuItem.Tag.ToString()].Texto;
            
             if(maestrosToolStripMenuItem.Tag != null && traducciones.ContainsKey(maestrosToolStripMenuItem.Tag.ToString()))
             this.maestrosToolStripMenuItem.Text = traducciones[maestrosToolStripMenuItem.Tag.ToString()].Texto;
+
+            if (usuarioToolStripMenuItem.Tag != null && traducciones.ContainsKey(usuarioToolStripMenuItem.Tag.ToString()))
+                this.usuarioToolStripMenuItem.Text = traducciones[usuarioToolStripMenuItem.Tag.ToString()].Texto;
+
+            if (reportesToolStripMenuItem.Tag != null && traducciones.ContainsKey(reportesToolStripMenuItem.Tag.ToString()))
+                this.reportesToolStripMenuItem.Text = traducciones[reportesToolStripMenuItem.Tag.ToString()].Texto;
+
+            if (ayudaToolStripMenuItem.Tag != null && traducciones.ContainsKey(ayudaToolStripMenuItem.Tag.ToString()))
+                this.ayudaToolStripMenuItem.Text = traducciones[ayudaToolStripMenuItem.Tag.ToString()].Texto;
+
+            if (cambiarClaveToolStripMenuItem.Tag != null && traducciones.ContainsKey(cambiarClaveToolStripMenuItem.Tag.ToString()))
+                this.cambiarClaveToolStripMenuItem.Text = traducciones[cambiarClaveToolStripMenuItem.Tag.ToString()].Texto;
+
+
+            
 
             // entonces el texto del menu va a ser igual a lo que hay en traducciones 
 

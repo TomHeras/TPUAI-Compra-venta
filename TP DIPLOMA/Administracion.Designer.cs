@@ -141,6 +141,7 @@ namespace TP_DIPLOMA
             // 
             this.cambiarClaveToolStripMenuItem.Name = "cambiarClaveToolStripMenuItem";
             this.cambiarClaveToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cambiarClaveToolStripMenuItem.Tag = "cambiarcontra";
             this.cambiarClaveToolStripMenuItem.Text = "Cambiar clave";
             this.cambiarClaveToolStripMenuItem.Click += new System.EventHandler(this.cambiarClaveToolStripMenuItem_Click);
             // 
@@ -183,7 +184,7 @@ namespace TP_DIPLOMA
             // 
             this.tsmabmusuarios.Name = "tsmabmusuarios";
             this.tsmabmusuarios.Size = new System.Drawing.Size(180, 22);
-            this.tsmabmusuarios.Tag = "abmusers";
+            this.tsmabmusuarios.Tag = "Gestion de usuarios";
             this.tsmabmusuarios.Text = "Gestion de usuarios";
             this.tsmabmusuarios.Click += new System.EventHandler(this.gestionDeUsuariosToolStripMenuItem_Click);
             // 
@@ -265,7 +266,7 @@ namespace TP_DIPLOMA
             this.productosToolStripMenuItem,
             this.preciosToolStripMenuItem});
             this.stockToolStripMenuItem.Name = "stockToolStripMenuItem";
-            this.stockToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.stockToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
             this.stockToolStripMenuItem.Text = "Stock";
             // 
             // productosToolStripMenuItem
@@ -285,14 +286,14 @@ namespace TP_DIPLOMA
             // clientesToolStripMenuItem
             // 
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
             this.clientesToolStripMenuItem.Text = "Clientes";
             this.clientesToolStripMenuItem.Click += new System.EventHandler(this.clientesToolStripMenuItem_Click);
             // 
             // proveedoresToolStripMenuItem
             // 
             this.proveedoresToolStripMenuItem.Name = "proveedoresToolStripMenuItem";
-            this.proveedoresToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.proveedoresToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
             this.proveedoresToolStripMenuItem.Text = "Proveedores";
             // 
             // reportesToolStripMenuItem
