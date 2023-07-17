@@ -23,14 +23,6 @@ namespace Seguridad.Composite
 
         }
 
-        public Patente Patente
-        {
-            get => default;
-            set
-            {
-            }
-        }
-
         public override void VaciarHijos()
         {
             _hijos = new List<Componente>();

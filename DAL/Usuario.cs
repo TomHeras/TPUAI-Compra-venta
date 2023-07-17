@@ -207,5 +207,37 @@ namespace DAL
 
             return ListaUsuarios;
         }
+
+        public string  CambiarContraseña(BE.userauxiliar usupaass)
+        {
+            string fa;
+
+            SqlParameter[] parametros = new SqlParameter[2];
+            parametros[0] = new SqlParameter("@user", usupaass.Idusuario);
+            parametros[1] = new SqlParameter("@pass", usupaass.Password);
+            fa = acceso.Escribir("update_password", parametros);
+
+            return fa;
+        }
+
+
+        public string EditarEstado(BE.userauxiliar useer)
+        {
+            string fm;
+
+            SqlParameter[] parameters = new SqlParameter[6];
+            parameters[0] =new SqlParameter("@Idusu",useer.Idusuario);
+            parameters[1] = new SqlParameter("@nick", useer.Usuarios);
+            parameters[2] = new SqlParameter("@pass", useer.Password);
+            parameters[3]=new SqlParameter("@estado",useer.Estado);
+            parameters[4] = new SqlParameter("@Idioma", useer.Idioma2);
+            parameters[5] = new SqlParameter("@nombre", useer.Nombre);
+
+            fm = acceso.Escribir("editarUSUARIO", parameters);
+
+            return fm;
+        }
+
+        
     }
 }

@@ -62,7 +62,7 @@ namespace TP_DIPLOMA
                     tooltripselec.Visible = gestorpatentes.BuscarPermisos(Tipopatente.puederverselecidioma, permisos);
                     //soloadmin
                     tooltripgestionidioma.Visible = gestorpatentes.BuscarPermisos(Tipopatente.puedervergestionaridioma, permisos);
-                    tooltriplista.Visible= gestorpatentes.BuscarPermisos(Tipopatente.puederveractualizaidioma, permisos);
+                    tooltriplista.Visible= gestorpatentes.BuscarPermisos(Tipopatente.puedervergestionaridioma, permisos);
                     //propio de todos los usuarios
                     cambiarClaveToolStripMenuItem.Visible= gestorpatentes.BuscarPermisos(Tipopatente.puedecambiarclave, permisos);
 
@@ -76,8 +76,8 @@ namespace TP_DIPLOMA
 
 
                     negocioToolStripMenuItem.Visible= gestorpatentes.BuscarPermisos(Tipopatente.puedeaccedernegocio, permisos);
-                    
-                    ventasToolStripMenuItem1.Visible= gestorpatentes.BuscarPermisos(Tipopatente.puederverventas, permisos);
+
+                    cobrosToolStripMenuItem.Visible= gestorpatentes.BuscarPermisos(Tipopatente.puederverventas, permisos);
                     carritoToolStripMenuItem.Visible= gestorpatentes.BuscarPermisos(Tipopatente.puedervercarrito, permisos);
                     facturacionToolStripMenuItem.Visible= gestorpatentes.BuscarPermisos(Tipopatente.puedeverfacturacion, permisos);
                     comprasToolStripMenuItem.Visible= gestorpatentes.BuscarPermisos(Tipopatente.puedevercompras, permisos);
@@ -351,16 +351,12 @@ namespace TP_DIPLOMA
 
         private void ventasToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            Negocio.Ventasfrm venfrm = new Negocio.Ventasfrm();
-            venfrm.MdiParent = this;
-            venfrm.Show();
+            
         }
 
         private void facturacionToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Negocio.Facturasfrm facfrm = new Negocio.Facturasfrm();
-            facfrm.MdiParent = this;
-            facfrm.Show();
+           
         }
 
         private void gestionDeUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
@@ -368,6 +364,27 @@ namespace TP_DIPLOMA
             ABMusuarios abmuser = new ABMusuarios();
             abmuser.MdiParent = this;
             abmuser.Show();
+        }
+
+        private void cobrosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Negocio.Ventasfrm venfrm = new Negocio.Ventasfrm();
+            venfrm.MdiParent = this;
+            venfrm.Show();
+        }
+
+        private void facturasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Negocio.Facturasfrm facfrm = new Negocio.Facturasfrm();
+            facfrm.MdiParent = this;
+            facfrm.Show();
+        }
+
+        private void cambiarClaveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CambiarCave password = new CambiarCave();
+            password.MdiParent = this;
+            password.Show();
         }
     }
 }

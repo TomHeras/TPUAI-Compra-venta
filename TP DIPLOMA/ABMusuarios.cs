@@ -22,6 +22,7 @@ namespace TP_DIPLOMA
         BE.Usuario user = new BE.Usuario();
         BLL.Usuarios gestorusuarios = new BLL.Usuarios();
         BE.userauxiliar usaux = new BE.userauxiliar();
+        BLL.idioma gestoridiom = new BLL.idioma();
         
         public void enlazar()
         {
@@ -35,6 +36,8 @@ namespace TP_DIPLOMA
             controlUsuario2.limpiar();
             controlUsuario3.limpiar();
             controlUsuario4.limpiar();
+            comboBox1.SelectedIndex = -1;
+            comboBox2.SelectedIndex = -1;
         }
         private void ABMusuarios_Load(object sender, EventArgs e)
         {
@@ -45,12 +48,23 @@ namespace TP_DIPLOMA
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            //user = (BE.Usuario)dataGridView1.Rows[e.RowIndex].DataBoundItem;
+            usaux = (BE.userauxiliar)dataGridView1.Rows[e.RowIndex].DataBoundItem;
 
-            //controlUsuario1.Texto = user.Nombre.ToString();
-            //controlUsuario2.Texto = user.Usuarios.ToString();
-            ////controlUsuario3.Texto = user.Password.ToString();
-            //controlUsuario4.Texto = user.Mail.ToString();
+            lblidcl.Text = usaux.Idusuario.ToString();
+            controlUsuario1.Texto = usaux.Nombre.ToString();
+            controlUsuario2.Texto = usaux.Usuarios.ToString();
+            controlUsuario3.Texto = usaux.Password.ToString();
+            controlUsuario4.Texto = usaux.Mail.ToString();            
+            comboBox1.Text = usaux.Idioma2.ToString();
+            if (usaux.Estado==true)
+            {
+                comboBox2.Text = "Activo";
+            }
+            else
+            {
+                comboBox2.Text = "Bloqueado";
+            }
+            
         }
         
         private void button1_Click(object sender, EventArgs e)
@@ -78,14 +92,14 @@ namespace TP_DIPLOMA
 
                             user.Idioma = new Idiomas()
                             {
-                                Id = comboBox1.SelectedIndex
+                                Id = comboBox1.SelectedIndex+1
                             };
                             user.Usuarios = controlUsuario2.Texto;
                             user.Nombre = controlUsuario1.Texto;
                             var pass = controlUsuario3.Texto;
                             user.Password = Encriptador.Hash(pass);
                             user.Mail = controlUsuario4.Texto;
-                            user.Estado = true;
+                            user.Estado = bool.Parse(comboBox2.SelectedIndex.ToString());
                             user.Baja_logica = false;
                             user.UsuDVH = 1;
 
@@ -119,6 +133,35 @@ namespace TP_DIPLOMA
                 {
 
                     throw;
+                }
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            foreach (BE.userauxiliar item in gestorusuarios.Listadeusu())
+            {
+                if (lblidcl.Text==item.Idusuario.ToString())
+                {
+                    item.Nombre = controlUsuario1.Texto;
+                    item.Usuarios = controlUsuario2.Texto;
+                    item.Password = usaux.Password; /*Encriptador.Hash(controlUsuario3.Texto)*/
+                    item.Mail = controlUsuario4.Texto;
+                    item.Idioma2 = comboBox1.SelectedIndex + 1;
+                    if (comboBox1.SelectedItem.ToString()=="Activo")
+                    {
+                        item.Estado = true;
+                    }
+                    else
+                    {
+                        item.Estado = false;
+                    }
+
+                    gestorusuarios.EditarUsuario_estado(item);
+                    MessageBox.Show("El usuario fue modificado con exito");
+
+                    limpiar();
+                    enlazar();
                 }
             }
         }

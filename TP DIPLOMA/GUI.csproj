@@ -70,6 +70,12 @@
     <Compile Include="Bitacora.Designer.cs">
       <DependentUpon>Bitacora.cs</DependentUpon>
     </Compile>
+    <Compile Include="CambiarCave.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CambiarCave.Designer.cs">
+      <DependentUpon>CambiarCave.cs</DependentUpon>
+    </Compile>
     <Compile Include="ControlUsuario.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -196,6 +202,9 @@
     <EmbeddedResource Include="Bitacora.resx">
       <DependentUpon>Bitacora.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CambiarCave.resx">
+      <DependentUpon>CambiarCave.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ControlUsuario.resx">
       <DependentUpon>ControlUsuario.cs</DependentUpon>
     </EmbeddedResource>
@@ -242,6 +251,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include="ClassDiagram1.cd" />
+    <None Include="ClassDiagram2.cd" />
     <None Include="Properties\DataSources\BLL.Maestros.Clientes.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -68,5 +68,22 @@ namespace BLL
 
             return fa;
         }
+
+
+        public string CambiarContraseña(BE.userauxiliar userpas)
+        {
+            string fa;
+            fa = Mapper.CambiarContraseña(userpas);
+
+            return fa;
+        }
+
+        public string EditarUsuario_estado(BE.userauxiliar user)
+        {
+            string fa;
+            fa = Mapper.EditarEstado(user);
+
+            return fa;
+        }
     }
 }

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Seguridad.Singleton;
+using Seguridad;
 
 namespace TP_DIPLOMA
 {
@@ -64,6 +65,8 @@ namespace TP_DIPLOMA
                     {
                         if (item.Estado == true)
                         {
+                            user.Idusuario = item.Idusuario;
+                            user.Nombre = item.Nombre;
                             user.Usuarios = controlUsuario1.Texto;
                             user.Password = cotrolPass1.Texto;
                             user.Estado = true;
@@ -89,7 +92,27 @@ namespace TP_DIPLOMA
                         Administracion adm = new Administracion();
                         adm.Show();
                         this.Hide();
+
                         CargarBitacora(user.Usuarios, "Inicio de sesion", "baja");
+                    }
+                    else
+                    {
+                        cont =cont +1;
+                        if (cont>=3)
+                        {
+                            BE.userauxiliar usaux = new BE.userauxiliar();
+                            usaux.Usuarios = controlUsuario1.Texto;
+                            usaux.Idusuario = user.Idusuario;
+                            usaux.Idioma2 = 1;
+                            usaux.Password = Encriptador.Hash(user.Password);
+                            usaux.Nombre = user.Nombre;
+                            usaux.Estado = false;
+
+
+;                           gestoruser.EditarUsuario_estado(usaux);
+                            MessageBox.Show("El usario fue bloqueado por la cantidad de intentos");
+                            cont = 0;
+                        }
                     }
                 }
                 else

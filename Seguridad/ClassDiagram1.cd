@@ -7,8 +7,8 @@
       <FileName>Backup_restore.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Seguridad.Encriptador" Collapsed="true">
-    <Position X="10" Y="0.5" Width="1.5" />
+  <Class Name="Seguridad.Encriptador">
+    <Position X="11" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Encriptador.cs</FileName>
@@ -24,12 +24,9 @@
   <Class Name="Seguridad.Composite.Familia">
     <Position X="3.75" Y="4.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAgAAAAIAAAAAAAAAAAAAAEAAAAAAAAAAkAAAAA=</HashCode>
+      <HashCode>AAAAAAgAAAAIAAAAAAAAAAAAAAEAAAAAAAAAAEAAAAA=</HashCode>
       <FileName>Composite\Familia.cs</FileName>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="Patente" />
-    </ShowAsAssociation>
   </Class>
   <Class Name="Seguridad.Composite.Patente">
     <Position X="0.75" Y="4.25" Width="1.5" />
@@ -62,25 +59,25 @@
       <HashCode>AAACAAAAAAAAAAAEAAAAoAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>MultiIdioma\Idiomas.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Position="0.2" Collapsed="true" />
+    <Lollipop Position="0.19" Collapsed="true" />
   </Class>
   <Class Name="Seguridad.MultiIdioma.Traduccion" BaseTypeListCollapsed="true">
-    <Position X="10.75" Y="4" Width="1.5" />
+    <Position X="11.25" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAABAAAAAAAAQAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>MultiIdioma\Traduccion.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="Seguridad.Singleton.Sesion" Collapsed="true">
-    <Position X="11.75" Y="1.5" Width="1.5" />
+  <Class Name="Seguridad.Singleton.Sesion">
+    <Position X="3.75" Y="7.25" Width="3.75" />
     <TypeIdentifier>
       <HashCode>AAAACACAAAAAACAAAAAAAAIAgAAEAJAAAAAEAAQAAAA=</HashCode>
       <FileName>Singleton\Sesion.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Seguridad.Singleton.SingletonSesion" Collapsed="true">
-    <Position X="8.25" Y="2.5" Width="1.5" />
+  <Class Name="Seguridad.Singleton.SingletonSesion">
+    <Position X="8.75" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAAAAAAAAAAAAgACAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Singleton\SingletonSesion.cs</FileName>
@@ -93,10 +90,10 @@
       <FileName>MultiIdioma\IdiomaObserver.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Enum Name="Seguridad.Composite.Tipopatente">
+  <Enum Name="Seguridad.Composite.Tipopatente" Collapsed="true">
     <Position X="5.75" Y="3.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>ACMAAAAAAAAABAACAIAAAABBIAJAAAAAAAABAIICAAA=</HashCode>
+      <HashCode>AQAFgAMgAIAACAAAAoIAAAEAAQAAAQAgAAIAABBAAAA=</HashCode>
       <FileName>Composite\Tipopatente.cs</FileName>
     </TypeIdentifier>
   </Enum>

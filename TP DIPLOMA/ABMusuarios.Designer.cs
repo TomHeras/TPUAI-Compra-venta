@@ -39,13 +39,16 @@ namespace TP_DIPLOMA
             this.button1 = new System.Windows.Forms.Button();
             this.lblidcl = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.tPMODELOSDataSet7 = new TP_DIPLOMA.TPMODELOSDataSet7();
             this.idiomaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tPMODELOSDataSet7 = new TP_DIPLOMA.TPMODELOSDataSet7();
+            this.label1 = new System.Windows.Forms.Label();
             this.idiomaTableAdapter = new TP_DIPLOMA.TPMODELOSDataSet7TableAdapters.IdiomaTableAdapter();
+            this.button2 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tPMODELOSDataSet7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.idiomaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tPMODELOSDataSet7)).BeginInit();
             this.SuspendLayout();
             // 
             // controlUsuario1
@@ -100,7 +103,7 @@ namespace TP_DIPLOMA
             // button1
             // 
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(77, 279);
+            this.button1.Location = new System.Drawing.Point(77, 318);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(105, 23);
             this.button1.TabIndex = 5;
@@ -128,6 +131,16 @@ namespace TP_DIPLOMA
             this.comboBox1.Size = new System.Drawing.Size(110, 21);
             this.comboBox1.TabIndex = 21;
             // 
+            // idiomaBindingSource
+            // 
+            this.idiomaBindingSource.DataMember = "Idioma";
+            this.idiomaBindingSource.DataSource = this.tPMODELOSDataSet7;
+            // 
+            // tPMODELOSDataSet7
+            // 
+            this.tPMODELOSDataSet7.DataSetName = "TPMODELOSDataSet7";
+            this.tPMODELOSDataSet7.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -137,25 +150,49 @@ namespace TP_DIPLOMA
             this.label1.TabIndex = 22;
             this.label1.Text = "Idioma";
             // 
-            // tPMODELOSDataSet7
-            // 
-            this.tPMODELOSDataSet7.DataSetName = "TPMODELOSDataSet7";
-            this.tPMODELOSDataSet7.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // idiomaBindingSource
-            // 
-            this.idiomaBindingSource.DataMember = "Idioma";
-            this.idiomaBindingSource.DataSource = this.tPMODELOSDataSet7;
-            // 
             // idiomaTableAdapter
             // 
             this.idiomaTableAdapter.ClearBeforeFill = true;
+            // 
+            // button2
+            // 
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Location = new System.Drawing.Point(77, 370);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(105, 23);
+            this.button2.TabIndex = 23;
+            this.button2.Text = "Modificar Usuario";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(38, 279);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(40, 13);
+            this.label2.TabIndex = 24;
+            this.label2.Text = "Estado";
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "Activo",
+            "Bloqueado"});
+            this.comboBox2.Location = new System.Drawing.Point(103, 270);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(110, 21);
+            this.comboBox2.TabIndex = 25;
             // 
             // ABMusuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.lblidcl);
@@ -169,8 +206,8 @@ namespace TP_DIPLOMA
             this.Text = "ABMusuarios";
             this.Load += new System.EventHandler(this.ABMusuarios_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tPMODELOSDataSet7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.idiomaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tPMODELOSDataSet7)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -190,5 +227,8 @@ namespace TP_DIPLOMA
         private TPMODELOSDataSet7 tPMODELOSDataSet7;
         private System.Windows.Forms.BindingSource idiomaBindingSource;
         private TPMODELOSDataSet7TableAdapters.IdiomaTableAdapter idiomaTableAdapter;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox comboBox2;
     }
 }
