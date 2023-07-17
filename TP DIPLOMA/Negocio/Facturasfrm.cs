@@ -50,6 +50,8 @@ namespace TP_DIPLOMA.Negocio
                         item.Estado = comboBox1.SelectedIndex;
                         item.Fechaact = DateTime.Now;
                         gestor.editarestado(item);
+
+                        MessageBox.Show("El Pedido fue actualizado exitosamente");
                     }
                 }
             }
@@ -57,9 +59,9 @@ namespace TP_DIPLOMA.Negocio
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var listdetalle = gestor.listardetalles().Where(x => x.ID_pedido.ToString() == textBox1.ToString());
+            var detalles = gestor.listardetalles().Where(x => x.ID_pedido.ToString() == textBox1.Text).ToList();
 
-            dataGridView1.DataSource = listdetalle;
+            dataGridView1.DataSource = detalles;
         }
     }
 }
