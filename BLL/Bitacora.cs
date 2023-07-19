@@ -20,6 +20,28 @@ namespace BLL
             return Lista;
         }
 
-        
+
+        public void Consultar(string query)
+        {
+            Mapper.Consultar(query);
+        }
+
+        public List<BE.Bitacora> listacambios()
+        {
+            List<BE.Bitacora> cambios = Mapper.listarcambios();
+            return cambios;
+        }
+
+        public List<BE.BitacoraCAbmios> Cambios()
+        {
+            List<BE.BitacoraCAbmios> cam = Mapper.Cambios();
+            return cam;
+        }
+
+        public List<BE.BitacoraCAbmios> CambiosBetween()
+        {
+            List<BE.BitacoraCAbmios> cam = Mapper.CambiosBetween();
+            return cam;
+        }
     }
 }

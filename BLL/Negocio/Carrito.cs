@@ -25,10 +25,27 @@ namespace BLL.Negocio
         {
             return this.pedidos;
         }
-        
+
         public void vaciarcarrito()
         {
-             this.pedidos= new List<BE.Negocio.Carrito>();
+            this.pedidos = new List<BE.Negocio.Carrito>();
+        }
+
+
+        List<BE.compra> acotizar = new List<BE.compra>();
+
+        public void agregaralista(BE.compra cotizar)
+        {
+            this.acotizar.Add(cotizar);
+        }
+
+        public List<BE.compra> ordencompra()
+        {
+            return this.acotizar;
+        }
+        public void vaciarlista()
+        {
+            this.acotizar = new List<BE.compra>();
         }
     }
 }

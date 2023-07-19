@@ -6,70 +6,78 @@ using System.Threading.Tasks;
 
 namespace BE
 {
-    public class Usuario:IUsuario
+    public class Usuario : IUsuario
     {
-       
-            private int idusuario;
 
-            public int Idusuario
-            {
-                get { return idusuario; }
-                set { idusuario = value; }
-            }
+        private int idusuario;
 
-
-            private string usuario;
-
-            public string Usuarios
-            {
-                get { return usuario; }
-                set { usuario = value; }
-            }
-
-            private string password;
-
-            public string Password
-            {
-                get { return password; }
-                set { password = value; }
-            }
-
-            private string nombre;
-
-            public string Nombre
-            {
-                get { return nombre; }
-                set { nombre = value; }
-            }
+        public int Idusuario
+        {
+            get { return idusuario; }
+            set { idusuario = value; }
+        }
 
 
-            private string mail;
+        private string usuario;
 
-            public string Mail
-            {
-                get { return mail; }
-                set { mail = value; }
-            }
+        public string Usuarios
+        {
+            get { return usuario; }
+            set { usuario = value; }
+        }
 
-            private bool estado;
+        private string password;
 
-            public bool Estado
-            {
-                get { return estado; }
-                set { estado = value; }
-            }
+        public string Password
+        {
+            get { return password; }
+            set { password = value; }
+        }
 
-            private bool baja_logica;
+        private string nombre;
 
-            public bool Baja_logica
-            {
-                get { return baja_logica; }
-                set { baja_logica = value; }
-            }
+        public string Nombre
+        {
+            get { return nombre; }
+            set { nombre = value; }
+        }
 
-            public Iidioma Idioma { get; set; }
+        private string apellido;
 
-            
+        public string Apellido
+        {
+            get { return apellido; }
+            set { apellido = value; }
+        }
+
+
+        private string mail;
+
+        public string Mail
+        {
+            get { return mail; }
+            set { mail = value; }
+        }
+
+        private bool estado;
+
+        public bool Estado
+        {
+            get { return estado; }
+            set { estado = value; }
+        }
+
+        private bool baja_logica;
+
+        public bool Baja_logica
+        {
+            get { return baja_logica; }
+            set { baja_logica = value; }
+        }
+
+        public Iidioma Idioma { get; set; }
+
+
         private int idioma2;
 
         public int Idioma2
@@ -80,16 +88,16 @@ namespace BE
 
         private int _UsuDVH;
 
-            public int UsuDVH
-            {
-                get { return _UsuDVH; }
-                set { _UsuDVH = value; }
-            }
+        public int UsuDVH
+        {
+            get { return _UsuDVH; }
+            set { _UsuDVH = value; }
+        }
 
-            int IUsuario.idusuario { get { return idusuario; } set { idusuario = value; } }
-            string IUsuario.usuario { get { return usuario; } set { usuario = value; } }
+        int IUsuario.idusuario { get { return idusuario; } set { idusuario = value; } }
+        string IUsuario.usuario { get { return usuario; } set { usuario = value; } }
 
-            string IUsuario.password { get { return password; } set { password = value; } }
-        
+        string IUsuario.password { get { return password; } set { password = value; } }
+
     }
 }

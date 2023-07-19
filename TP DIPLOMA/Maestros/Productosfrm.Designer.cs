@@ -38,6 +38,7 @@ namespace TP_DIPLOMA.Maestros
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.ctlprecio = new TP_DIPLOMA.ControlUsuario();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -84,7 +85,7 @@ namespace TP_DIPLOMA.Maestros
             // button1
             // 
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(301, 55);
+            this.button1.Location = new System.Drawing.Point(283, 86);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 21;
@@ -95,7 +96,7 @@ namespace TP_DIPLOMA.Maestros
             // button2
             // 
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(301, 97);
+            this.button2.Location = new System.Drawing.Point(283, 128);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 22;
@@ -106,7 +107,7 @@ namespace TP_DIPLOMA.Maestros
             // button3
             // 
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(301, 142);
+            this.button3.Location = new System.Drawing.Point(283, 173);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 23;
@@ -117,17 +118,28 @@ namespace TP_DIPLOMA.Maestros
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(26, 197);
+            this.dataGridView1.Location = new System.Drawing.Point(27, 238);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(453, 338);
+            this.dataGridView1.Size = new System.Drawing.Size(500, 338);
             this.dataGridView1.TabIndex = 24;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            // 
+            // ctlprecio
+            // 
+            this.ctlprecio.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ctlprecio.BackgroundImage")));
+            this.ctlprecio.Etiqueta = "Precio";
+            this.ctlprecio.Location = new System.Drawing.Point(50, 187);
+            this.ctlprecio.Name = "ctlprecio";
+            this.ctlprecio.Size = new System.Drawing.Size(178, 45);
+            this.ctlprecio.TabIndex = 25;
+            this.ctlprecio.Texto = "";
             // 
             // Productosfrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(514, 547);
+            this.ClientSize = new System.Drawing.Size(560, 598);
+            this.Controls.Add(this.ctlprecio);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -155,5 +167,6 @@ namespace TP_DIPLOMA.Maestros
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private ControlUsuario ctlprecio;
     }
 }

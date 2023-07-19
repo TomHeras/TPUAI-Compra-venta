@@ -30,24 +30,17 @@ namespace TP_DIPLOMA
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LOGIN));
-            this.controlUsuario1 = new TP_DIPLOMA.ControlUsuario();
             this.Btnlogin = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.cotrolPass1 = new TP_DIPLOMA.CotrolPass();
+            this.controlUsuario1 = new TP_DIPLOMA.ControlUsuario();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // controlUsuario1
-            // 
-            this.controlUsuario1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("controlUsuario1.BackgroundImage")));
-            this.controlUsuario1.Etiqueta = "Usuario";
-            this.controlUsuario1.Location = new System.Drawing.Point(12, 22);
-            this.controlUsuario1.Name = "controlUsuario1";
-            this.controlUsuario1.Size = new System.Drawing.Size(177, 36);
-            this.controlUsuario1.TabIndex = 0;
-            this.controlUsuario1.Texto = "";
             // 
             // Btnlogin
             // 
-            this.Btnlogin.Location = new System.Drawing.Point(63, 176);
+            this.Btnlogin.Location = new System.Drawing.Point(79, 251);
             this.Btnlogin.Name = "Btnlogin";
             this.Btnlogin.Size = new System.Drawing.Size(108, 25);
             this.Btnlogin.TabIndex = 3;
@@ -55,28 +48,73 @@ namespace TP_DIPLOMA
             this.Btnlogin.UseVisualStyleBackColor = true;
             this.Btnlogin.Click += new System.EventHandler(this.Btnlogin_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::TP_DIPLOMA.Properties.Resources.Sesion;
+            this.pictureBox1.Location = new System.Drawing.Point(55, 32);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(161, 82);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.Window;
+            this.label1.Location = new System.Drawing.Point(78, 126);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(109, 15);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Ingrese Usuario";
+            // 
             // cotrolPass1
             // 
-            this.cotrolPass1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cotrolPass1.BackgroundImage")));
+            this.cotrolPass1.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
+            this.cotrolPass1.BackColor = System.Drawing.Color.Transparent;
             this.cotrolPass1.Etiqueta = "Contraseña";
-            this.cotrolPass1.Location = new System.Drawing.Point(12, 52);
+            this.cotrolPass1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.cotrolPass1.Location = new System.Drawing.Point(21, 190);
             this.cotrolPass1.Name = "cotrolPass1";
-            this.cotrolPass1.Size = new System.Drawing.Size(177, 45);
+            this.cotrolPass1.Padding = new System.Windows.Forms.Padding(8, 6, 8, 6);
+            this.cotrolPass1.Size = new System.Drawing.Size(219, 45);
             this.cotrolPass1.TabIndex = 2;
             this.cotrolPass1.Texto = "";
+            // 
+            // controlUsuario1
+            // 
+            this.controlUsuario1.BackColor = System.Drawing.Color.Transparent;
+            this.controlUsuario1.Etiqueta = "Usuario";
+            this.controlUsuario1.Location = new System.Drawing.Point(21, 148);
+            this.controlUsuario1.Name = "controlUsuario1";
+            this.controlUsuario1.Size = new System.Drawing.Size(214, 36);
+            this.controlUsuario1.TabIndex = 0;
+            this.controlUsuario1.Texto = "";
             // 
             // LOGIN
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(240, 220);
+            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.BackgroundImage = global::TP_DIPLOMA.Properties.Resources.Recuperar;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(280, 305);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.cotrolPass1);
             this.Controls.Add(this.Btnlogin);
             this.Controls.Add(this.controlUsuario1);
+            this.Controls.Add(this.pictureBox1);
+            this.DoubleBuffered = true;
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "LOGIN";
-            this.Text = "Bienvenido";
+            this.Text = "SyT Nova";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -85,6 +123,8 @@ namespace TP_DIPLOMA
         private ControlUsuario controlUsuario1;
         private System.Windows.Forms.Button Btnlogin;
         private CotrolPass cotrolPass1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label1;
     }
 }
 

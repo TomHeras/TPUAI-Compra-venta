@@ -50,5 +50,14 @@ namespace BE.Negocio
             set { costo = value; }
         }
 
+        private int dvh;
+
+        public int DVH
+        {
+            get { return dvh; }
+            set { dvh = value; }
+        }
+
+
     }
 }

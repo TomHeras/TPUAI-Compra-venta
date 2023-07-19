@@ -15,6 +15,13 @@ namespace BE.Negocio
             get { return id_pedido; }
             set { id_pedido = value; }
         }
+        private int dvh;
+
+        public int DVH
+        {
+            get { return dvh; }
+            set { dvh = value; }
+        }
 
         private int id_clientes;
 

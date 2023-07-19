@@ -33,6 +33,8 @@ namespace Seguridad.Composite
         puedervercl,   
         puederverprov, //repositor
         perfil,
+        backup,
+        restore,
 
     }
 }
