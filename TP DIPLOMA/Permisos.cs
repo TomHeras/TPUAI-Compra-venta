@@ -41,6 +41,7 @@ namespace TP_DIPLOMA
         {
             this.cboPatentes.DataSource = GestorPatentes.GetAllPatentes();
             this.cboFamilias.DataSource = GestorPatentes.GetAllFamilias();
+            this.cmbperfiles.DataSource = GestorPatentes.GetAllPerfiles();
         }//listar patentes y familias
 
         void limpiar()
@@ -179,5 +180,30 @@ namespace TP_DIPLOMA
             
 
         }//guarda las familias modificada con los permisos
+
+        private void btnconfigurarperfiles_Click(object sender, EventArgs e)
+        {
+            var tmp = (Familia)this.cmbperfiles.SelectedItem;
+            flia = new Familia();
+            flia.Id = tmp.Id;
+            flia.Nombre = tmp.Nombre;
+
+            MostrarFamilia(true);
+        }
+
+        
+        private void button3_Click(object sender, EventArgs e)
+        {
+            string perfil = Tipopatente.perfil.ToString();
+            Familia p = new Familia()
+            {
+                Nombre = textBox1.Text,             
+                             
+            };
+
+            GestorPatentes.GuardarComponentePerfil(p,perfil);
+            llenarpatentefamilias();
+            MessageBox.Show("Perfil guardado correctamente");
+        }
     }
 }

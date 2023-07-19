@@ -52,11 +52,21 @@ namespace TP_DIPLOMA
             this.label3 = new System.Windows.Forms.Label();
             this.cboPermisos = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.btnconfigurarperfiles = new System.Windows.Forms.Button();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.cmbperfiles = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.groupBox4.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.grpPatentes.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.groupBox5.SuspendLayout();
+            this.groupBox6.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox4
@@ -64,14 +74,14 @@ namespace TP_DIPLOMA
             this.groupBox4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("groupBox4.BackgroundImage")));
             this.groupBox4.Controls.Add(this.cmdGuardarFamilia);
             this.groupBox4.Controls.Add(this.treeConfigurarFamilia);
-            this.groupBox4.Location = new System.Drawing.Point(540, 37);
+            this.groupBox4.Location = new System.Drawing.Point(286, 297);
             this.groupBox4.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox4.Size = new System.Drawing.Size(290, 249);
             this.groupBox4.TabIndex = 15;
             this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Configurar Familia";
+            this.groupBox4.Text = "Configurar ";
             // 
             // cmdGuardarFamilia
             // 
@@ -80,7 +90,7 @@ namespace TP_DIPLOMA
             this.cmdGuardarFamilia.Name = "cmdGuardarFamilia";
             this.cmdGuardarFamilia.Size = new System.Drawing.Size(110, 19);
             this.cmdGuardarFamilia.TabIndex = 1;
-            this.cmdGuardarFamilia.Text = "Guardar familia";
+            this.cmdGuardarFamilia.Text = "Guardar ";
             this.cmdGuardarFamilia.UseVisualStyleBackColor = true;
             this.cmdGuardarFamilia.Click += new System.EventHandler(this.cmdGuardarFamilia_Click);
             // 
@@ -100,7 +110,7 @@ namespace TP_DIPLOMA
             this.groupBox2.Controls.Add(this.groupBox3);
             this.groupBox2.Controls.Add(this.cboFamilias);
             this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Location = new System.Drawing.Point(269, 37);
+            this.groupBox2.Location = new System.Drawing.Point(318, 37);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
@@ -306,11 +316,102 @@ namespace TP_DIPLOMA
             this.label1.TabIndex = 0;
             this.label1.Text = "Permiso";
             // 
+            // groupBox5
+            // 
+            this.groupBox5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("groupBox5.BackgroundImage")));
+            this.groupBox5.Controls.Add(this.btnconfigurarperfiles);
+            this.groupBox5.Controls.Add(this.groupBox6);
+            this.groupBox5.Controls.Add(this.cmbperfiles);
+            this.groupBox5.Controls.Add(this.label7);
+            this.groupBox5.Location = new System.Drawing.Point(13, 297);
+            this.groupBox5.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox5.Size = new System.Drawing.Size(258, 249);
+            this.groupBox5.TabIndex = 15;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Perfiles";
+            // 
+            // btnconfigurarperfiles
+            // 
+            this.btnconfigurarperfiles.Location = new System.Drawing.Point(14, 63);
+            this.btnconfigurarperfiles.Margin = new System.Windows.Forms.Padding(2);
+            this.btnconfigurarperfiles.Name = "btnconfigurarperfiles";
+            this.btnconfigurarperfiles.Size = new System.Drawing.Size(98, 32);
+            this.btnconfigurarperfiles.TabIndex = 11;
+            this.btnconfigurarperfiles.Text = "Configurar";
+            this.btnconfigurarperfiles.UseVisualStyleBackColor = true;
+            this.btnconfigurarperfiles.Click += new System.EventHandler(this.btnconfigurarperfiles_Click);
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.button3);
+            this.groupBox6.Controls.Add(this.textBox1);
+            this.groupBox6.Controls.Add(this.label6);
+            this.groupBox6.Location = new System.Drawing.Point(15, 99);
+            this.groupBox6.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox6.Size = new System.Drawing.Size(232, 93);
+            this.groupBox6.TabIndex = 9;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "Nueva";
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(11, 61);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(56, 19);
+            this.button3.TabIndex = 4;
+            this.button3.Text = "Guardar";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(11, 37);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(174, 20);
+            this.textBox1.TabIndex = 3;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(9, 20);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(44, 13);
+            this.label6.TabIndex = 2;
+            this.label6.Text = "Nombre";
+            // 
+            // cmbperfiles
+            // 
+            this.cmbperfiles.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbperfiles.FormattingEnabled = true;
+            this.cmbperfiles.Location = new System.Drawing.Point(15, 39);
+            this.cmbperfiles.Margin = new System.Windows.Forms.Padding(2);
+            this.cmbperfiles.Name = "cmbperfiles";
+            this.cmbperfiles.Size = new System.Drawing.Size(234, 21);
+            this.cmbperfiles.TabIndex = 8;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(13, 23);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(89, 13);
+            this.label7.TabIndex = 7;
+            this.label7.Text = "Todos los perfiles";
+            // 
             // Permisos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(857, 309);
+            this.ClientSize = new System.Drawing.Size(587, 561);
+            this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.grpPatentes);
@@ -326,6 +427,10 @@ namespace TP_DIPLOMA
             this.grpPatentes.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -354,5 +459,13 @@ namespace TP_DIPLOMA
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cboPermisos;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.Button btnconfigurarperfiles;
+        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox cmbperfiles;
+        private System.Windows.Forms.Label label7;
     }
 }

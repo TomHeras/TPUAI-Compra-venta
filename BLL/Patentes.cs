@@ -23,7 +23,10 @@ namespace BLL
             pate = new DAL.Patentes();
         }
 
-
+        public Componente GuardarComponentePerfil(Componente p, string esfamilia)
+        {
+            return pate.GuardarComponentePerfil(p, esfamilia);
+        }
         public Componente guardarcomponente(Componente c, bool flia)
         {
             return pate.GuardarComponente(c, flia);
@@ -44,6 +47,10 @@ namespace BLL
             return pate.obtenerpermisos();
         }
 
+        public IList<Familia> GetAllPerfiles()
+        {
+            return pate.traerPerfiles();
+        }
 
 
         public IList<Componente> GetAll(string familia)

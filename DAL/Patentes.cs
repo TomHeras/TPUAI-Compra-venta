@@ -448,5 +448,65 @@ namespace DAL
             }
         }
 
+        public Componente GuardarComponentePerfil(Componente p, string esfamilia)
+        {
+            try
+            {
+                var cnn = new SqlConnection(acceso.crearconeion());
+                cnn.Open();
+                var cmd = new SqlCommand();
+                cmd.Connection = cnn;
+                var sql = $@"insert into Patente (PatNom,PatDesc) values (@nombre,@descripcion);  SELECT IdPat AS LastId_patente FROM Patente WHERE IdPat = @@Identity;       ";
+                cmd.CommandText = sql;
+                cmd.Parameters.Add(new SqlParameter("nombre", p.Nombre));
+
+
+                if (esfamilia=="")
+                    cmd.Parameters.Add(new SqlParameter("descripcion", DBNull.Value));
+
+                else
+                    cmd.Parameters.Add(new SqlParameter("descripcion", esfamilia.ToString()));
+
+                var id = cmd.ExecuteScalar();
+                p.Id = (int)id;
+                return p;
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+
+        public IList<Familia> traerPerfiles()
+        {
+            var cnn = new SqlConnection(acceso.crearconeion());
+            cnn.Open();
+            var cmd = new SqlCommand();
+            cmd.Connection = cnn;
+
+            var sql = $@"select * from Patente p where p.PatDesc =  'Perfil';";
+
+            cmd.CommandText = sql;
+
+            var reader = cmd.ExecuteReader();
+
+            var lista = new List<Familia>();
+
+            while (reader.Read())
+            {
+
+                var id = reader.GetInt32(reader.GetOrdinal("IdPat"));
+                var nombre = reader.GetString(reader.GetOrdinal("PatNom"));
+
+                Familia c = new Familia();
+                c.Id = id;
+                c.Nombre = nombre;
+                lista.Add(c);
+            }
+            reader.Close();
+            cnn.Close();
+            return lista;
+        }
+
     }
 }

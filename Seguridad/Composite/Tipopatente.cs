@@ -8,6 +8,7 @@ namespace Seguridad.Composite
 {
    public enum Tipopatente
     {
+       
         //acceder
         puedeaccederidioma,
         puedecambiarclave,//lo ponemos de una xq el usuario debe poder cambiarlo si o si
@@ -31,7 +32,7 @@ namespace Seguridad.Composite
         puedeverprecios,
         puedervercl,   
         puederverprov, //repositor
-
+        perfil,
 
     }
 }
