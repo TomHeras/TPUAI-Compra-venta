@@ -21,7 +21,7 @@ namespace DAL
             var cmd = new SqlCommand();
             cmd.Connection = cnn;
 
-            var sql = $@"select * from Patente p where p.PatDesc is not null;";
+            var sql = $@"select * from Patente p where p.PatDesc is not null AND p.PatDesc != 'perfil';";
 
             cmd.CommandText = sql;
 

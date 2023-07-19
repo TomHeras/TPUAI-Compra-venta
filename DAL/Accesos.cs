@@ -18,13 +18,24 @@ namespace DAL
             //cs.IntegratedSecurity = true;
             //cs.DataSource = ".";
             //cs.InitialCatalog = "MyCompany";
-            cs.ConnectionString = @"Data Source=DESKTOP-QI5JC7C\TOOM;Initial Catalog=TPMODELOS;Integrated Security=True";//revisar  base de datos
-
+            cs.ConnectionString = @"Data Source=DESKTOP-QI5JC7C\TOOM;Initial Catalog=TPDIPLOMA;Integrated Security=True";//revisar  base de datos
+            //AR2482453W1\SQLEXPRESS CAMBIAR ESTE PARA LA BASE DE DATOS DE LA NOTEBOOK
+            //DESKTOP-QI5JC7C\TOOM Escritorio
+            //////DESKTOP-81ATIN0\SQLEXPRESS Note MERK
+            // CAMBIAR CONECTIONG STRING DE LAS COMBOBOX SINO PINCHA
 
             return cs.ConnectionString; 
         }
 
-
+        public void abrirconexion()
+        {
+            conexion.ConnectionString = @"Data Source=Data Source=DESKTOP-QI5JC7C\TOOM;Initial Catalog=TPDIPLOMA;Integrated Security=True";
+            conexion.Open();
+        }
+        public void cerrarconexion()
+        {
+            conexion.Close();
+        }
         public DataTable Leer(string NombreProcedimiento, SqlParameter[] parametros)
         {
             SqlConnection sql = new SqlConnection();
@@ -73,14 +84,27 @@ namespace DAL
 
         public void ejecutarconsulta(string consulta)
         {
-            crearconeion();
+            cerrarconexion();
+            abrirconexion();
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = conexion;
             cmd.CommandText = consulta;
             cmd.ExecuteNonQuery();
-            crearconeion();
+            cerrarconexion();
         }
+        
 
+        public DataSet EjecutarConsultaDStabla( string consulta, string tabla)
+        {
+            DataSet DS = new DataSet();
+            SqlCommand Com = new SqlCommand();
+            abrirconexion();
+            DS = new DataSet();
+            SqlDataAdapter DA = new SqlDataAdapter(consulta, conexion);
+            DA.Fill(DS, tabla);
+            cerrarconexion();
+            return DS;
+        }
         public string escribir(string st, SqlParameter[] parametros)
         {
             SqlConnection sql = new SqlConnection();

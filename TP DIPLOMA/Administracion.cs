@@ -20,15 +20,15 @@ namespace TP_DIPLOMA
     {
         private int childFormNumber = 0;
 
-         BLL.Usuarios GetUsuarios = new BLL.Usuarios();
-         BLL.Patentes gestorpatentes = new BLL.Patentes();
-         Patente_Usuario permisos = new Patente_Usuario();
+        BLL.Usuarios GetUsuarios = new BLL.Usuarios();
+        BLL.Patentes gestorpatentes = new BLL.Patentes();
+        Patente_Usuario permisos = new Patente_Usuario();
         BLL.Traductor tradu;
 
         public Administracion()
         {
             InitializeComponent();
-            validarpermisos();
+            //validarpermisos();
 
             GetUsuarios = new BLL.Usuarios();
             permisos = new Patente_Usuario();
@@ -38,12 +38,12 @@ namespace TP_DIPLOMA
             MostrarIdiomas();
             MarcarIdioma();
             Traducir();
-            
+
 
         }
 
 
-       
+
 
         public void validarpermisos()
         {
@@ -51,9 +51,9 @@ namespace TP_DIPLOMA
             foreach (var item in lista)
             {
 
-                if (SingletonSesion.Instancia.Usuario.usuario==item.Usuarios)
+                if (SingletonSesion.Instancia.Usuario.usuario == item.Usuarios)
                 {
-                    
+
                     permisos.Idusuarios = item.Idusuario;
                     permisos.Nombre = item.Usuarios;
 
@@ -62,9 +62,9 @@ namespace TP_DIPLOMA
                     tooltripselec.Visible = gestorpatentes.BuscarPermisos(Tipopatente.puederverselecidioma, permisos);
                     //soloadmin
                     tooltripgestionidioma.Visible = gestorpatentes.BuscarPermisos(Tipopatente.puedervergestionaridioma, permisos);
-                    tooltriplista.Visible= gestorpatentes.BuscarPermisos(Tipopatente.puedervergestionaridioma, permisos);
+                    tooltriplista.Visible = gestorpatentes.BuscarPermisos(Tipopatente.puedervergestionaridioma, permisos);
                     //propio de todos los usuarios
-                    cambiarClaveToolStripMenuItem.Visible= gestorpatentes.BuscarPermisos(Tipopatente.puedecambiarclave, permisos);
+                    cambiarClaveToolStripMenuItem.Visible = gestorpatentes.BuscarPermisos(Tipopatente.puedecambiarclave, permisos);
 
                     //solo usuarios tipo admin
                     smiseguridad.Visible = gestorpatentes.BuscarPermisos(Tipopatente.puedeaccederseguridad, permisos);
@@ -72,28 +72,37 @@ namespace TP_DIPLOMA
                     tooltrippermisos.Visible = gestorpatentes.BuscarPermisos(Tipopatente.puederverperfiles, permisos);
                     tooltrippermisousuario.Visible = gestorpatentes.BuscarPermisos(Tipopatente.puederverasignacion, permisos);
                     //esto se separa por seguridad, un admin puede registrar nuevos usuarios, pero solo el DBA puede asignar permisos y crearlos, ademas de crear usuarios
-                    tsmabmusuarios.Visible= gestorpatentes.BuscarPermisos(Tipopatente.puederverabmusuarios, permisos);
+                    tsmabmusuarios.Visible = gestorpatentes.BuscarPermisos(Tipopatente.puederverabmusuarios, permisos);
 
 
-                    negocioToolStripMenuItem.Visible= gestorpatentes.BuscarPermisos(Tipopatente.puedeaccedernegocio, permisos);
+                    negocioToolStripMenuItem.Visible = gestorpatentes.BuscarPermisos(Tipopatente.puedeaccedernegocio, permisos);
 
+<<<<<<< HEAD
+                    cobrosToolStripMenuItem.Visible = gestorpatentes.BuscarPermisos(Tipopatente.puederverventas, permisos);
+                    carritoToolStripMenuItem.Visible = gestorpatentes.BuscarPermisos(Tipopatente.puedervercarrito, permisos);
+                    facturacionToolStripMenuItem.Visible = gestorpatentes.BuscarPermisos(Tipopatente.puedeverfacturacion, permisos);
+=======
                     cobrosToolStripMenuItem.Visible= gestorpatentes.BuscarPermisos(Tipopatente.puederverventas, permisos);
                     carritoToolStripMenuItem.Visible= gestorpatentes.BuscarPermisos(Tipopatente.puedervercarrito, permisos);
                     facturacionToolStripMenuItem.Visible= gestorpatentes.BuscarPermisos(Tipopatente.puedeverfacturacion, permisos);
-                    comprasToolStripMenuItem.Visible= gestorpatentes.BuscarPermisos(Tipopatente.puedevercompras, permisos);
+                    
+>>>>>>> ae908eba2451935d0e21c831547748aa93a071bd
 
-                    maestrosToolStripMenuItem.Visible= gestorpatentes.BuscarPermisos(Tipopatente.puedeaccedermaestros, permisos);
-                    stockToolStripMenuItem.Visible= gestorpatentes.BuscarPermisos(Tipopatente.puedeaccedermaestros, permisos);
-                    productosToolStripMenuItem.Visible= gestorpatentes.BuscarPermisos(Tipopatente.puederverproudctos, permisos);
-                    preciosToolStripMenuItem.Visible = gestorpatentes.BuscarPermisos(Tipopatente.puedeverprecios, permisos);
+
+                    maestrosToolStripMenuItem.Visible = gestorpatentes.BuscarPermisos(Tipopatente.puedeaccedermaestros, permisos);
+                    stockToolStripMenuItem.Visible = gestorpatentes.BuscarPermisos(Tipopatente.puedeaccedermaestros, permisos);
+                    productosToolStripMenuItem.Visible = gestorpatentes.BuscarPermisos(Tipopatente.puederverproudctos, permisos);
+                    //preciosToolStripMenuItem.Visible = gestorpatentes.BuscarPermisos(Tipopatente.puedeverprecios, permisos);
 
                     clientesToolStripMenuItem.Visible = gestorpatentes.BuscarPermisos(Tipopatente.puedervercl, permisos);
                     proveedoresToolStripMenuItem.Visible = gestorpatentes.BuscarPermisos(Tipopatente.puederverprov, permisos);
 
+                    respaldosToolStripMenuItem.Visible = gestorpatentes.BuscarPermisos(Tipopatente.backup, permisos);
+
 
 
                 }
-                
+
 
 
             }
@@ -132,7 +141,11 @@ namespace TP_DIPLOMA
 
         private void Administracion_Load(object sender, EventArgs e)
         {
-            SingletonSesion.Instancia.SuscribirObservador(this);            
+            SingletonSesion.Instancia.SuscribirObservador(this);
+<<<<<<< HEAD
+=======
+            
+>>>>>>> ae908eba2451935d0e21c831547748aa93a071bd
         }
 
         private void Administracion_FormClosing(object sender, FormClosingEventArgs e)
@@ -242,42 +255,42 @@ namespace TP_DIPLOMA
             //if (mnugesusu.Tag != null && traducciones.ContainsKey(mnugesusu.Tag.ToString()))
             //    this.mnugesusu.Text = traducciones[mnugesusu.Tag.ToString()].Texto;
 
-            
+
             if (negocioToolStripMenuItem.Tag != null && traducciones.ContainsKey(negocioToolStripMenuItem.Tag.ToString()))
-            this.negocioToolStripMenuItem.Text = traducciones[negocioToolStripMenuItem.Tag.ToString()].Texto;
-            
+                this.negocioToolStripMenuItem.Text = traducciones[negocioToolStripMenuItem.Tag.ToString()].Texto;
+
             if (clientesToolStripMenuItem.Tag != null && traducciones.ContainsKey(clientesToolStripMenuItem.Tag.ToString()))
                 this.clientesToolStripMenuItem.Text = traducciones[clientesToolStripMenuItem.Tag.ToString()].Texto;
-            
+
             if (clientesToolStripMenuItem.Tag != null && traducciones.ContainsKey(clientesToolStripMenuItem.Tag.ToString()))
                 this.clientesToolStripMenuItem.Text = traducciones[clientesToolStripMenuItem.Tag.ToString()].Texto;
-            
+
             if (tooltrippermisos.Tag != null && traducciones.ContainsKey(tooltrippermisos.Tag.ToString()))
                 this.tooltrippermisos.Text = traducciones[tooltrippermisos.Tag.ToString()].Texto;
-            
+
             if (tooltrippermisousuario.Tag != null && traducciones.ContainsKey(tooltrippermisousuario.Tag.ToString()))
                 this.tooltrippermisousuario.Text = traducciones[tooltrippermisousuario.Tag.ToString()].Texto;
-            
+
             if (tsmabmusuarios.Tag != null && traducciones.ContainsKey(tsmabmusuarios.Tag.ToString()))  //no entro
                 this.tsmabmusuarios.Text = traducciones[tsmabmusuarios.Tag.ToString()].Texto;
-            
+
             if (ventasToolStripMenuItem.Tag != null && traducciones.ContainsKey(ventasToolStripMenuItem.Tag.ToString()))//no entro
                 this.ventasToolStripMenuItem.Text = traducciones[ventasToolStripMenuItem.Tag.ToString()].Texto;
-            
+
             if (carritoToolStripMenuItem.Tag != null && traducciones.ContainsKey(carritoToolStripMenuItem.Tag.ToString()))//no entro
                 this.carritoToolStripMenuItem.Text = traducciones[carritoToolStripMenuItem.Tag.ToString()].Texto;
-            
+
             if (facturacionToolStripMenuItem.Tag != null && traducciones.ContainsKey(facturacionToolStripMenuItem.Tag.ToString()))
                 this.facturacionToolStripMenuItem.Text = traducciones[facturacionToolStripMenuItem.Tag.ToString()].Texto;
-            
+
             if (facturasToolStripMenuItem.Tag != null && traducciones.ContainsKey(facturasToolStripMenuItem.Tag.ToString()))
                 this.facturasToolStripMenuItem.Text = traducciones[facturasToolStripMenuItem.Tag.ToString()].Texto;
-            
+
             if (cobrosToolStripMenuItem.Tag != null && traducciones.ContainsKey(cobrosToolStripMenuItem.Tag.ToString()))
                 this.cobrosToolStripMenuItem.Text = traducciones[cobrosToolStripMenuItem.Tag.ToString()].Texto;
-           
-            if(maestrosToolStripMenuItem.Tag != null && traducciones.ContainsKey(maestrosToolStripMenuItem.Tag.ToString()))
-            this.maestrosToolStripMenuItem.Text = traducciones[maestrosToolStripMenuItem.Tag.ToString()].Texto;
+
+            if (maestrosToolStripMenuItem.Tag != null && traducciones.ContainsKey(maestrosToolStripMenuItem.Tag.ToString()))
+                this.maestrosToolStripMenuItem.Text = traducciones[maestrosToolStripMenuItem.Tag.ToString()].Texto;
 
             if (usuarioToolStripMenuItem.Tag != null && traducciones.ContainsKey(usuarioToolStripMenuItem.Tag.ToString()))
                 this.usuarioToolStripMenuItem.Text = traducciones[usuarioToolStripMenuItem.Tag.ToString()].Texto;
@@ -292,7 +305,7 @@ namespace TP_DIPLOMA
                 this.cambiarClaveToolStripMenuItem.Text = traducciones[cambiarClaveToolStripMenuItem.Tag.ToString()].Texto;
 
 
-            
+
 
             // entonces el texto del menu va a ser igual a lo que hay en traducciones 
 
@@ -315,18 +328,20 @@ namespace TP_DIPLOMA
             MostrarIdiomas();
         }
 
-      
+
 
         private void mnulogut_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("¿Está seguro?", "Confirme", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
+                CargarBitacora(SingletonSesion.Instancia.Usuario.usuario, "Cierre de sesion", "Baja", "LOGOUT");
                 GetUsuarios.Logout();
-               
+
                 ValidarForm();
-                LOGIN frm= new LOGIN();    
+                LOGIN frm = new LOGIN();
                 frm.Show();
                 this.Hide();
+
             }
         }
 
@@ -347,9 +362,7 @@ namespace TP_DIPLOMA
 
         private void respaldoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Backupres bcp = new Backupres();
-            bcp.MdiParent = this;
-            bcp.Show();
+
 
         }
 
@@ -395,12 +408,12 @@ namespace TP_DIPLOMA
 
         private void ventasToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void facturacionToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           
+
         }
 
         private void gestionDeUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
@@ -429,6 +442,116 @@ namespace TP_DIPLOMA
             CambiarCave password = new CambiarCave();
             password.MdiParent = this;
             password.Show();
+        }
+
+<<<<<<< HEAD
+        private void bitacoraToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void reporteDeVentasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Reporte1 repo = new Reporte1();
+            repo.MdiParent = this;
+            repo.Show();
+        }
+
+        private void proveedoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Maestros.Proveedores prov = new Maestros.Proveedores();
+            prov.MdiParent = this;
+            prov.Show();
+        }
+
+        BLL.Bitacora gestorbitacora = new BLL.Bitacora();
+        BE.Bitacora BitacoraTemp;
+
+        void CargarBitacora(string Nick, string Descripcion, string Criticidad, string modulo)
+        {
+            BitacoraTemp = new BE.Bitacora();
+
+            BitacoraTemp.NickUsuario = Nick;
+            BitacoraTemp.Fecha = DateTime.Now;
+            //BitacoraTemp.Hora = DateTime.Parse( DateTime.Now.ToShortTimeString());
+            BitacoraTemp.Modulo = modulo;
+            BitacoraTemp.Descripcion = Descripcion;
+            BitacoraTemp.Criticidad = Criticidad;
+
+            gestorbitacora.InsertarBitacora(BitacoraTemp);
+        }
+
+        private void bitacoraDeEventosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Bitacora bitc = new Bitacora();
+            bitc.MdiParent = this;
+            bitc.Show();
+        }
+
+        private void respaldosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BACKUP bckres = new BACKUP();
+            bckres.MdiParent = this;
+            bckres.Show();
+        }
+
+        private void comprasToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Comprar solicot = new Comprar();
+            solicot.MdiParent = this;
+            solicot.Show();
+        }
+
+        private void ordenesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Ordenes ordenes = new Ordenes();
+            ordenes.MdiParent = this;
+            ordenes.Show();
+
+
+
+        }
+
+        private void detallesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Negocio.DetallesCompras details = new Negocio.DetallesCompras();
+            details.MdiParent = this;
+            details.Show();
+        }
+
+        private void ordenesDeCompraToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Negocio.OrdeneCompra ordenes = new Negocio.OrdeneCompra();
+            ordenes.MdiParent = this;
+            ordenes.Show();
+        }
+
+        private void bitacoraDeCambiosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BitacoraCambios cam = new BitacoraCambios();
+            cam.MdiParent = this;
+            cam.Show();
+        }
+
+        private void serealizacionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Serealizacion seres = new Serealizacion();
+            seres.MdiParent = this;
+            seres.Show();
+        }
+
+        private void reporteDeComprasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Reporte2 compas = new Reporte2();
+            compas.MdiParent = this;
+            compas.Show();
+=======
+        private void reporteDeVentasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Reportes.Reporte_Ventas venta = new Reportes.Reporte_Ventas();
+            venta.MdiParent = this;
+            venta.Show();
+>>>>>>> ae908eba2451935d0e21c831547748aa93a071bd
         }
     }
 }

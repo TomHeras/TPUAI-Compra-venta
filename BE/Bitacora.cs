@@ -23,12 +23,28 @@ namespace BE
             set { _fecha = value; }
         }
 
+        //private DateTime hora;
+
+        //public DateTime Hora
+        //{
+        //    get { return hora; }
+        //    set { hora = value; }
+        //}
+
         private string _desc;
 
-        public string Descripcion
+        public string Descripcion//operacion
         {
             get { return _desc; }
             set { _desc = value; }
+        }
+
+        private string modulo;
+
+        public string Modulo
+        {
+            get { return modulo; }
+            set { modulo = value; }
         }
 
         private string _crit;
@@ -38,5 +54,13 @@ namespace BE
             get { return _crit; }
             set { _crit = value; }
         }
+        private int idreg;
+
+        public int IDREG
+        {
+            get { return idreg; }
+            set { idreg = value; }
+        }
+
     }
 }

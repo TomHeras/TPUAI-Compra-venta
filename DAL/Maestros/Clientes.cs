@@ -35,11 +35,11 @@ namespace DAL.Maestros
         {
             string fa ;
 
-            SqlParameter[] parametros = new SqlParameter[3];
+            SqlParameter[] parametros = new SqlParameter[4];
             parametros[0] = new SqlParameter("@nombre", cliente.Nombre);
             parametros[1] = new SqlParameter("@direccion", cliente.Direccion);
             parametros[2] = new SqlParameter("@telefono", cliente.Telefono);
-          
+            parametros[3] = new SqlParameter("@DVH", cliente.DVH);
             fa = acces.Escribir("altacliente", parametros);
             return fa;
         }

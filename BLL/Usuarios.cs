@@ -68,7 +68,12 @@ namespace BLL
 
             return fa;
         }
+        public int DVH()
+        {
+            int fa = Mapper.DV();
 
+            return fa;
+        }
 
         public string CambiarContraseña(BE.userauxiliar userpas)
         {
@@ -84,6 +89,13 @@ namespace BLL
             fa = Mapper.EditarEstado(user);
 
             return fa;
+        }
+
+
+        public List<BE.Usuario> Listarnicks()
+        {
+            List<BE.Usuario> listausu = Mapper.traernicks();
+            return listausu;
         }
     }
 }

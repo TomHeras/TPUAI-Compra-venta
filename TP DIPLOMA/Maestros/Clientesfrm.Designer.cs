@@ -45,18 +45,20 @@ namespace TP_DIPLOMA.Maestros
             // 
             this.controlUsuario1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("controlUsuario1.BackgroundImage")));
             this.controlUsuario1.Etiqueta = "Nombre";
-            this.controlUsuario1.Location = new System.Drawing.Point(23, 57);
+            this.controlUsuario1.Location = new System.Drawing.Point(31, 70);
+            this.controlUsuario1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.controlUsuario1.Name = "controlUsuario1";
-            this.controlUsuario1.Size = new System.Drawing.Size(178, 45);
+            this.controlUsuario1.Size = new System.Drawing.Size(237, 55);
             this.controlUsuario1.TabIndex = 0;
             this.controlUsuario1.Texto = "";
             // 
             // lblidcl
             // 
             this.lblidcl.AutoSize = true;
-            this.lblidcl.Location = new System.Drawing.Point(92, 24);
+            this.lblidcl.Location = new System.Drawing.Point(123, 30);
+            this.lblidcl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblidcl.Name = "lblidcl";
-            this.lblidcl.Size = new System.Drawing.Size(58, 13);
+            this.lblidcl.Size = new System.Drawing.Size(76, 17);
             this.lblidcl.TabIndex = 19;
             this.lblidcl.Text = ".................";
             this.lblidcl.Visible = false;
@@ -65,9 +67,10 @@ namespace TP_DIPLOMA.Maestros
             // 
             this.controlUsuario2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("controlUsuario2.BackgroundImage")));
             this.controlUsuario2.Etiqueta = "Direccion";
-            this.controlUsuario2.Location = new System.Drawing.Point(23, 120);
+            this.controlUsuario2.Location = new System.Drawing.Point(31, 148);
+            this.controlUsuario2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.controlUsuario2.Name = "controlUsuario2";
-            this.controlUsuario2.Size = new System.Drawing.Size(178, 45);
+            this.controlUsuario2.Size = new System.Drawing.Size(237, 55);
             this.controlUsuario2.TabIndex = 20;
             this.controlUsuario2.Texto = "";
             // 
@@ -75,17 +78,19 @@ namespace TP_DIPLOMA.Maestros
             // 
             this.controlUsuario3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("controlUsuario3.BackgroundImage")));
             this.controlUsuario3.Etiqueta = "Telefono";
-            this.controlUsuario3.Location = new System.Drawing.Point(23, 192);
+            this.controlUsuario3.Location = new System.Drawing.Point(31, 236);
+            this.controlUsuario3.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.controlUsuario3.Name = "controlUsuario3";
-            this.controlUsuario3.Size = new System.Drawing.Size(178, 45);
+            this.controlUsuario3.Size = new System.Drawing.Size(237, 55);
             this.controlUsuario3.TabIndex = 21;
             this.controlUsuario3.Texto = "";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(23, 280);
+            this.button1.Location = new System.Drawing.Point(31, 345);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(100, 28);
             this.button1.TabIndex = 22;
             this.button1.Text = "Resgitrar";
             this.button1.UseVisualStyleBackColor = true;
@@ -93,9 +98,10 @@ namespace TP_DIPLOMA.Maestros
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(95, 337);
+            this.button2.Location = new System.Drawing.Point(127, 415);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.Size = new System.Drawing.Size(100, 28);
             this.button2.TabIndex = 23;
             this.button2.Text = "Editar";
             this.button2.UseVisualStyleBackColor = true;
@@ -103,9 +109,10 @@ namespace TP_DIPLOMA.Maestros
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(159, 280);
+            this.button3.Location = new System.Drawing.Point(212, 345);
+            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.Size = new System.Drawing.Size(100, 28);
             this.button3.TabIndex = 24;
             this.button3.Text = "Borrar";
             this.button3.UseVisualStyleBackColor = true;
@@ -114,17 +121,19 @@ namespace TP_DIPLOMA.Maestros
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(303, 57);
+            this.dataGridView1.Location = new System.Drawing.Point(404, 70);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(428, 317);
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.Size = new System.Drawing.Size(571, 390);
             this.dataGridView1.TabIndex = 25;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // Clientesfrm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(746, 402);
+            this.ClientSize = new System.Drawing.Size(995, 495);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -133,6 +142,7 @@ namespace TP_DIPLOMA.Maestros
             this.Controls.Add(this.controlUsuario2);
             this.Controls.Add(this.lblidcl);
             this.Controls.Add(this.controlUsuario1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Clientesfrm";
             this.Text = "Clientesfrm";
             this.Load += new System.EventHandler(this.Clientesfrm_Load);

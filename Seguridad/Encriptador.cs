@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Security.Cryptography;
 
+
+
 namespace Seguridad
 {
     public class Encriptador
@@ -15,7 +17,7 @@ namespace Seguridad
             var md5data = md5.ComputeHash(Encoding.ASCII.GetBytes(value));
             return (new ASCIIEncoding()).GetString(md5data);
         }
-
+        
         public static object Hash(object password)
         {
             throw new NotImplementedException();

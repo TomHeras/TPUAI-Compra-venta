@@ -44,15 +44,17 @@
   <ItemGroup>
     <Compile Include="Accesos.cs" />
     <Compile Include="Bitacora.cs" />
-    <Compile Include="Digitos.cs" />
     <Compile Include="DV.cs" />
+    <Compile Include="Estado.cs" />
     <Compile Include="Idioma.cs" />
     <Compile Include="Maestros\Clientes.cs" />
     <Compile Include="Maestros\Precios.cs" />
     <Compile Include="Maestros\Productos.cs" />
+    <Compile Include="Maestros\Proveedores.cs" />
     <Compile Include="Negocio\pedidos.cs" />
     <Compile Include="Patentes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="prov_prov.cs" />
     <Compile Include="Usuario.cs" />
   </ItemGroup>
   <ItemGroup>

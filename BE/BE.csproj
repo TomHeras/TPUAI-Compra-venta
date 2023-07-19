@@ -41,7 +41,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AuxiliarRelaionarPP.cs" />
     <Compile Include="Bitacora.cs" />
+    <Compile Include="BitacoraCAbmios.cs" />
+    <Compile Include="compra.cs" />
+    <Compile Include="ComprasDEt.cs" />
+    <Compile Include="Cotizacion.cs" />
     <Compile Include="Etiquetas.cs" />
     <Compile Include="IEtiqueta.cs" />
     <Compile Include="Iidioma.cs" />
@@ -50,6 +55,7 @@
     <Compile Include="Maestros\Clientes.cs" />
     <Compile Include="Maestros\Precios.cs" />
     <Compile Include="Maestros\Productos.cs" />
+    <Compile Include="Maestros\Proveedores.cs" />
     <Compile Include="Negocio\Carrito.cs" />
     <Compile Include="Negocio\Estado.cs" />
     <Compile Include="Negocio\Pedido_Cab.cs" />

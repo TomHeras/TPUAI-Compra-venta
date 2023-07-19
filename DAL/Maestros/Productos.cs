@@ -15,10 +15,12 @@ namespace DAL.Maestros
         {
             string fa;
 
-            SqlParameter[] parametros = new SqlParameter[3];
+            SqlParameter[] parametros = new SqlParameter[5];
             parametros[0] = new SqlParameter("@medidas", produ.Medidas);
             parametros[1] = new SqlParameter("@cantidad", produ.Cantidad);
             parametros[2] = new SqlParameter("@tipo", produ.Tipo);
+            parametros[3] = new SqlParameter("@precio", produ.Precio);
+            parametros[4] = new SqlParameter("@DVH", produ.DVH);
             fa = acces.Escribir("altaproducto", parametros);
 
             return fa;
@@ -37,11 +39,12 @@ namespace DAL.Maestros
         public string modificar(BE.Maestros.Productos stock) // Modificar productos
         {
             string fa;
-            SqlParameter[] parametros = new SqlParameter[4];
+            SqlParameter[] parametros = new SqlParameter[5];
             parametros[0] = new SqlParameter("@IDprod", stock.ID_producto);
             parametros[1] = new SqlParameter("@medidas", stock.Medidas);
             parametros[2] = new SqlParameter("@cantidad", stock.Cantidad);
             parametros[3] = new SqlParameter("@Tipo", stock.Tipo);
+            parametros[4] = new SqlParameter("@precio", stock.Precio);
             fa = acces.Escribir("editarproducto", parametros);
             return fa;
         }
@@ -58,6 +61,7 @@ namespace DAL.Maestros
                 sto.Medidas = double.Parse(registro["medidas"].ToString());
                 sto.Cantidad = int.Parse(registro["cantidad"].ToString());
                 sto.Tipo = registro["Tipo"].ToString();
+                sto.Precio= double.Parse(registro["precio"].ToString());
                 stok.Add(sto);
             }
             return stok;
@@ -82,7 +86,9 @@ namespace DAL.Maestros
 
         public void llenar()
         {
+            
             acces.Leer("llenartabla", null);
+            acces.ejecutarconsulta("update Precios set DVH=0 ");
         }
         public void cambiara0()
         {

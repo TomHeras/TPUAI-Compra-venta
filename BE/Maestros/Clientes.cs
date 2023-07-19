@@ -40,6 +40,13 @@ namespace BE.Maestros
             get { return telefono; }
             set { telefono = value; }
         }
+        private int dvh;
+
+        public int DVH
+        {
+            get { return dvh; }
+            set { dvh = value; }
+        }
 
     }
 }

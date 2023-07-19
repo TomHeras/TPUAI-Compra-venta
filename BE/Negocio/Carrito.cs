@@ -61,5 +61,7 @@ namespace BE.Negocio
             Cant = cantida;
             costo = Costo;
         }
+
+        
     }
 }

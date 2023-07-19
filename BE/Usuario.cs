@@ -42,8 +42,16 @@ namespace BE
                 set { nombre = value; }
             }
 
+            private string apellido;
 
-            private string mail;
+            public string Apellido
+            {
+            get { return apellido; }
+            set { apellido = value; }
+            }
+
+
+        private string mail;
 
             public string Mail
             {

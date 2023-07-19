@@ -35,6 +35,18 @@ namespace BLL.Negocio
             return fa;
         }
 
+        public string cotizacion(BE.Cotizacion coti)
+        {
+            string fa;
+            fa = mapper.Cargarcotizacion(coti);
+            return fa;
+        }
+
+        public string ordencompra(BE.ComprasDEt ordencompra)
+        {
+            string fa = mapper.Cargarordencompra(ordencompra);
+            return fa;
+        }
         public List<BE.Negocio.Pedido_Cab> listarcabecera()
         {
             List<BE.Negocio.Pedido_Cab> cab = mapper.listcab();
@@ -45,6 +57,35 @@ namespace BLL.Negocio
         {
             List<BE.Negocio.Pedido_det> det = mapper.listdet();
             return det;
+        }
+
+        public List<BE.ComprasDEt> traerdetallepedido()
+        {
+            List<BE.ComprasDEt> cotizacions = mapper.traercomprasdet();
+
+            return cotizacions;
+        }
+
+        public List<BE.Cotizacion> traercotizaciones()
+        {
+            List<BE.Cotizacion> cotizacions = mapper.cotizaciones();
+
+            return cotizacions;
+        }
+        DAL.Accesos mapper2 = new DAL.Accesos();
+        public void Consulta(string query)
+        {
+            mapper2.ejecutarconsulta(query);
+        }
+
+        public void xmlventa()
+        {
+            mapper.XMLVenta();
+        }
+
+        public void xmlcompra()
+        {
+            mapper.XMLcompra();
         }
     }
 }

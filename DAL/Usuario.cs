@@ -66,6 +66,7 @@ namespace DAL
                 usu.Idusuario = int.Parse(registro["IdUsu"].ToString());                  
                 usu.Nombre= registro["UsuNom"].ToString();
                 usu.Usuarios = registro["UsuNick"].ToString();
+                usu.Apellido = registro["UsuApe"].ToString();
                 usu.Mail = registro["UsuMail"].ToString();
                 usu.Estado = bool.Parse(registro["UsuEstado"].ToString());
                 usu.Baja_logica = bool.Parse(registro["Usubajal"].ToString());
@@ -76,6 +77,20 @@ namespace DAL
             return ListaUsuarios;
         }
 
+        public List<BE.Usuario> traernicks()
+        {
+            List<BE.Usuario> ListaUsuarios = new List<BE.Usuario>();
+            DataTable tabla = acceso.Leer("traernicks", null);
+
+            foreach (DataRow registro in tabla.Rows)
+            {
+                BE.Usuario usu = new BE.Usuario();                
+                usu.Nombre = registro["Usunick"].ToString();                
+                ListaUsuarios.Add(usu);
+            }
+
+            return ListaUsuarios;
+        }
 
         //para gestion de permisos de usuarios
       
@@ -150,23 +165,127 @@ namespace DAL
         public string agregarusuario(BE.Usuario usu)
         {
             string fa;
-            SqlParameter[] parameters = new SqlParameter[8];
+            int nuevoIdusu;
+            SqlParameter[] parameters = new SqlParameter[9];
 
             parameters[0] = new SqlParameter("IdIdioma", usu.Idioma.Id);
             parameters[1] = new SqlParameter("Usunom", usu.Nombre);
-            parameters[2] = new SqlParameter("Usunick", usu.Usuarios);
-            parameters[3] = new SqlParameter("Usupass", usu.Password);
-            parameters[4] = new SqlParameter("Usumail", usu.Mail);
-            parameters[5] = new SqlParameter("Usuestado", usu.Estado);
-            parameters[6] = new SqlParameter("Usubajal", usu.Baja_logica);
-            parameters[7] = new SqlParameter("UsuDVH", usu.UsuDVH);
+            parameters[2] = new SqlParameter("UsuApe", usu.Apellido);
+            parameters[3] = new SqlParameter("Usunick", usu.Usuarios);//NICK
+            parameters[4] = new SqlParameter("Usupass", usu.Password);
+            parameters[5] = new SqlParameter("Usumail", usu.Mail);
+            parameters[6] = new SqlParameter("Usuestado", usu.Estado);
+            parameters[7] = new SqlParameter("Usubajal", usu.Baja_logica);
+            parameters[8] = new SqlParameter("UsuDVH", usu.UsuDVH);
 
             fa = acceso.Escribir("Altausuario2", parameters);
 
+            nuevoIdusu = (ObtenerUltimoIdUsuario());
+
+            // 2. Asignar el Idusu al objeto usuario
+            usu.Idusuario = nuevoIdusu;
+
+            //// 3. Calcular el DVH
+            usu.UsuDVH = ObtenerDVH(usu.Idusuario);
+
+            //// 4. Actualizar el registro con el DVH calculado
+            SqlParameter[] parametersUpdate = new SqlParameter[2];
+            parametersUpdate[0] = new SqlParameter("Idusu", usu.Idusuario);
+            parametersUpdate[1] = new SqlParameter("UsuDVH", usu.UsuDVH);
+
+            fa = acceso.Escribir("ActualizarUsuarioDVH", parametersUpdate);
             return fa;
 
         }
 
+        public int ObtenerUltimoIdUsuario()
+        {
+            int ultimoIdusu = 0; // Valor predeterminado si no se encuentra ningún ID
+
+            // Consulta SQL para obtener el último Idusu
+            string query = "SELECT TOP 1 Idusu FROM Usuarios ORDER BY Idusu DESC";
+
+            // Crear y abrir la conexión a la base de datos
+            using (var cnn = new SqlConnection(acceso.crearconeion()))
+            {
+                using (var command = new SqlCommand(query, cnn))
+                {
+                    try
+                    {
+                        cnn.Open();
+
+                        // Ejecutar la consulta y obtener un lector de datos
+                        using (var reader = command.ExecuteReader())
+                        {
+                            // Leer el primer registro (debería ser el único en este caso)
+                            if (reader.Read())
+                            {
+                                ultimoIdusu = reader.GetInt32(0); // Obtener el valor del primer campo
+                            }
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        // Manejo de errores
+                        Console.WriteLine($"Ocurrió un error: {ex.Message}");
+                    }
+                }
+            }
+
+            return ultimoIdusu;
+        }
+        public int ObtenerDVH(int idusu)
+        {
+            int dvh = 0;
+
+            // Consulta SQL para ejecutar la función CalcularDVHPorId
+            string query = "SELECT dbo.CalcularDVHPorId(@Idusu)";
+
+            // Crear y abrir la conexión a la base de datos
+            using (var cnn = new SqlConnection(acceso.crearconeion()))
+            {
+                using (var command = new SqlCommand(query, cnn))
+                {
+                    // Agregar el parámetro @Idusu
+                    command.Parameters.AddWithValue("@Idusu", idusu);
+
+                    try
+                    {
+                        cnn.Open();
+
+                        // Ejecutar la consulta y obtener el valor
+                        object result = command.ExecuteScalar();
+
+                        // Convertir el resultado a entero
+                        if (result != null && result != DBNull.Value)
+                        {
+                            dvh = Convert.ToInt32(result);
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        // Manejo de errores
+                        Console.WriteLine($"Ocurrió un error: {ex.Message}");
+                    }
+                }
+            }
+
+            return dvh;
+        }
+        private int CalcularDVH(BE.Usuario usu)
+        {
+            // Concatenar los valores de los campos para calcular el DVH
+            string data = $"{usu.Idusuario}{usu.Idioma.Id}{usu.Nombre}{usu.Apellido}{usu.Usuarios}{usu.Password}{usu.Mail}{usu.Estado}{usu.Baja_logica}";
+
+            // Calcular el DVH como suma de los valores ASCII (o usa otro algoritmo)
+            int dvh = 0;
+            foreach (char c in data)
+            {
+                dvh += Convert.ToInt32(c);
+            }
+
+            return dvh;
+        }
         public List<BE.userauxiliar> Listarusuarios()
         {
             //BE.Iidioma iidioma = new BE.Iidioma { Id = 0, Nombre = "", Default = true };
@@ -188,6 +307,7 @@ namespace DAL
                 usu.Idusuario = int.Parse(registro["IdUsu"].ToString());
                 usu.Idioma = x;
                 usu.Nombre = registro["UsuNom"].ToString();
+                usu.Apellido = registro["UsuApe"].ToString();
                 usu.Usuarios = registro["UsuNick"].ToString();
                 usu.Password = registro["Usupass"].ToString();
                 usu.Mail = registro["UsuMail"].ToString();
@@ -197,6 +317,7 @@ namespace DAL
                 useaux.Idusuario = usu.Idusuario;
                 useaux.Idioma2 = x.Id;
                 useaux.Nombre = usu.Nombre;
+                useaux.Apellido = usu.Apellido;
                 useaux.Usuarios = usu.Usuarios;
                 useaux.Password = usu.Password;
                 useaux.Mail = usu.Mail;
@@ -225,19 +346,50 @@ namespace DAL
         {
             string fm;
 
-            SqlParameter[] parameters = new SqlParameter[6];
+            SqlParameter[] parameters = new SqlParameter[7];
             parameters[0] =new SqlParameter("@Idusu",useer.Idusuario);
             parameters[1] = new SqlParameter("@nick", useer.Usuarios);
             parameters[2] = new SqlParameter("@pass", useer.Password);
             parameters[3]=new SqlParameter("@estado",useer.Estado);
             parameters[4] = new SqlParameter("@Idioma", useer.Idioma2);
             parameters[5] = new SqlParameter("@nombre", useer.Nombre);
+            parameters[6] = new SqlParameter("@apellido", useer.Apellido);
 
             fm = acceso.Escribir("editarUSUARIO", parameters);
 
             return fm;
         }
 
-        
+        public int DV()
+        {
+            int total = 0;
+            string query = "SELECT SUM(dbo.CalcularDVHUsuario( IdIdioma,    Usunom,    UsuApe,    Usunick,    Usupass,    Usumail,    Usuestado,    UsubajaL )) AS Total FROM Usuarios";
+
+
+            var cnn = new SqlConnection(acceso.crearconeion());
+            {
+                SqlCommand command = new SqlCommand(query, cnn);
+
+                try
+                {
+                    cnn.Open();
+                    var cmd = new SqlCommand();
+                    SqlDataReader reader = command.ExecuteReader();
+
+                    if (reader.Read())
+                    {
+                        total = reader.GetInt32(0);
+                    }
+                    reader.Close();
+                }
+                catch (Exception ex)
+                {
+
+                    Console.WriteLine("Ocurrio un error", ex.Message);
+                }
+            }
+
+            return total;
+        }
     }
 }

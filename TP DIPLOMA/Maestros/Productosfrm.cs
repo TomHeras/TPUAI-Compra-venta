@@ -64,16 +64,18 @@ namespace TP_DIPLOMA.Maestros
                 tmp.Medidas = double.Parse(ctrlmedidas.Texto);
                 tmp.Cantidad = int.Parse(ctrlcantidad.Texto);
                 tmp.Tipo = ctrltipo.Texto;
+                tmp.Precio = double.Parse(ctlprecio.Texto);
+                tmp.DVH = 0;
                 gestprod.altaprod(tmp);
                 
                 
-                /////// procedimiento para cargar la lista de precios
-                gestprod.llenar();
-                gestprod.update0();
-                ///
+                ///////// procedimiento para cargar la lista de precios
+                //gestprod.llenar();
+                //gestprod.update0();
+                /////aca
 
 
-
+                //DigitosVerificadores();
                 MessageBox.Show("El producto fue registrado  con exito!");
 
                 enlazar();
@@ -84,7 +86,15 @@ namespace TP_DIPLOMA.Maestros
             }
         }
 
-
+        public void DigitosVerificadores()
+        {
+            BLL.Digitos DV = new BLL.Digitos();
+            BLL.Bitacora Bi = new BLL.Bitacora();
+            long dv = 0;
+            dv = DV.DVH("select * from Precios where DVH = 0", "Cursos");
+            Bi.Consultar("update Precios set DVH='" + dv + "' where DVH = 0");
+            DV.InsertarDVV("Precios", "DVH");
+        }
 
         private void button2_Click(object sender, EventArgs e)//borrar productos
         {
@@ -159,7 +169,7 @@ namespace TP_DIPLOMA.Maestros
                             item.Medidas = double.Parse(ctrlmedidas.Texto);
                             item.Cantidad = int.Parse(ctrlcantidad.Texto);
                             item.Tipo = ctrltipo.Texto;
-
+                            item.Precio = double.Parse(ctlprecio.Texto);
                             gestprod.editar_prod(item);
                             ////////
                             //aca van los procedimientos de edicion para la lista de precios agregando un foreach 

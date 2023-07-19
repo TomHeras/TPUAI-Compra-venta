@@ -15,12 +15,13 @@ namespace DAL.Maestros
         public string alta(BE.Maestros.Precios prec)
         {
             string fa ;
-            SqlParameter[] parametros = new SqlParameter[5];
+            SqlParameter[] parametros = new SqlParameter[6];
             parametros[0] = new SqlParameter("@ID_producto", prec.Idprod);
             parametros[1] = new SqlParameter("@detalles", prec.Detalles);
             parametros[2] = new SqlParameter("@precio", prec.Precio);
             parametros[3] = new SqlParameter("@medidas", prec.Medidas);
             parametros[4] = new SqlParameter("@tipo", prec.Tipo);
+            parametros[5] = new SqlParameter("@DVH", prec.DVH);
             fa = acces.Escribir("altaprecio", parametros);
             return fa;
         }

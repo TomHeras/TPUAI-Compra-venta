@@ -58,11 +58,11 @@
     <Compile Include="Administracion.Designer.cs">
       <DependentUpon>Administracion.cs</DependentUpon>
     </Compile>
-    <Compile Include="Backupres.cs">
+    <Compile Include="BACKUP.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Backupres.Designer.cs">
-      <DependentUpon>Backupres.cs</DependentUpon>
+    <Compile Include="BACKUP.Designer.cs">
+      <DependentUpon>BACKUP.cs</DependentUpon>
     </Compile>
     <Compile Include="Bitacora.cs">
       <SubType>Form</SubType>
@@ -70,11 +70,29 @@
     <Compile Include="Bitacora.Designer.cs">
       <DependentUpon>Bitacora.cs</DependentUpon>
     </Compile>
+    <Compile Include="BitacoraCambios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BitacoraCambios.Designer.cs">
+      <DependentUpon>BitacoraCambios.cs</DependentUpon>
+    </Compile>
     <Compile Include="CambiarCave.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CambiarCave.Designer.cs">
       <DependentUpon>CambiarCave.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Comprar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Comprar.Designer.cs">
+      <DependentUpon>Comprar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="COMpras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="COMpras.Designer.cs">
+      <DependentUpon>COMpras.cs</DependentUpon>
     </Compile>
     <Compile Include="ControlUsuario.cs">
       <SubType>UserControl</SubType>
@@ -82,17 +100,32 @@
     <Compile Include="ControlUsuario.Designer.cs">
       <DependentUpon>ControlUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="CotizaYDetalle.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CotizaYDetalle.xsd</DependentUpon>
+    </Compile>
     <Compile Include="CotrolPass.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="CotrolPass.Designer.cs">
       <DependentUpon>CotrolPass.cs</DependentUpon>
     </Compile>
+    <Compile Include="ESTADO.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ESTADO.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Idioma.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Idioma.Designer.cs">
       <DependentUpon>Idioma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="joincotizaciondetalle.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>joincotizaciondetalle.xsd</DependentUpon>
     </Compile>
     <Compile Include="LOGIN.cs">
       <SubType>Form</SubType>
@@ -118,11 +151,23 @@
     <Compile Include="Maestros\Productosfrm.Designer.cs">
       <DependentUpon>Productosfrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Maestros\Proveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Maestros\Proveedores.Designer.cs">
+      <DependentUpon>Proveedores.cs</DependentUpon>
+    </Compile>
     <Compile Include="Negocio\Carritofrm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Negocio\Carritofrm.Designer.cs">
       <DependentUpon>Carritofrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Negocio\DetallesCompras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Negocio\DetallesCompras.Designer.cs">
+      <DependentUpon>DetallesCompras.cs</DependentUpon>
     </Compile>
     <Compile Include="Negocio\Facturasfrm.cs">
       <SubType>Form</SubType>
@@ -130,11 +175,23 @@
     <Compile Include="Negocio\Facturasfrm.Designer.cs">
       <DependentUpon>Facturasfrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Negocio\OrdeneCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Negocio\OrdeneCompra.Designer.cs">
+      <DependentUpon>OrdeneCompra.cs</DependentUpon>
+    </Compile>
     <Compile Include="Negocio\Ventasfrm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Negocio\Ventasfrm.Designer.cs">
       <DependentUpon>Ventasfrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ordenes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ordenes.Designer.cs">
+      <DependentUpon>Ordenes.cs</DependentUpon>
     </Compile>
     <Compile Include="Permisos.cs">
       <SubType>Form</SubType>
@@ -150,45 +207,52 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+<<<<<<< HEAD
+    <Compile Include="Reporte1.cs">
+      <SubType>Form</SubType>
+=======
+    <Compile Include="Reportes\Reporte_Ventas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\Reporte_Ventas.Designer.cs">
+      <DependentUpon>Reporte_Ventas.cs</DependentUpon>
+    </Compile>
     <Compile Include="TPMODELOSDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>TPMODELOSDataSet.xsd</DependentUpon>
+>>>>>>> ae908eba2451935d0e21c831547748aa93a071bd
     </Compile>
-    <Compile Include="TPMODELOSDataSet1.Designer.cs">
+    <Compile Include="Reporte1.Designer.cs">
+      <DependentUpon>Reporte1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reporte2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporte2.Designer.cs">
+      <DependentUpon>Reporte2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Restaurar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Restaurar.Designer.cs">
+      <DependentUpon>Restaurar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Serealizacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Serealizacion.Designer.cs">
+      <DependentUpon>Serealizacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TPMODELOSDataSet8.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>TPMODELOSDataSet1.xsd</DependentUpon>
+      <DependentUpon>TPMODELOSDataSet8.xsd</DependentUpon>
     </Compile>
-    <Compile Include="TPMODELOSDataSet2.Designer.cs">
+    <Compile Include="TPMODELOSDataSet9.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>TPMODELOSDataSet2.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="TPMODELOSDataSet3.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TPMODELOSDataSet3.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="TPMODELOSDataSet4.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TPMODELOSDataSet4.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="TPMODELOSDataSet5.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TPMODELOSDataSet5.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="TPMODELOSDataSet6.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TPMODELOSDataSet6.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="TPMODELOSDataSet7.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TPMODELOSDataSet7.xsd</DependentUpon>
+      <DependentUpon>TPMODELOSDataSet9.xsd</DependentUpon>
     </Compile>
     <EmbeddedResource Include="ABMusuarios.resx">
       <DependentUpon>ABMusuarios.cs</DependentUpon>
@@ -196,14 +260,23 @@
     <EmbeddedResource Include="Administracion.resx">
       <DependentUpon>Administracion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Backupres.resx">
-      <DependentUpon>Backupres.cs</DependentUpon>
+    <EmbeddedResource Include="BACKUP.resx">
+      <DependentUpon>BACKUP.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Bitacora.resx">
       <DependentUpon>Bitacora.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BitacoraCambios.resx">
+      <DependentUpon>BitacoraCambios.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CambiarCave.resx">
       <DependentUpon>CambiarCave.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Comprar.resx">
+      <DependentUpon>Comprar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="COMpras.resx">
+      <DependentUpon>COMpras.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ControlUsuario.resx">
       <DependentUpon>ControlUsuario.cs</DependentUpon>
@@ -226,14 +299,26 @@
     <EmbeddedResource Include="Maestros\Productosfrm.resx">
       <DependentUpon>Productosfrm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Maestros\Proveedores.resx">
+      <DependentUpon>Proveedores.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Negocio\Carritofrm.resx">
       <DependentUpon>Carritofrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Negocio\DetallesCompras.resx">
+      <DependentUpon>DetallesCompras.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Negocio\Facturasfrm.resx">
       <DependentUpon>Facturasfrm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Negocio\OrdeneCompra.resx">
+      <DependentUpon>OrdeneCompra.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Negocio\Ventasfrm.resx">
       <DependentUpon>Ventasfrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ordenes.resx">
+      <DependentUpon>Ordenes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Permisos.resx">
       <DependentUpon>Permisos.cs</DependentUpon>
@@ -250,8 +335,58 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+<<<<<<< HEAD
+    <EmbeddedResource Include="Reporte1.resx">
+      <DependentUpon>Reporte1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporte2.resx">
+      <DependentUpon>Reporte2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Restaurar.resx">
+      <DependentUpon>Restaurar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Serealizacion.resx">
+      <DependentUpon>Serealizacion.cs</DependentUpon>
+=======
+    <EmbeddedResource Include="Reportes\Reporte_Ventas.resx">
+      <DependentUpon>Reporte_Ventas.cs</DependentUpon>
+>>>>>>> ae908eba2451935d0e21c831547748aa93a071bd
+    </EmbeddedResource>
     <None Include="ClassDiagram1.cd" />
     <None Include="ClassDiagram2.cd" />
+    <None Include="CotizaYDetalle.xsc">
+      <DependentUpon>CotizaYDetalle.xsd</DependentUpon>
+    </None>
+    <None Include="CotizaYDetalle.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CotizaYDetalle.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CotizaYDetalle.xss">
+      <DependentUpon>CotizaYDetalle.xsd</DependentUpon>
+    </None>
+    <None Include="ESTADO.xsc">
+      <DependentUpon>ESTADO.xsd</DependentUpon>
+    </None>
+    <None Include="ESTADO.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ESTADO.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ESTADO.xss">
+      <DependentUpon>ESTADO.xsd</DependentUpon>
+    </None>
+    <None Include="joincotizaciondetalle.xsc">
+      <DependentUpon>joincotizaciondetalle.xsd</DependentUpon>
+    </None>
+    <None Include="joincotizaciondetalle.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>joincotizaciondetalle.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="joincotizaciondetalle.xss">
+      <DependentUpon>joincotizaciondetalle.xsd</DependentUpon>
+    </None>
     <None Include="Properties\DataSources\BLL.Maestros.Clientes.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -262,6 +397,8 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+<<<<<<< HEAD
+=======
     <None Include="TPMODELOSDataSet.xsc">
       <DependentUpon>TPMODELOSDataSet.xsd</DependentUpon>
     </None>
@@ -350,6 +487,29 @@
     <None Include="TPMODELOSDataSet7.xss">
       <DependentUpon>TPMODELOSDataSet7.xsd</DependentUpon>
     </None>
+    <None Include="TPMODELOSDataSet8.xsc">
+      <DependentUpon>TPMODELOSDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="TPMODELOSDataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TPMODELOSDataSet8.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TPMODELOSDataSet8.xss">
+      <DependentUpon>TPMODELOSDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="TPMODELOSDataSet9.xsc">
+      <DependentUpon>TPMODELOSDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="TPMODELOSDataSet9.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TPMODELOSDataSet9.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TPMODELOSDataSet9.xss">
+      <DependentUpon>TPMODELOSDataSet9.xsd</DependentUpon>
+    </None>
+>>>>>>> ae908eba2451935d0e21c831547748aa93a071bd
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -368,6 +528,8 @@
       <Name>Seguridad</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Reportes\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

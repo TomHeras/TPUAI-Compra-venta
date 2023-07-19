@@ -63,6 +63,7 @@ namespace TP_DIPLOMA.Maestros
                 tmp.Nombre = controlUsuario1.Texto;
                 tmp.Direccion = controlUsuario2.Texto;
                 tmp.Telefono = int.Parse(controlUsuario3.Texto);
+                tmp.DVH = 0;
                 gestorcl.altacliente(tmp);
                 MessageBox.Show("Se registro un nuevo cliente");
                 enlazar();
