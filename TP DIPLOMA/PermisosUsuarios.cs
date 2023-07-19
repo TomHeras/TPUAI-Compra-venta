@@ -25,6 +25,7 @@ namespace TP_DIPLOMA
             cmbusers.DataSource = usu.GetAll(); //llamado a un procedimiento
             this.cboFamilias.DataSource = permisos.GetAllFamilias(); //llamado a un procedimi
             this.cboPatentes.DataSource = permisos.GetAllPatentes(); //llamado a un procedimi
+            this.comboBox1.DataSource = permisos.GetAllPerfiles();
 
         }
 
@@ -145,6 +146,40 @@ namespace TP_DIPLOMA
 
                 MessageBox.Show("Error al guardar el usuario");
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (tmp != null)
+            {
+                var flia = (Familia)comboBox1.SelectedItem;
+                if (flia != null)
+                {
+                    var esta = false;
+                    //verifico que ya no tenga el permiso. TODO: Esto debe ser parte de otra capa.
+                    foreach (var item in tmp.Permisos)
+                    {
+                        if (permisos.Existe(item, flia.Id))
+                        {
+                            esta = true;
+                        }
+                    }
+
+                    if (esta)
+                        MessageBox.Show("El usuario ya tiene la familia indicada");
+                    else
+                    {
+                        {
+                            permisos.FillFamilyComponents(flia);
+
+                            tmp.Permisos.Add(flia);
+                            MostrarPermisos(tmp);
+                        }
+                    }
+                }
+            }
+            else
+                MessageBox.Show("Seleccione un usuario");
         }
     }
 }

@@ -42,6 +42,9 @@ namespace TP_DIPLOMA
             this.lblagrepat = new System.Windows.Forms.Label();
             this.cmdConfigurar = new System.Windows.Forms.Button();
             this.lblallusers = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.grpPatentes.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -68,6 +71,9 @@ namespace TP_DIPLOMA
             // grpPatentes
             // 
             this.grpPatentes.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("grpPatentes.BackgroundImage")));
+            this.grpPatentes.Controls.Add(this.button1);
+            this.grpPatentes.Controls.Add(this.comboBox1);
+            this.grpPatentes.Controls.Add(this.label1);
             this.grpPatentes.Controls.Add(this.cmbusers);
             this.grpPatentes.Controls.Add(this.btnagregarfamilia);
             this.grpPatentes.Controls.Add(this.cboFamilias);
@@ -81,7 +87,7 @@ namespace TP_DIPLOMA
             this.grpPatentes.Margin = new System.Windows.Forms.Padding(2);
             this.grpPatentes.Name = "grpPatentes";
             this.grpPatentes.Padding = new System.Windows.Forms.Padding(2);
-            this.grpPatentes.Size = new System.Drawing.Size(256, 249);
+            this.grpPatentes.Size = new System.Drawing.Size(558, 397);
             this.grpPatentes.TabIndex = 14;
             this.grpPatentes.TabStop = false;
             this.grpPatentes.Tag = "user";
@@ -185,11 +191,44 @@ namespace TP_DIPLOMA
             this.lblallusers.Tag = "todoslosusuarios";
             this.lblallusers.Text = "Todos los usuarios";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(11, 304);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(83, 25);
+            this.button1.TabIndex = 17;
+            this.button1.Tag = "agregar";
+            this.button1.Text = "Agregar >>";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(11, 280);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(234, 21);
+            this.comboBox1.TabIndex = 16;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(9, 263);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(80, 13);
+            this.label1.TabIndex = 15;
+            this.label1.Tag = "agrepat";
+            this.label1.Text = "Agregar perfiles";
+            // 
             // PermisosUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(588, 274);
+            this.ClientSize = new System.Drawing.Size(580, 405);
             this.Controls.Add(this.cmdGuardar);
             this.Controls.Add(this.treeView1);
             this.Controls.Add(this.grpPatentes);
@@ -215,5 +254,8 @@ namespace TP_DIPLOMA
         private System.Windows.Forms.Label lblagrepat;
         private System.Windows.Forms.Button cmdConfigurar;
         private System.Windows.Forms.Label lblallusers;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label1;
     }
 }
