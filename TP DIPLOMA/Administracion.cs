@@ -28,7 +28,7 @@ namespace TP_DIPLOMA
         public Administracion()
         {
             InitializeComponent();
-            validarpermisos();
+            //validarpermisos();
 
             GetUsuarios = new BLL.Usuarios();
             permisos = new Patente_Usuario();
@@ -132,7 +132,8 @@ namespace TP_DIPLOMA
 
         private void Administracion_Load(object sender, EventArgs e)
         {
-            SingletonSesion.Instancia.SuscribirObservador(this);            
+            SingletonSesion.Instancia.SuscribirObservador(this);
+            
         }
 
         private void Administracion_FormClosing(object sender, FormClosingEventArgs e)
@@ -429,6 +430,13 @@ namespace TP_DIPLOMA
             CambiarCave password = new CambiarCave();
             password.MdiParent = this;
             password.Show();
+        }
+
+        private void reporteDeVentasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Reportes.Reporte_Ventas venta = new Reportes.Reporte_Ventas();
+            venta.MdiParent = this;
+            venta.Show();
         }
     }
 }

@@ -63,6 +63,7 @@ namespace TP_DIPLOMA
             this.lblSession = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripSesion = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.reporteDeVentasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -100,7 +101,7 @@ namespace TP_DIPLOMA
             this.tooltripgestionidioma,
             this.tooltriplista});
             this.tsmiidioma.Name = "tsmiidioma";
-            this.tsmiidioma.Size = new System.Drawing.Size(180, 22);
+            this.tsmiidioma.Size = new System.Drawing.Size(143, 22);
             this.tsmiidioma.Tag = "idioma";
             this.tsmiidioma.Text = "Idioma";
             // 
@@ -133,14 +134,14 @@ namespace TP_DIPLOMA
             this.usuarioToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cambiarClaveToolStripMenuItem});
             this.usuarioToolStripMenuItem.Name = "usuarioToolStripMenuItem";
-            this.usuarioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.usuarioToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.usuarioToolStripMenuItem.Tag = "usuario";
             this.usuarioToolStripMenuItem.Text = "Usuario";
             // 
             // cambiarClaveToolStripMenuItem
             // 
             this.cambiarClaveToolStripMenuItem.Name = "cambiarClaveToolStripMenuItem";
-            this.cambiarClaveToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cambiarClaveToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
             this.cambiarClaveToolStripMenuItem.Tag = "cambiarcontra";
             this.cambiarClaveToolStripMenuItem.Text = "Cambiar clave";
             this.cambiarClaveToolStripMenuItem.Click += new System.EventHandler(this.cambiarClaveToolStripMenuItem_Click);
@@ -148,7 +149,7 @@ namespace TP_DIPLOMA
             // mnulogut
             // 
             this.mnulogut.Name = "mnulogut";
-            this.mnulogut.Size = new System.Drawing.Size(180, 22);
+            this.mnulogut.Size = new System.Drawing.Size(143, 22);
             this.mnulogut.Tag = "cerrarsesion";
             this.mnulogut.Text = "Cerrar Sesion";
             this.mnulogut.Click += new System.EventHandler(this.mnulogut_Click);
@@ -167,7 +168,7 @@ namespace TP_DIPLOMA
             // tooltrippermisos
             // 
             this.tooltrippermisos.Name = "tooltrippermisos";
-            this.tooltrippermisos.Size = new System.Drawing.Size(180, 22);
+            this.tooltrippermisos.Size = new System.Drawing.Size(177, 22);
             this.tooltrippermisos.Tag = "famypat";
             this.tooltrippermisos.Text = "Perfiles";
             this.tooltrippermisos.Click += new System.EventHandler(this.tooltrippermisos_Click);
@@ -175,7 +176,7 @@ namespace TP_DIPLOMA
             // tooltrippermisousuario
             // 
             this.tooltrippermisousuario.Name = "tooltrippermisousuario";
-            this.tooltrippermisousuario.Size = new System.Drawing.Size(180, 22);
+            this.tooltrippermisousuario.Size = new System.Drawing.Size(177, 22);
             this.tooltrippermisousuario.Tag = "usuarios";
             this.tooltrippermisousuario.Text = "Asignacion";
             this.tooltrippermisousuario.Click += new System.EventHandler(this.tooltrippermisousuario_Click);
@@ -183,7 +184,7 @@ namespace TP_DIPLOMA
             // tsmabmusuarios
             // 
             this.tsmabmusuarios.Name = "tsmabmusuarios";
-            this.tsmabmusuarios.Size = new System.Drawing.Size(180, 22);
+            this.tsmabmusuarios.Size = new System.Drawing.Size(177, 22);
             this.tsmabmusuarios.Tag = "Gestion de usuarios";
             this.tsmabmusuarios.Text = "Gestion de usuarios";
             this.tsmabmusuarios.Click += new System.EventHandler(this.gestionDeUsuariosToolStripMenuItem_Click);
@@ -298,6 +299,8 @@ namespace TP_DIPLOMA
             // 
             // reportesToolStripMenuItem
             // 
+            this.reportesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.reporteDeVentasToolStripMenuItem});
             this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
             this.reportesToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
             this.reportesToolStripMenuItem.Tag = "Reportes";
@@ -334,6 +337,13 @@ namespace TP_DIPLOMA
             this.toolStripSesion.Size = new System.Drawing.Size(116, 17);
             this.toolStripSesion.Text = "[ Sesión no iniciada ]";
             this.toolStripSesion.Click += new System.EventHandler(this.toolStripSesion_Click);
+            // 
+            // reporteDeVentasToolStripMenuItem
+            // 
+            this.reporteDeVentasToolStripMenuItem.Name = "reporteDeVentasToolStripMenuItem";
+            this.reporteDeVentasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.reporteDeVentasToolStripMenuItem.Text = "Reporte de Ventas";
+            this.reporteDeVentasToolStripMenuItem.Click += new System.EventHandler(this.reporteDeVentasToolStripMenuItem_Click);
             // 
             // Administracion
             // 
@@ -392,6 +402,7 @@ namespace TP_DIPLOMA
         private System.Windows.Forms.ToolStripMenuItem carritoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem facturasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cobrosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reporteDeVentasToolStripMenuItem;
     }
 }
 

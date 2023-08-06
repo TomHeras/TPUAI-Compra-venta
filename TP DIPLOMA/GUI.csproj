@@ -150,6 +150,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reportes\Reporte_Ventas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\Reporte_Ventas.Designer.cs">
+      <DependentUpon>Reporte_Ventas.cs</DependentUpon>
+    </Compile>
     <Compile Include="TPMODELOSDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -189,6 +195,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>TPMODELOSDataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TPMODELOSDataSet8.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TPMODELOSDataSet8.xsd</DependentUpon>
     </Compile>
     <EmbeddedResource Include="ABMusuarios.resx">
       <DependentUpon>ABMusuarios.cs</DependentUpon>
@@ -250,6 +261,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Reportes\Reporte_Ventas.resx">
+      <DependentUpon>Reporte_Ventas.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="ClassDiagram1.cd" />
     <None Include="ClassDiagram2.cd" />
     <None Include="Properties\DataSources\BLL.Maestros.Clientes.datasource" />
@@ -349,6 +363,17 @@
     </None>
     <None Include="TPMODELOSDataSet7.xss">
       <DependentUpon>TPMODELOSDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="TPMODELOSDataSet8.xsc">
+      <DependentUpon>TPMODELOSDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="TPMODELOSDataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TPMODELOSDataSet8.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TPMODELOSDataSet8.xss">
+      <DependentUpon>TPMODELOSDataSet8.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
