@@ -24,6 +24,8 @@ namespace TP_DIPLOMA.Reportes
         double total = 0.0;
         private void Reporte_Ventas_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'tPMODELOSDataSet9.Reporte_prodRepo' Puede moverla o quitarla según sea necesario.
+            this.reporte_prodRepoTableAdapter.Fill(this.tPMODELOSDataSet9.Reporte_prodRepo);
             // TODO: esta línea de código carga datos en la tabla 'tPMODELOSDataSet8.Reporte_ArticulosVendidos' Puede moverla o quitarla según sea necesario.
             this.reporte_ArticulosVendidosTableAdapter.Fill(this.tPMODELOSDataSet8.Reporte_ArticulosVendidos);
 
