@@ -85,8 +85,12 @@ namespace TP_DIPLOMA
                     cobrosToolStripMenuItem.Visible= gestorpatentes.BuscarPermisos(Tipopatente.puederverventas, permisos);
                     carritoToolStripMenuItem.Visible= gestorpatentes.BuscarPermisos(Tipopatente.puedervercarrito, permisos);
                     facturacionToolStripMenuItem.Visible= gestorpatentes.BuscarPermisos(Tipopatente.puedeverfacturacion, permisos);
-                    
->>>>>>> ae908eba2451935d0e21c831547748aa93a071bd
+                    comprasToolStripMenuItem.Visible= gestorpatentes.BuscarPermisos(Tipopatente.puedevercompras, permisos);
+
+                    maestrosToolStripMenuItem.Visible= gestorpatentes.BuscarPermisos(Tipopatente.puedeaccedermaestros, permisos);
+                    stockToolStripMenuItem.Visible= gestorpatentes.BuscarPermisos(Tipopatente.puedeaccedermaestros, permisos);
+                    productosToolStripMenuItem.Visible= gestorpatentes.BuscarPermisos(Tipopatente.puederverproudctos, permisos);
+                    preciosToolStripMenuItem.Visible = gestorpatentes.BuscarPermisos(Tipopatente.puedeverprecios, permisos);
 
 
                     maestrosToolStripMenuItem.Visible = gestorpatentes.BuscarPermisos(Tipopatente.puedeaccedermaestros, permisos);

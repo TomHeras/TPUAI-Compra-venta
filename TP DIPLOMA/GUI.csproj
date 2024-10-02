@@ -254,6 +254,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>TPMODELOSDataSet9.xsd</DependentUpon>
     </Compile>
+    <Compile Include="TPMODELOSDataSet8.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TPMODELOSDataSet8.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TPMODELOSDataSet9.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TPMODELOSDataSet9.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="ABMusuarios.resx">
       <DependentUpon>ABMusuarios.cs</DependentUpon>
     </EmbeddedResource>
