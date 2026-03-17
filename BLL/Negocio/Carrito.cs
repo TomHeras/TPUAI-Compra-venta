@@ -47,5 +47,22 @@ namespace BLL.Negocio
         {
             this.acotizar = new List<BE.compra>();
         }
+
+
+        List<BE.compra> acotizar = new List<BE.compra>();
+
+        public void agregaralista(BE.compra cotizar)
+        {
+            this.acotizar.Add(cotizar);
+        }
+
+        public List<BE.compra> ordencompra()
+        {
+            return this.acotizar;
+        }
+        public void vaciarlista()
+        {
+            this.acotizar = new List<BE.compra>();
+        }
     }
 }

@@ -21,6 +21,7 @@ namespace TP_DIPLOMA.Negocio
         BE.Cotizacion coti = new BE.Cotizacion();
         BLL.Negocio.Pedidos gestorpedidos = new BLL.Negocio.Pedidos();
         BLL.Bitacora bitacora = new BLL.Bitacora();
+<<<<<<< HEAD
         BLL.Estado estdos = new BLL.Estado();
         private void OrdeneCompra_Load(object sender, EventArgs e)
         {
@@ -30,6 +31,13 @@ namespace TP_DIPLOMA.Negocio
             comboBox1.DataSource = estdos.listarestados();
             comboBox1.DisplayMember = "Descrip"; // Se mostrará la descripción en el ComboBox
             comboBox1.ValueMember = "Idestado";
+=======
+        private void OrdeneCompra_Load(object sender, EventArgs e)
+        {
+            // TODO: esta línea de código carga datos en la tabla 'eSTADO1.estados' Puede moverla o quitarla según sea necesario.
+            this.estadosTableAdapter.Fill(this.eSTADO1.estados);
+            enlazar();
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
         }
 
         public void enlazar()
@@ -55,14 +63,23 @@ namespace TP_DIPLOMA.Negocio
         public void LLenarbitacoraC()
         {
             var idreg = 0;
+<<<<<<< HEAD
             string consulta = "INSERT INTO BitacoraCambios (Idpedido, NickUsuario, Fecha, Modulo, Operacion, Criticidad, Estado) VALUES ('" + coti.ID_pedido + "','" + SingletonSesion.Instancia.Usuario.usuario + "','" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "','" + "Cotizaciones', 'Generar colicitud de cotizacion',' Baja'," + int.Parse(comboBox1.SelectedValue.ToString()) + ")";
+=======
+            string consulta = "INSERT INTO BitacoraCambios (Idpedido, NickUsuario, Fecha, Modulo, Operacion, Criticidad, Estado) VALUES ('" + coti.ID_pedido + "','" + SingletonSesion.Instancia.Usuario.usuario + "','" + DateTime.Now + "','" + "Cotizaciones', 'Generar colicitud de cotizacion',' Baja',"+ int.Parse(comboBox1.SelectedValue.ToString())+")";
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
             bitacora.Consultar(consulta);
             foreach (BE.Bitacora item in bitacora.listacambios())
             {
                 idreg = item.IDREG;
             }
+<<<<<<< HEAD
            
             string historico = "INSERT INTO Cambioshistorico ( Idpedido, Tipo, Estado, Cotizacion, Usuario, Fecha) values('" + coti.ID_pedido + "','"+ "Compras" + "','" + int.Parse(comboBox1.SelectedValue.ToString()) + "','" +coti.Cotizaciones+"','"+ SingletonSesion.Instancia.Usuario.usuario+"','" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")+"')";
+=======
+            //var idreg = GetBitacora.listacambios();
+            string historico = "INSERT INTO CotizacionCambios (IDRegistro,Idpedido, Idprov, Usuario, Estado, descrip, criticidad, modulo, cotizacion, FechaGen, FechaAct, FechaBitacora) values('" + idreg + "','" + coti.ID_pedido + "','" + coti.ID_idprov + "','" + SingletonSesion.Instancia.Usuario.usuario + "','" + int.Parse(comboBox1.SelectedValue.ToString())+"', 'Generar colicitud de cotizacion', 'baja', 'Cotizaciones','" + coti.Cotizaciones + "','" + coti.Fechagen + "','" + coti.Fechaact + "','" + DateTime.Now + "')";
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
             bitacora.Consultar(historico);
         }
 
@@ -70,7 +87,11 @@ namespace TP_DIPLOMA.Negocio
         public void estado()
         {
             int estado = int.Parse(comboBox1.SelectedValue.ToString());
+<<<<<<< HEAD
             string consulta = "Update Cotizacion set Estado=" + estado + " where IDPEDIDO=" + int.Parse(textBox1.Text);
+=======
+            string consulta="Update Cotizacion set Estado="+estado+"where IDPEDIDO="+int.Parse(textBox1.Text);
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
             bitacora.Consultar(consulta);
         }
 
@@ -92,7 +113,11 @@ namespace TP_DIPLOMA.Negocio
                         LLenarbitacoraC();
                         MessageBox.Show("El Estado Fue cambiado con exito");
                     }
+<<<<<<< HEAD
 
+=======
+                   
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
                 }
 
             }

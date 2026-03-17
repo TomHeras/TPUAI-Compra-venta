@@ -102,6 +102,7 @@ namespace BLL
             List<BE.Usuario> listausu = Mapper.traernicks();
             return listausu;
         }
+<<<<<<< HEAD
         public void Consultar(string query)
         {
             Mapper.Consultar(query);
@@ -111,5 +112,7 @@ namespace BLL
             int fa=Mapper.ObtenerUltimoIdUsuario();
             return fa;
         }
+=======
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
     }
 }

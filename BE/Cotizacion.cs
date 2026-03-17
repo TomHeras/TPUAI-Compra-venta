@@ -23,6 +23,7 @@ namespace BE
             get { return idprov; }
             set { idprov = value; }
         }
+<<<<<<< HEAD
         private int DVh;
 
         public int DVH
@@ -30,6 +31,8 @@ namespace BE
             get { return DVh; }
             set { DVh = value; }
         }
+=======
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
 
         private int estado;
 

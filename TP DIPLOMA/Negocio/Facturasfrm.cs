@@ -91,5 +91,10 @@ namespace TP_DIPLOMA.Negocio
         {
             gestor.xmlventa();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            gestor.xmlventa();
+        }
     }
 }

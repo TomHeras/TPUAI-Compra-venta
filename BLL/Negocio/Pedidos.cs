@@ -88,6 +88,7 @@ namespace BLL.Negocio
         {
             mapper.XMLcompra();
         }
+<<<<<<< HEAD
 
 
 
@@ -95,5 +96,7 @@ namespace BLL.Negocio
         {
             return mapper.ReporteCompras();
         }
+=======
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
     }
 }

@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 ﻿using Seguridad.Singleton;
 using System;
+=======
+﻿using System;
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -26,6 +30,7 @@ namespace TP_DIPLOMA
 
         }
 
+<<<<<<< HEAD
         BE.BitacoraCAbmios bitacora2 = new BE.BitacoraCAbmios();
         BLL.Bitacora gestorbitacora = new BLL.Bitacora();
         BLL.Usuarios usugest = new BLL.Usuarios();
@@ -33,6 +38,14 @@ namespace TP_DIPLOMA
         BLL.Maestros.Productos Productos = new BLL.Maestros.Productos();
         BLL.Negocio.Pedidos pedidos = new BLL.Negocio.Pedidos();
         BLL.Cambioshistorico Historico=new BLL.Cambioshistorico();
+=======
+            BE.BitacoraCAbmios bitacora2 = new BE.BitacoraCAbmios();
+            BLL.Bitacora gestorbitacora = new BLL.Bitacora();
+            BLL.Usuarios usugest = new BLL.Usuarios();
+            BE.Usuario usus = new BE.Usuario();
+            BLL.Maestros.Productos Productos = new BLL.Maestros.Productos();
+            BLL.Negocio.Pedidos pedidos = new BLL.Negocio.Pedidos();
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
         public void enlazar()
         {
             dataGridView1.DataSource = null;
@@ -44,7 +57,11 @@ namespace TP_DIPLOMA
 
             foreach (BE.Usuario item in usugest.Listarnicks())
             {
+<<<<<<< HEAD
 
+=======
+                
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
                 cmbusuarios.Items.Add(item.Nombre);
             }
             //cmbusuarios.Items.Add (usugest.Listarnicks());
@@ -52,6 +69,7 @@ namespace TP_DIPLOMA
 
         private void button1_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             if (checkBox1.Checked == true && checkBox3.Checked == false && checkBox2.Checked == false)
             {
                 string fecha1 = dateTimePicker1.Value.ToString("MM/dd/yyyy HH:mm:ss");
@@ -60,11 +78,22 @@ namespace TP_DIPLOMA
                 DateTime desde, hasta;
                 hasta = DateTime.Parse(fecha2);
                 desde = DateTime.Parse(fecha1);
+=======
+            if (checkBox1.Checked== true && checkBox3.Checked == false && checkBox2.Checked == false)
+            {                
+                string fecha1 = dateTimePicker1.Value.ToString("MM/dd/yyyy HH:mm:ss");
+                string fecha2=dateTimePicker2.Value.ToString("MM/dd/yyyy HH:mm:ss");
+
+                DateTime desde, hasta;
+                hasta =DateTime.Parse( fecha2);
+                desde = DateTime.Parse(fecha1);                                
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
                 var listardetcompra = gestorbitacora.Cambios().Where(x => x.Fecha >= desde).ToList().Where(x => x.Fecha <= hasta).ToList();
                 dataGridView1.DataSource = listardetcompra;
             }
             else if (checkBox3.Checked == true && checkBox2.Checked == false && checkBox1.Checked == false)
             {
+<<<<<<< HEAD
                 string criticidad = cmbxcriticidad.SelectedItem.ToString();//int.Parse(cmbusuarios.SelectedIndex.ToString());
 
                 if (criticidad == "Baja")
@@ -72,6 +101,15 @@ namespace TP_DIPLOMA
                     criticidad = " Baja";
                 }
                 else if (criticidad == "Alta")
+=======
+                string criticidad= cmbxcriticidad.SelectedItem.ToString();//int.Parse(cmbusuarios.SelectedIndex.ToString());
+                              
+                if (criticidad=="Baja")
+                {
+                    criticidad = " Baja";
+                }
+                else if (criticidad =="Alta")
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
                 {
                     criticidad = " Alta";
                 }
@@ -87,6 +125,7 @@ namespace TP_DIPLOMA
                 var listardetcompra = gestorbitacora.Cambios().Where(x => x.Usuario == cmbusuarios.SelectedItem.ToString()).ToList();
                 dataGridView1.DataSource = listardetcompra;
             }
+<<<<<<< HEAD
 
         }
         int idreg, idped;string tipo;
@@ -127,12 +166,24 @@ namespace TP_DIPLOMA
             }
             string historico = "INSERT INTO Cambioshistorico ( Idpedido, Tipo, Estado, Cotizacion, Usuario, Fecha) values('" + idped + "','" + tipo+ "','" + 2 + "','" + cotizacion + "','" + SingletonSesion.Instancia.Usuario.usuario + "','" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "')";
             bitacora.Consultar(historico);
+=======
+            
+        }
+        int idreg, idped;
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+            bitacora2=(BE.BitacoraCAbmios)dataGridView1.Rows[e.RowIndex].DataBoundItem;
+            idreg = bitacora2.Idregistro;
+            idped = bitacora2.Idpedido;
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             try
             {
+<<<<<<< HEAD
                 int idreg2 = idreg;
                 int estadoact = 0;
 
@@ -143,31 +194,48 @@ namespace TP_DIPLOMA
                         estadoact = item.Estado;
                     }
                 }
+=======
+                int idreg2 = idreg - 1;
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
                 foreach (BE.BitacoraCAbmios item in gestorbitacora.Cambios())
                 {
                     if (item.Idregistro == idreg2)
                     {
+<<<<<<< HEAD
                         int  pedido = idped;
                        
                         int estado = Historico.ObtenerEstadoAnterior(pedido);
                         string consulta = "Update Cotizacion set Estado=" + estado + " where IDPEDIDO=" + pedido;
+=======
+                        int estado = item.Estado, pedido = idped;
+                        string consulta = "Update Cotizacion set Estado=" + estado + "where IDPEDIDO=" + pedido;
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
                         gestorbitacora.Consultar(consulta);
 
                         foreach (BE.ComprasDEt item3 in pedidos.traerdetallepedido())
                         {
                             if (item3.ID_pedido == pedido)
                             {
+<<<<<<< HEAD
                                 if (estadoact==2)
                                 {
                                     foreach (BE.Maestros.Productos item2 in Productos.listar())
                                     {
                                         if (item2.ID_producto == item3.ID_producto)
                                         {
+=======
+
+                                foreach (BE.Maestros.Productos item2 in Productos.listar())
+                                {
+                                    if (item2.ID_producto == item3.ID_producto)
+                                    {
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
                                         int cant = item2.Cantidad - item3.Cantidad;
                                         string consulta2 = "Update Stock set Cantidad=" + cant + "where ID_producto=" + item2.ID_producto;
                                         gestorbitacora.Consultar(consulta2);
                                         string contula3 = "Update BitacoraCambios set Estado=" + estado + "where=" + idreg2;
                                         gestorbitacora.Consultar(contula3);
+<<<<<<< HEAD
                                         }
                                     }
 
@@ -180,6 +248,13 @@ namespace TP_DIPLOMA
 
                         LLenarbitacoraC( estado);
 
+=======
+                                    }
+                                }
+                            }   
+                        }
+
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
                     }
                 }
             }

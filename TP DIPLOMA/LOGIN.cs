@@ -13,7 +13,10 @@ using Seguridad.Composite;
 using Seguridad.MultiIdioma;
 using BLL;
 using BE;
+<<<<<<< HEAD
 using DevExpress.UserSkins;
+=======
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
 
 namespace TP_DIPLOMA
 {
@@ -85,7 +88,11 @@ namespace TP_DIPLOMA
                             break;
                         }
                     }
+<<<<<<< HEAD
 
+=======
+                    
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
                 }
 
                 if (user.Estado == true)
@@ -94,6 +101,7 @@ namespace TP_DIPLOMA
                     MessageBox.Show(gestoruser.login(controlUsuario1.Texto, cotrolPass1.Texto), "Atención", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     if (SingletonSesion.Instancia.IsLogged())
                     {
+<<<<<<< HEAD
                         
                         if (Integridad()==true)
                         {
@@ -118,6 +126,16 @@ namespace TP_DIPLOMA
 
 
 
+=======
+
+                        CargarBitacora(user.Usuarios, "Inicio de sesion", "Baja", "LOGIN");
+                        Administracion adm = new Administracion();
+                        adm.Show();
+                        this.Hide();
+
+                        
+
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
                     }
                     else
                     {
@@ -153,7 +171,11 @@ namespace TP_DIPLOMA
 
         int cont = 0;
 
+<<<<<<< HEAD
         void CargarBitacora(string Nick, string Descripcion, string Criticidad, string modulo)
+=======
+        void CargarBitacora(string Nick, string Descripcion, string Criticidad, string modulo )
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
         {
             BitacoraTemp = new BE.Bitacora();
 
@@ -166,7 +188,11 @@ namespace TP_DIPLOMA
 
             gestorbitacora.InsertarBitacora(BitacoraTemp);
         }
+<<<<<<< HEAD
         int dv = 0, dvh = 0;
+=======
+        int dv = 0, dvh=0;
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
         BLL.Digitos DV = new BLL.Digitos();
 
         //public void Digitos()
@@ -179,14 +205,23 @@ namespace TP_DIPLOMA
         //        gestoruser.login(controlUsuario1.Texto, cotrolPass1.Texto);
         //        validarpermiso();
 
+<<<<<<< HEAD
 
 
+=======
+                
+                    
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
         //                //Administracion adm = new Administracion();
         //                //adm.Show();
         //                //this.Hide();
 
         //                //CargarBitacora(user.Usuarios, "Inicio de sesion", "Baja", "LOGIN");
+<<<<<<< HEAD
 
+=======
+                                                                        
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
         //    }
         //    else //Verifica DVV de pedidos
         //    {
@@ -194,7 +229,11 @@ namespace TP_DIPLOMA
         //        dvh = DV.SumaDVV("DVH", "Pedidosdet");
         //        if (dv != dvh)
         //        {
+<<<<<<< HEAD
 
+=======
+                    
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
         //            MessageBox.Show("La integridad fue comprometida, se recomienda restaurar");
         //            //gestoruser.login(controlUsuario1.Texto, cotrolPass1.Texto);
         //            //gestoruser.Logout();
@@ -212,6 +251,7 @@ namespace TP_DIPLOMA
         //            }
         //            else
         //            {
+<<<<<<< HEAD
 
 
         //            }
@@ -219,12 +259,24 @@ namespace TP_DIPLOMA
         //        }
         //    }
 
+=======
+                        
+                        
+        //            }
+                  
+        //        }
+        //    }
+            
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
         //}
 
 
         BLL.Patentes gestorpatentes = new BLL.Patentes();
         Patente_Usuario permisos = new Patente_Usuario();
+<<<<<<< HEAD
        Seguridad.Digitos DVs = new Seguridad.Digitos();
+=======
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
         public void validarpermiso()
         {
             gestoruser.login(controlUsuario1.Texto, cotrolPass1.Texto);
@@ -249,7 +301,11 @@ namespace TP_DIPLOMA
                     {
                         MessageBox.Show("No posee los permisos para restaurar la base de datos, por favor comuniquese con soporte");
                         gestoruser.Logout();
+<<<<<<< HEAD
                     }
+=======
+                    }                
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
 
 
                 }
@@ -258,6 +314,7 @@ namespace TP_DIPLOMA
 
             }
         }
+<<<<<<< HEAD
 
         bool Inter = false;
         public bool Integridad()
@@ -295,5 +352,7 @@ namespace TP_DIPLOMA
 
             return Inter;
         }
+=======
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
     }
 }

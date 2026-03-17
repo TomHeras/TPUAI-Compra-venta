@@ -20,7 +20,11 @@ namespace TP_DIPLOMA
         private void Bitacora_Load(object sender, EventArgs e)
         {
             enlazar();
+<<<<<<< HEAD
 
+=======
+            
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
         }
         BE.BitacoraCAbmios bitacora2 = new BE.BitacoraCAbmios();
         BLL.Bitacora gestorbitacora = new BLL.Bitacora();
@@ -28,7 +32,11 @@ namespace TP_DIPLOMA
         BE.Usuario usus = new BE.Usuario();
         BLL.Maestros.Productos Productos = new BLL.Maestros.Productos();
         BLL.Negocio.Pedidos pedidos = new BLL.Negocio.Pedidos();
+<<<<<<< HEAD
         public void enlazar()
+=======
+        public  void enlazar()
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
         {
             dataGridView1.DataSource = null;
             dataGridView1.DataSource = GestorBitacora.Listar();
@@ -132,7 +140,11 @@ namespace TP_DIPLOMA
 
             foreach (BE.Usuario item in gestorusuarios.Listar())
             {
+<<<<<<< HEAD
                 if (item.Usuarios == bit.NickUsuario)
+=======
+                if (item.Usuarios==bit.NickUsuario)
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
                 {
                     txtape.Text = item.Apellido;
                     txtname.Text = item.Nombre;

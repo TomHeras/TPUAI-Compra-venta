@@ -33,7 +33,11 @@ namespace TP_DIPLOMA
             this.Cotizaciones = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.traercotizacionesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+<<<<<<< HEAD
 
+=======
+            
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
             this.levantarjoinBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cotizaYDetalle = new TP_DIPLOMA.CotizaYDetalle();
             this.joincotizaciondetalle = new TP_DIPLOMA.joincotizaciondetalle();
@@ -56,7 +60,11 @@ namespace TP_DIPLOMA
             this.button3 = new System.Windows.Forms.Button();
             
             this.estadosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+<<<<<<< HEAD
  
+=======
+           
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
@@ -200,7 +208,10 @@ namespace TP_DIPLOMA
             // 
             // traercotizacionesTableAdapter
             // 
+<<<<<<< HEAD
             
+=======
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
             // 
             // label3
             // 
@@ -239,12 +250,16 @@ namespace TP_DIPLOMA
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // tPMODELOSDataSet19
+<<<<<<< HEAD
             // 
             // 
             // estadosTableAdapter
             // 
             
             // 
+=======
+            
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
             // label4
             // 
             this.label4.AutoSize = true;

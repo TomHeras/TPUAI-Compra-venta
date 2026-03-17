@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BE.Maestros
 {
-    public class Proveedores
+   public class Proveedores
     {
         private int idprov;
 
