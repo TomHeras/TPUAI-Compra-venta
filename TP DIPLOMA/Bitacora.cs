@@ -20,7 +20,7 @@ namespace TP_DIPLOMA
         private void Bitacora_Load(object sender, EventArgs e)
         {
             enlazar();
-            
+
         }
         BE.BitacoraCAbmios bitacora2 = new BE.BitacoraCAbmios();
         BLL.Bitacora gestorbitacora = new BLL.Bitacora();
@@ -28,7 +28,7 @@ namespace TP_DIPLOMA
         BE.Usuario usus = new BE.Usuario();
         BLL.Maestros.Productos Productos = new BLL.Maestros.Productos();
         BLL.Negocio.Pedidos pedidos = new BLL.Negocio.Pedidos();
-        public  void enlazar()
+        public void enlazar()
         {
             dataGridView1.DataSource = null;
             dataGridView1.DataSource = GestorBitacora.Listar();
@@ -48,51 +48,95 @@ namespace TP_DIPLOMA
         {
             try
             {
-                if (checkdias.Checked == true && checkusuarios.Checked == false && checkmodulos.Checked == false && checkcriticidad.Checked == false)
-                {
-                    string fecha1 = dateTimePicker1.Value.ToString("MM/dd/yyyy HH:mm:ss");
-                    string fecha2 = dateTimePicker2.Value.ToString("MM/dd/yyyy HH:mm:ss");
+                DateTime desde, hasta;
 
-                    DateTime desde, hasta;
-                    hasta = DateTime.Parse(fecha2);
-                    desde = DateTime.Parse(fecha1);
-                    var listardetcompra = gestorbitacora.Listar().Where(x => x.Fecha >= desde).ToList().Where(x => x.Fecha <= hasta).ToList();
-                    dataGridView1.DataSource = listardetcompra;
-                }
-                else if (checkdias.Checked == false && checkusuarios.Checked == false && checkmodulos.Checked == false && checkcriticidad.Checked == true)
+                // Validación y filtro por fechas
+                if (checkdias.Checked && !checkusuarios.Checked && !checkmodulos.Checked && !checkcriticidad.Checked)
                 {
-                    string criticidad = comboBox3.SelectedItem.ToString();//int.Parse(cmbusuarios.SelectedIndex.ToString());
+                    desde = dateTimePicker1.Value;
+                    hasta = dateTimePicker2.Value;
 
-                    //if (criticidad == "Baja")
-                    //{
-                    //    criticidad = " Baja";
-                    //}
-                    //else if (criticidad == "Alta")
-                    //{
-                    //    criticidad = " Alta";
-                    //}
-                    //else
-                    //{
-                    //    criticidad = " Media";
-                    //}
-                    var listardetcompra = gestorbitacora.Listar().Where(x => x.Criticidad == criticidad).ToList();
+                    var listardetcompra = gestorbitacora.Listar()
+                        .Where(x => x.Fecha >= desde && x.Fecha <= hasta)
+                        .ToList();
+
                     dataGridView1.DataSource = listardetcompra;
                 }
-                else if (checkdias.Checked == false && checkusuarios.Checked == true && checkmodulos.Checked == false && checkcriticidad.Checked == false)
+                // Filtro por criticidad
+                else if (!checkdias.Checked && !checkusuarios.Checked && !checkmodulos.Checked && checkcriticidad.Checked)
                 {
-                    var listardetcompra = gestorbitacora.Listar().Where(x => x.NickUsuario == cmbusuarios.SelectedItem.ToString()).ToList();
-                    dataGridView1.DataSource = listardetcompra;
+                    if (comboBox3.SelectedItem != null)
+                    {
+                        string criticidad = comboBox3.SelectedItem.ToString();
+
+                        var listardetcompra = gestorbitacora.Listar()
+                            .Where(x => x.Criticidad == criticidad)
+                            .ToList();
+
+                        dataGridView1.DataSource = listardetcompra;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Selecciona una criticidad válida.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
                 }
-                else if (checkdias.Checked == false && checkusuarios.Checked == false && checkmodulos.Checked == true && checkcriticidad.Checked == false)
+                // Filtro por usuario
+                else if (!checkdias.Checked && checkusuarios.Checked && !checkmodulos.Checked && !checkcriticidad.Checked)
                 {
-                    var listardetcompra = gestorbitacora.Listar().Where(x => x.Modulo == comboBox1.SelectedItem.ToString()).ToList();
-                    dataGridView1.DataSource = listardetcompra;
+                    if (cmbusuarios.SelectedItem != null)
+                    {
+                        string usuario = cmbusuarios.SelectedItem.ToString();
+
+                        var listardetcompra = gestorbitacora.Listar()
+                            .Where(x => x.NickUsuario == usuario)
+                            .ToList();
+
+                        dataGridView1.DataSource = listardetcompra;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Selecciona un usuario válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+                // Filtro por módulo
+                else if (!checkdias.Checked && !checkusuarios.Checked && checkmodulos.Checked && !checkcriticidad.Checked)
+                {
+                    if (comboBox1.SelectedItem != null)
+                    {
+                        string modulo = comboBox1.SelectedItem.ToString();
+
+                        var listardetcompra = gestorbitacora.Listar()
+                            .Where(x => x.Modulo == modulo)
+                            .ToList();
+
+                        dataGridView1.DataSource = listardetcompra;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Selecciona un módulo válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                MessageBox.Show($"Ocurrió un error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        BE.Usuario user = new BE.Usuario();
+        BLL.Usuarios gestorusuarios = new BLL.Usuarios();
+        BE.userauxiliar usaux = new BE.userauxiliar();
+        BE.Bitacora bit = new BE.Bitacora();
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            bit = (BE.Bitacora)dataGridView1.Rows[e.RowIndex].DataBoundItem;
 
-                throw;
+            foreach (BE.Usuario item in gestorusuarios.Listar())
+            {
+                if (item.Usuarios == bit.NickUsuario)
+                {
+                    txtape.Text = item.Apellido;
+                    txtname.Text = item.Nombre;
+                }
             }
         }
     }

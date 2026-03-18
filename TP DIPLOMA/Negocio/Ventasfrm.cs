@@ -27,20 +27,23 @@ namespace TP_DIPLOMA.Negocio
         private void Ventasfrm_Load(object sender, EventArgs e)
         {
             // TODO: esta línea de código carga datos en la tabla 'tPMODELOSDataSet11.estados' Puede moverla o quitarla según sea necesario.
-            this.estadosTableAdapter1.Fill(this.tPMODELOSDataSet11.estados);
+            //this.estadosTableAdapter1.Fill(this.tPMODELOSDataSet11.estados);
             // TODO: esta línea de código carga datos en la tabla 'tPMODELOSDataSet6.estados' Puede moverla o quitarla según sea necesario.
             //this.estadosTableAdapter.Fill(this.tPMODELOSDataSet6.estados);ESCRITORIO
             enlazar();
+            comboBox1.DataSource = estdos.listarestados();
+            comboBox1.DisplayMember = "Descrip"; // Se mostrará la descripción en el ComboBox
+            comboBox1.ValueMember = "Idestado";
         }
 
         BE.Negocio.Pedido_Cab cab = new BE.Negocio.Pedido_Cab();
         BLL.Negocio.Pedidos gestorped = new BLL.Negocio.Pedidos();
+        BLL.Estado estdos = new BLL.Estado();
 
-        
 
         private void button2_Click(object sender, EventArgs e)//buscar
         {
-            var listcabecera=gestorped.listarcabecera().Where(x=>x.ID_pedido.ToString()==textBox1.Text).ToList();
+            var listcabecera = gestorped.listarcabecera().Where(x => x.ID_pedido.ToString() == textBox1.Text).ToList();
 
             dataGridView1.DataSource = listcabecera;
         }

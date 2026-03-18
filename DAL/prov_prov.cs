@@ -21,7 +21,7 @@ namespace DAL
             {
                 BE.AuxiliarRelaionarPP pp = new BE.AuxiliarRelaionarPP();
                 pp.Proveedor = int.Parse(item["IDProv"].ToString());
-                pp.Producto= int.Parse(item["IDProd"].ToString());
+                pp.Producto = int.Parse(item["IDProd"].ToString());
 
                 auxiliarRelaionarPPs.Add(pp);
             }

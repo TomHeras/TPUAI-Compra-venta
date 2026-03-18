@@ -35,18 +35,18 @@ namespace TP_DIPLOMA.Negocio
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.estadosBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.tPMODELOSDataSet10 = new TP_DIPLOMA.TPMODELOSDataSet10();
+
             this.estadosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tPMODELOSDataSet6 = new TP_DIPLOMA.TPMODELOSDataSet6();
-            this.estadosTableAdapter = new TP_DIPLOMA.TPMODELOSDataSet6TableAdapters.estadosTableAdapter();
+
+
             this.button2 = new System.Windows.Forms.Button();
-            this.estadosTableAdapter1 = new TP_DIPLOMA.TPMODELOSDataSet10TableAdapters.estadosTableAdapter();
+
             this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.estadosBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tPMODELOSDataSet10)).BeginInit();
+
             ((System.ComponentModel.ISupportInitialize)(this.estadosBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tPMODELOSDataSet6)).BeginInit();
+
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -93,26 +93,26 @@ namespace TP_DIPLOMA.Negocio
             // estadosBindingSource1
             // 
             this.estadosBindingSource1.DataMember = "estados";
-            this.estadosBindingSource1.DataSource = this.tPMODELOSDataSet10;
+
             // 
             // tPMODELOSDataSet10
             // 
-            this.tPMODELOSDataSet10.DataSetName = "TPMODELOSDataSet10";
-            this.tPMODELOSDataSet10.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+
+
             // 
             // estadosBindingSource
             // 
             this.estadosBindingSource.DataMember = "estados";
-            this.estadosBindingSource.DataSource = this.tPMODELOSDataSet6;
+
             // 
             // tPMODELOSDataSet6
             // 
-            this.tPMODELOSDataSet6.DataSetName = "TPMODELOSDataSet6";
-            this.tPMODELOSDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+
+
             // 
             // estadosTableAdapter
             // 
-            this.estadosTableAdapter.ClearBeforeFill = true;
+
             // 
             // button2
             // 
@@ -127,7 +127,7 @@ namespace TP_DIPLOMA.Negocio
             // 
             // estadosTableAdapter1
             // 
-            this.estadosTableAdapter1.ClearBeforeFill = true;
+
             // 
             // button3
             // 
@@ -156,9 +156,9 @@ namespace TP_DIPLOMA.Negocio
             this.Load += new System.EventHandler(this.Facturasfrm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.estadosBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tPMODELOSDataSet10)).EndInit();
+
             ((System.ComponentModel.ISupportInitialize)(this.estadosBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tPMODELOSDataSet6)).EndInit();
+
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -170,13 +170,13 @@ namespace TP_DIPLOMA.Negocio
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.ComboBox comboBox1;
-        private TPMODELOSDataSet6 tPMODELOSDataSet6;
+
         private System.Windows.Forms.BindingSource estadosBindingSource;
-        private TPMODELOSDataSet6TableAdapters.estadosTableAdapter estadosTableAdapter;
+
         private System.Windows.Forms.Button button2;
-        private TPMODELOSDataSet10 tPMODELOSDataSet10;
+
         private System.Windows.Forms.BindingSource estadosBindingSource1;
-        private TPMODELOSDataSet10TableAdapters.estadosTableAdapter estadosTableAdapter1;
+
         private System.Windows.Forms.Button button3;
     }
 }

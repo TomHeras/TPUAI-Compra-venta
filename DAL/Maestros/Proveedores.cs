@@ -33,10 +33,11 @@ namespace DAL.Maestros
         public string agregar(BE.Maestros.Proveedores prov)
         {
             string fa;
-            SqlParameter[] parametros = new SqlParameter[3];
+            SqlParameter[] parametros = new SqlParameter[4];
             parametros[0] = new SqlParameter("@nombre", prov.Nombre);
             parametros[1] = new SqlParameter("@direccion", prov.Direccion);
             parametros[2] = new SqlParameter("@telefono", prov.Telefono);
+            parametros[3] = new SqlParameter("@DVH", prov.DDVH);
             fa = acceso.Escribir("AltaProv", parametros);
 
             return fa;
@@ -85,7 +86,7 @@ namespace DAL.Maestros
             SqlDataAdapter DA = new SqlDataAdapter("ListarProv", acceso.conexion);
             DA.Fill(DS, "proveedores");
             acceso.cerrarconexion();
-            DS.WriteXml("C:/Users/BX657MT/OneDrive - EY/Desktop/UAI/proveedores.xml");
+            DS.WriteXml("C:/Facultad/proveedores.xml");
         }
     }
 }

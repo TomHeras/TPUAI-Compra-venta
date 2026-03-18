@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Seguridad.Singleton;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Seguridad.Singleton;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 namespace TP_DIPLOMA
 {
     public partial class Ordenes : Form
@@ -21,17 +22,7 @@ namespace TP_DIPLOMA
 
         private void Ordenes_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'tPMODELOSDataSet19.estados' Puede moverla o quitarla según sea necesario.
-            this.estadosTableAdapter.Fill(this.tPMODELOSDataSet19.estados);
-            // TODO: esta línea de código carga datos en la tabla 'tPMODELOSDataSet18.traercotizaciones' Puede moverla o quitarla según sea necesario.
-            this.traercotizacionesTableAdapter.Fill(this.tPMODELOSDataSet18.traercotizaciones);
-            //// TODO: esta línea de código carga datos en la tabla 'cotizaYDetalle.levantarjoin' Puede moverla o quitarla según sea necesario.
-            //this.levantarjoinTableAdapter.Fill(this.cotizaYDetalle.levantarjoin);
-            //// TODO: esta línea de código carga datos en la tabla 'joincotizaciondetalle.Cotizacion' Puede moverla o quitarla según sea necesario.
-            //this.cotizacionTableAdapter.Fill(this.joincotizaciondetalle.Cotizacion);
-            //// TODO: esta línea de código carga datos en la tabla 'joincotizaciondetalle.Compras_Det' Puede moverla o quitarla según sea necesario.
-            //this.compras_DetTableAdapter.Fill(this.joincotizaciondetalle.Compras_Det);
-            enlazar();
+             enlazar();
 
         }
         BE.Cotizacion cotis = new BE.Cotizacion();
@@ -75,14 +66,14 @@ namespace TP_DIPLOMA
         public void LLenarbitacoraC()
         {
             var idreg = 0;
-            string consulta = "INSERT INTO BitacoraCambios (Idpedido, NickUsuario, Fecha, Modulo, Operacion, Criticidad, Estado) VALUES ('" + cotis.ID_pedido + "','" + SingletonSesion.Instancia.Usuario.usuario + "','" + DateTime.Now + "','" + "Cotizaciones', 'Generar colicitud de cotizacion',' Baja','4')";
+            string consulta = "INSERT INTO BitacoraCambios (Idpedido, NickUsuario, Fecha, Modulo, Operacion, Criticidad, Estado) VALUES ('" + cotis.ID_pedido + "','" + SingletonSesion.Instancia.Usuario.usuario + "','" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "','" + "Cotizaciones', 'Orden de compra generada',' Baja','4')";
             GetBitacora.Consultar(consulta);
             foreach (BE.Bitacora item in GetBitacora.listacambios())
             {
                 idreg = item.IDREG;
             }
             //var idreg = GetBitacora.listacambios();
-            string historico = "INSERT INTO CotizacionCambios (IDRegistro,Idpedido, Idprov, Usuario, Estado, descrip, criticidad, modulo, cotizacion, FechaGen, FechaAct, FechaBitacora) values('" + idreg + "','" + cotis.ID_pedido + "','" + cotis.ID_idprov + "','" + SingletonSesion.Instancia.Usuario.usuario + "','" + "4', 'Generar colicitud de cotizacion', 'baja', 'Cotizaciones','"+cotis.Cotizaciones + "','" + cotis.Fechagen + "','" + cotis.Fechaact + "','" + DateTime.Now + "')";
+            string historico = "INSERT INTO Cambioshistorico ( Idpedido, Tipo, Estado, Cotizacion, Usuario, Fecha) values('" + cotis.ID_pedido + "','" + "Compras" + "','" + 4 + "','" + cotis.Cotizaciones + "','" + SingletonSesion.Instancia.Usuario.usuario + "','" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "')";
             GetBitacora.Consultar(historico);
         }
         private void button1_Click(object sender, EventArgs e)
@@ -138,9 +129,11 @@ namespace TP_DIPLOMA
 
                             string consulta = "Update Cotizacion set Estado= 4 where IDPEDIDO=" + int.Parse(textBox1.Text);
                             gestorped.Consulta(consulta);
-                            LLenarbitacoraC();
+                            //LLenarbitacoraC();
                             enlazar();
                             CargarBitacora(SingletonSesion.Instancia.Usuario.usuario, "Generacion de orden de compra", "Media", "Compras");
+                            LLenarbitacoraC();
+                            MessageBox.Show("Se genero la orden de compra con exito");
                         }
                         else
                         {
@@ -205,7 +198,17 @@ namespace TP_DIPLOMA
 
         private void button4_Click(object sender, EventArgs e)
         {
-            gestorped.xmlcompra();
+            try
+            {
+                gestorped.xmlcompra();
+                MessageBox.Show("Informacion guardada con exito!");
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Hubo un problema al guardar los datos");
+            }
+            
         }
     }
 }

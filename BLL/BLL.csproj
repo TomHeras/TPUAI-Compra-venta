@@ -43,10 +43,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bitacora.cs" />
+    <Compile Include="Cambioshistorico.cs" />
     <Compile Include="Digitos.cs" />
+    <Compile Include="Estado.cs" />
     <Compile Include="idioma.cs" />
     <Compile Include="Maestros\Clientes.cs" />
-    <Compile Include="Maestros\Precios.cs" />
     <Compile Include="Maestros\Productos.cs" />
     <Compile Include="Maestros\Proveedores.cs" />
     <Compile Include="Negocio\Carrito.cs" />

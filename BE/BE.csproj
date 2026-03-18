@@ -44,6 +44,7 @@
     <Compile Include="AuxiliarRelaionarPP.cs" />
     <Compile Include="Bitacora.cs" />
     <Compile Include="BitacoraCAbmios.cs" />
+    <Compile Include="CAmbiosHistorico.cs" />
     <Compile Include="compra.cs" />
     <Compile Include="ComprasDEt.cs" />
     <Compile Include="Cotizacion.cs" />
@@ -53,13 +54,13 @@
     <Compile Include="ITraduccion.cs" />
     <Compile Include="IUsuario.cs" />
     <Compile Include="Maestros\Clientes.cs" />
-    <Compile Include="Maestros\Precios.cs" />
     <Compile Include="Maestros\Productos.cs" />
     <Compile Include="Maestros\Proveedores.cs" />
     <Compile Include="Negocio\Carrito.cs" />
     <Compile Include="Negocio\Estado.cs" />
     <Compile Include="Negocio\Pedido_Cab.cs" />
     <Compile Include="Negocio\Pedido_det.cs" />
+    <Compile Include="PedidoReport.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="userauxiliar.cs" />
     <Compile Include="Usuario.cs" />

@@ -20,8 +20,8 @@ namespace DAL.Maestros
 
             foreach (DataRow registro in tabla1.Rows)
             {
-                BE.Maestros.Clientes cl =new BE.Maestros.Clientes();
-                cl.Idcl= int.Parse(registro["ID_clientes"].ToString());
+                BE.Maestros.Clientes cl = new BE.Maestros.Clientes();
+                cl.Idcl = int.Parse(registro["ID_clientes"].ToString());
                 cl.Nombre = registro["Nombre"].ToString();
                 cl.Direccion = registro["Direccion"].ToString();
                 cl.Telefono = int.Parse(registro["Telefono"].ToString());
@@ -33,20 +33,20 @@ namespace DAL.Maestros
 
         public string agregar(BE.Maestros.Clientes cliente)
         {
-            string fa ;
+            string fa;
 
-            SqlParameter[] parametros = new SqlParameter[3];
+            SqlParameter[] parametros = new SqlParameter[4];
             parametros[0] = new SqlParameter("@nombre", cliente.Nombre);
             parametros[1] = new SqlParameter("@direccion", cliente.Direccion);
             parametros[2] = new SqlParameter("@telefono", cliente.Telefono);
-          
+            parametros[3] = new SqlParameter("@DVH", cliente.DVH);
             fa = acces.Escribir("altacliente", parametros);
             return fa;
         }
 
         public string modificarcliente(BE.Maestros.Clientes cliente)
         {
-            string fa ;
+            string fa;
             SqlParameter[] parametros = new SqlParameter[4];
             parametros[0] = new SqlParameter("@ID_cliente", cliente.Idcl);
             parametros[1] = new SqlParameter("@nombre", cliente.Nombre);
@@ -59,7 +59,7 @@ namespace DAL.Maestros
 
         public string bajacliente(BE.Maestros.Clientes cliente)
         {
-            string fa ;
+            string fa;
             SqlParameter[] parametros = new SqlParameter[1];
             parametros[0] = new SqlParameter("@ID_clientes", cliente.Idcl);
             fa = acces.Escribir("Bajaclientes", parametros);

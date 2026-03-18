@@ -33,7 +33,7 @@ namespace TP_DIPLOMA
             this.Cotizaciones = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.traercotizacionesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tPMODELOSDataSet18 = new TP_DIPLOMA.TPMODELOSDataSet18();
+
             this.levantarjoinBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cotizaYDetalle = new TP_DIPLOMA.CotizaYDetalle();
             this.joincotizaciondetalle = new TP_DIPLOMA.joincotizaciondetalle();
@@ -49,21 +49,21 @@ namespace TP_DIPLOMA
             this.button1 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.traercotizacionesTableAdapter = new TP_DIPLOMA.TPMODELOSDataSet18TableAdapters.traercotizacionesTableAdapter();
+            
             this.label3 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.tPMODELOSDataSet19 = new TP_DIPLOMA.TPMODELOSDataSet19();
+            
             this.estadosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.estadosTableAdapter = new TP_DIPLOMA.TPMODELOSDataSet19TableAdapters.estadosTableAdapter();
+ 
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.Cotizaciones.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.traercotizacionesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tPMODELOSDataSet18)).BeginInit();
+            
             ((System.ComponentModel.ISupportInitialize)(this.levantarjoinBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cotizaYDetalle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.joincotizaciondetalle)).BeginInit();
@@ -73,7 +73,7 @@ namespace TP_DIPLOMA
             ((System.ComponentModel.ISupportInitialize)(this.comprasDetBindingSource1)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tPMODELOSDataSet19)).BeginInit();
+            
             ((System.ComponentModel.ISupportInitialize)(this.estadosBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -101,13 +101,6 @@ namespace TP_DIPLOMA
             // 
             // traercotizacionesBindingSource
             // 
-            this.traercotizacionesBindingSource.DataMember = "traercotizaciones";
-            this.traercotizacionesBindingSource.DataSource = this.tPMODELOSDataSet18;
-            // 
-            // tPMODELOSDataSet18
-            // 
-            this.tPMODELOSDataSet18.DataSetName = "TPMODELOSDataSet18";
-            this.tPMODELOSDataSet18.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // levantarjoinBindingSource
             // 
@@ -207,7 +200,7 @@ namespace TP_DIPLOMA
             // 
             // traercotizacionesTableAdapter
             // 
-            this.traercotizacionesTableAdapter.ClearBeforeFill = true;
+            
             // 
             // label3
             // 
@@ -247,17 +240,10 @@ namespace TP_DIPLOMA
             // 
             // tPMODELOSDataSet19
             // 
-            this.tPMODELOSDataSet19.DataSetName = "TPMODELOSDataSet19";
-            this.tPMODELOSDataSet19.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // estadosBindingSource
-            // 
-            this.estadosBindingSource.DataMember = "estados";
-            this.estadosBindingSource.DataSource = this.tPMODELOSDataSet19;
             // 
             // estadosTableAdapter
             // 
-            this.estadosTableAdapter.ClearBeforeFill = true;
+            
             // 
             // label4
             // 
@@ -310,7 +296,7 @@ namespace TP_DIPLOMA
             this.Cotizaciones.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.traercotizacionesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tPMODELOSDataSet18)).EndInit();
+            
             ((System.ComponentModel.ISupportInitialize)(this.levantarjoinBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cotizaYDetalle)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.joincotizaciondetalle)).EndInit();
@@ -320,7 +306,7 @@ namespace TP_DIPLOMA
             ((System.ComponentModel.ISupportInitialize)(this.comprasDetBindingSource1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tPMODELOSDataSet19)).EndInit();
+            
             ((System.ComponentModel.ISupportInitialize)(this.estadosBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -346,16 +332,16 @@ namespace TP_DIPLOMA
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
-        private TPMODELOSDataSet18 tPMODELOSDataSet18;
+        
         private System.Windows.Forms.BindingSource traercotizacionesBindingSource;
-        private TPMODELOSDataSet18TableAdapters.traercotizacionesTableAdapter traercotizacionesTableAdapter;
+        
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
-        private TPMODELOSDataSet19 tPMODELOSDataSet19;
+        
         private System.Windows.Forms.BindingSource estadosBindingSource;
-        private TPMODELOSDataSet19TableAdapters.estadosTableAdapter estadosTableAdapter;
+        
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button4;

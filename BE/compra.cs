@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BE
 {
-   public  class compra
+    public class compra
     {
         private int idprov;
 
@@ -23,6 +23,14 @@ namespace BE
         {
             get { return idprod; }
             set { idprod = value; }
+        }
+
+        private int dvh;
+
+        public int DVH
+        {
+            get { return dvh; }
+            set { dvh = value; }
         }
 
         private DateTime fecha;

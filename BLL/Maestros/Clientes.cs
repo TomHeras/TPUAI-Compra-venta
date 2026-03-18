@@ -12,7 +12,7 @@ namespace BLL.Maestros
 
         public string altacliente(BE.Maestros.Clientes cli)
         {
-            string fa ;
+            string fa;
             fa = mapper.agregar(cli);
             return fa;
         }
@@ -25,13 +25,13 @@ namespace BLL.Maestros
 
         public string modificarcliente(BE.Maestros.Clientes cli)
         {
-            string fa ;
+            string fa;
             fa = mapper.modificarcliente(cli);
             return fa;
         }
         public string bajacl(BE.Maestros.Clientes cli)
         {
-            string fa ;
+            string fa;
             fa = mapper.bajacliente(cli);
             return fa;
         }

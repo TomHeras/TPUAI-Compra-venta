@@ -45,7 +45,8 @@ namespace TP_DIPLOMA
             {
                 if (item.Idusuario==id)
                 {
-                    if (item.Password==Encriptador.Hash(textBox1.Text))
+                    string pass = Encriptador.Hash(textBox1.Text);
+                    if (item.Password==pass)
                     {
                         if (textBox2.Text==textBox3.Text)
                         {
@@ -57,6 +58,14 @@ namespace TP_DIPLOMA
 
                             limpiar();
                         }
+                        else
+                        {
+                            MessageBox.Show("Las contraseñas deben coincidir");
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("La contraseña no coincide, por favor vuelva a ingresar la contraseña");
                     }
                     
                 }

@@ -42,21 +42,21 @@ namespace TP_DIPLOMA
             DataSet DS = new DataSet();
            
             
-            if (textBox1.Text== "C:\\Users\\BX657MT\\OneDrive - EY\\Desktop\\UAI\\proveedores.xml")
+            if (textBox1.Text== "C:\\Facultad\\proveedores.xml")
             {
-                DS.ReadXml("C:\\Users\\BX657MT\\OneDrive - EY\\Desktop\\UAI\\proveedores.xml");
+                DS.ReadXml("C:\\Facultad\\proveedores.xml");
                 dataGridView1.DataSource = DS;
                 dataGridView1.DataMember = "proveedores";
             }
-            else if (textBox1.Text == "C:\\Users\\BX657MT\\OneDrive - EY\\Desktop\\UAI\\Compras.xml")
+            else if (textBox1.Text == "C:\\Facultad\\Compras.xml")
             {
-                DS.ReadXml("C:\\Users\\BX657MT\\OneDrive - EY\\Desktop\\UAI\\Compras.xml");
+                DS.ReadXml("C:\\Facultad\\Compras.xml");
                 dataGridView1.DataSource = DS;
                 dataGridView1.DataMember = "Compras";
             }
-            else if (textBox1.Text == "C:\\Users\\BX657MT\\OneDrive - EY\\Desktop\\UAI\\ventas.xml")
+            else if (textBox1.Text == "C:\\Facultad\\ventas.xml")
             {
-                DS.ReadXml("C:\\Users\\BX657MT\\OneDrive - EY\\Desktop\\UAI\\ventas.xml");
+                DS.ReadXml("C:\\Facultad\\ventas.xml");
                 dataGridView1.DataSource = DS;
                 dataGridView1.DataMember = "ventas";
             }

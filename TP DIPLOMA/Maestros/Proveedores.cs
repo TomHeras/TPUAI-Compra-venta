@@ -24,7 +24,12 @@ namespace TP_DIPLOMA.Maestros
         {
             dataGridView1.DataSource = null;
             dataGridView1.DataSource = gestorprov.listrarprovs();
-           
+
+        }
+
+        public void enlazarcombo()
+        {
+            comboBox1.DataSource = gestorPROD.listarprod();
         }
 
         public void limpiar()
@@ -69,8 +74,9 @@ namespace TP_DIPLOMA.Maestros
         private void Proveedores_Load(object sender, EventArgs e)
         {
             // TODO: esta línea de código carga datos en la tabla 'tPMODELOSDataSet15.Stock' Puede moverla o quitarla según sea necesario.
-            this.stockTableAdapter.Fill(this.tPMODELOSDataSet15.Stock);
+            //this.stockTableAdapter.Fill(this.tPMODELOSDataSet15.Stock);
             enlazar();
+            enlazarcombo();
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -101,13 +107,13 @@ namespace TP_DIPLOMA.Maestros
 
         private void btneditar_Click(object sender, EventArgs e)
         {
-            if (controlUsuario2.Texto!="")
+            if (controlUsuario2.Texto != "")
             {
                 foreach (BE.Maestros.Proveedores item in gestorprov.listrarprovs())
                 {
                     try
                     {
-                        if (item.Idprov==int.Parse(lblidcl.Text))
+                        if (item.Idprov == int.Parse(lblidcl.Text))
                         {
                             item.Nombre = controlUsuario3.Texto;
                             item.Direccion = controlUsuario2.Texto;
@@ -134,7 +140,7 @@ namespace TP_DIPLOMA.Maestros
         {
             BE.Maestros.Proveedores prov = new BE.Maestros.Proveedores();
             prov.Idprov = int.Parse(lblidcl.Text);
-            prov.IDasig =int.Parse( comboBox1.SelectedValue.ToString());
+            prov.IDasig = int.Parse(comboBox1.SelectedValue.ToString());
 
             gestorprov.AsginarProd(prov);
             MessageBox.Show("El producto fue asignado al proveedor");

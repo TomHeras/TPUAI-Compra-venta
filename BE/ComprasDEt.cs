@@ -17,6 +17,13 @@ namespace BE
         }
 
         private int id_prov;
+        private int dvh;
+
+        public int DVH
+        {
+            get { return dvh; }
+            set { dvh = value; }
+        }
 
         public int ID_prov
         {
@@ -37,7 +44,7 @@ namespace BE
 
         public int Cantidad
         {
-            get     { return cantidad; }
+            get { return cantidad; }
             set { cantidad = value; }
         }
 

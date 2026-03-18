@@ -12,6 +12,8 @@ using Seguridad.Singleton;
 using Seguridad.MultiIdioma;
 using BLL;
 using BE;
+//using TP_DIPLOMA.;
+using TP_DIPLOMA.Reportes;
 
 
 namespace TP_DIPLOMA
@@ -64,7 +66,7 @@ namespace TP_DIPLOMA
                     tooltripgestionidioma.Visible = gestorpatentes.BuscarPermisos(Tipopatente.puedervergestionaridioma, permisos);
                     tooltriplista.Visible = gestorpatentes.BuscarPermisos(Tipopatente.puedervergestionaridioma, permisos);
                     //propio de todos los usuarios
-                    cambiarClaveToolStripMenuItem.Visible = gestorpatentes.BuscarPermisos(Tipopatente.puedecambiarclave, permisos);
+                    //cambiarClaveToolStripMenuItem.Visible = gestorpatentes.BuscarPermisos(Tipopatente.puedecambiarclave, permisos);
 
                     //solo usuarios tipo admin
                     smiseguridad.Visible = gestorpatentes.BuscarPermisos(Tipopatente.puedeaccederseguridad, permisos);
@@ -85,7 +87,7 @@ namespace TP_DIPLOMA
                     maestrosToolStripMenuItem.Visible = gestorpatentes.BuscarPermisos(Tipopatente.puedeaccedermaestros, permisos);
                     stockToolStripMenuItem.Visible = gestorpatentes.BuscarPermisos(Tipopatente.puedeaccedermaestros, permisos);
                     productosToolStripMenuItem.Visible = gestorpatentes.BuscarPermisos(Tipopatente.puederverproudctos, permisos);
-                    preciosToolStripMenuItem.Visible = gestorpatentes.BuscarPermisos(Tipopatente.puedeverprecios, permisos);
+                    
 
                     clientesToolStripMenuItem.Visible = gestorpatentes.BuscarPermisos(Tipopatente.puedervercl, permisos);
                     proveedoresToolStripMenuItem.Visible = gestorpatentes.BuscarPermisos(Tipopatente.puederverprov, permisos);
@@ -381,12 +383,7 @@ namespace TP_DIPLOMA
             prodfrm.Show();
         }
 
-        private void preciosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Maestros.Preciosfrm precfrm = new Maestros.Preciosfrm();
-            precfrm.MdiParent = this;
-            precfrm.Show();
-        }
+        
 
         private void carritoToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -530,9 +527,19 @@ namespace TP_DIPLOMA
 
         private void reporteDeComprasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Reporte2 compas = new Reporte2();
-            compas.MdiParent = this;
-            compas.Show();
+            //Reporte2 compas = new Reporte2();
+            //compas.MdiParent = this;
+            //compas.Show();
+            FrmDashboardVentas venta = new FrmDashboardVentas();
+            venta.MdiParent = this;
+            venta.Show();
+        }
+
+        private void reporteDashboardToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmDashboardCompras Dash = new FrmDashboardCompras();
+            Dash.MdiParent= this;
+            Dash.Show();
         }
     }
 }

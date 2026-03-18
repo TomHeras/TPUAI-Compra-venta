@@ -46,6 +46,11 @@ namespace BLL
             return listausu;
         }
 
+        public List<BE.Usuario> Traer()
+        {
+            List<BE.Usuario> listausu = Mapper.LeerUsuarios();
+            return listausu;
+        }
         public List<BE.userauxiliar> Listadeusu()
         {
             List<BE.userauxiliar> listausu = Mapper.Listarusuarios();
@@ -68,7 +73,12 @@ namespace BLL
 
             return fa;
         }
+        public int DVH()
+        {
+            int fa = Mapper.DV();
 
+            return fa;
+        }
 
         public string CambiarContraseña(BE.userauxiliar userpas)
         {
@@ -91,6 +101,15 @@ namespace BLL
         {
             List<BE.Usuario> listausu = Mapper.traernicks();
             return listausu;
+        }
+        public void Consultar(string query)
+        {
+            Mapper.Consultar(query);
+        }
+        public int ID()
+        {
+            int fa=Mapper.ObtenerUltimoIdUsuario();
+            return fa;
         }
     }
 }

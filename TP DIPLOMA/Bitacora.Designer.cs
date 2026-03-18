@@ -42,18 +42,22 @@ namespace TP_DIPLOMA
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtname = new System.Windows.Forms.TextBox();
+            this.txtape = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(55, 267);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridView1.Location = new System.Drawing.Point(41, 217);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(866, 489);
+            this.dataGridView1.Size = new System.Drawing.Size(650, 397);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // comboBox1
             // 
@@ -63,17 +67,19 @@ namespace TP_DIPLOMA
             "LOGOUT",
             "Facturas",
             "Compras"});
-            this.comboBox1.Location = new System.Drawing.Point(55, 55);
+            this.comboBox1.Location = new System.Drawing.Point(41, 45);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(163, 24);
+            this.comboBox1.Size = new System.Drawing.Size(123, 21);
             this.comboBox1.TabIndex = 1;
             // 
             // cmbusuarios
             // 
             this.cmbusuarios.FormattingEnabled = true;
-            this.cmbusuarios.Location = new System.Drawing.Point(55, 125);
+            this.cmbusuarios.Location = new System.Drawing.Point(41, 102);
+            this.cmbusuarios.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmbusuarios.Name = "cmbusuarios";
-            this.cmbusuarios.Size = new System.Drawing.Size(163, 24);
+            this.cmbusuarios.Size = new System.Drawing.Size(123, 21);
             this.cmbusuarios.TabIndex = 2;
             // 
             // comboBox3
@@ -83,23 +89,26 @@ namespace TP_DIPLOMA
             "Baja",
             "Alta",
             "Media"});
-            this.comboBox3.Location = new System.Drawing.Point(55, 196);
+            this.comboBox3.Location = new System.Drawing.Point(41, 159);
+            this.comboBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(163, 24);
+            this.comboBox3.Size = new System.Drawing.Size(123, 21);
             this.comboBox3.TabIndex = 3;
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(469, 61);
+            this.dateTimePicker1.Location = new System.Drawing.Point(352, 50);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
+            this.dateTimePicker1.Size = new System.Drawing.Size(151, 20);
             this.dateTimePicker1.TabIndex = 4;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(427, 169);
+            this.button1.Location = new System.Drawing.Point(320, 137);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(144, 29);
+            this.button1.Size = new System.Drawing.Size(108, 24);
             this.button1.TabIndex = 5;
             this.button1.Text = "Buscar registros";
             this.button1.UseVisualStyleBackColor = true;
@@ -108,9 +117,10 @@ namespace TP_DIPLOMA
             // checkcriticidad
             // 
             this.checkcriticidad.AutoSize = true;
-            this.checkcriticidad.Location = new System.Drawing.Point(55, 169);
+            this.checkcriticidad.Location = new System.Drawing.Point(41, 137);
+            this.checkcriticidad.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.checkcriticidad.Name = "checkcriticidad";
-            this.checkcriticidad.Size = new System.Drawing.Size(88, 21);
+            this.checkcriticidad.Size = new System.Drawing.Size(69, 17);
             this.checkcriticidad.TabIndex = 6;
             this.checkcriticidad.Text = "Criticidad";
             this.checkcriticidad.UseVisualStyleBackColor = true;
@@ -118,9 +128,10 @@ namespace TP_DIPLOMA
             // checkusuarios
             // 
             this.checkusuarios.AutoSize = true;
-            this.checkusuarios.Location = new System.Drawing.Point(55, 98);
+            this.checkusuarios.Location = new System.Drawing.Point(41, 80);
+            this.checkusuarios.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.checkusuarios.Name = "checkusuarios";
-            this.checkusuarios.Size = new System.Drawing.Size(86, 21);
+            this.checkusuarios.Size = new System.Drawing.Size(67, 17);
             this.checkusuarios.TabIndex = 7;
             this.checkusuarios.Text = "Usuarios";
             this.checkusuarios.UseVisualStyleBackColor = true;
@@ -128,9 +139,10 @@ namespace TP_DIPLOMA
             // checkmodulos
             // 
             this.checkmodulos.AutoSize = true;
-            this.checkmodulos.Location = new System.Drawing.Point(55, 28);
+            this.checkmodulos.Location = new System.Drawing.Point(41, 23);
+            this.checkmodulos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.checkmodulos.Name = "checkmodulos";
-            this.checkmodulos.Size = new System.Drawing.Size(83, 21);
+            this.checkmodulos.Size = new System.Drawing.Size(66, 17);
             this.checkmodulos.TabIndex = 8;
             this.checkmodulos.Text = "Modulos";
             this.checkmodulos.UseVisualStyleBackColor = true;
@@ -138,43 +150,83 @@ namespace TP_DIPLOMA
             // checkdias
             // 
             this.checkdias.AutoSize = true;
-            this.checkdias.Location = new System.Drawing.Point(368, 28);
+            this.checkdias.Location = new System.Drawing.Point(276, 23);
+            this.checkdias.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.checkdias.Name = "checkdias";
-            this.checkdias.Size = new System.Drawing.Size(69, 21);
+            this.checkdias.Size = new System.Drawing.Size(56, 17);
             this.checkdias.TabIndex = 9;
             this.checkdias.Text = "Fecha";
             this.checkdias.UseVisualStyleBackColor = true;
             // 
             // dateTimePicker2
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(469, 115);
+            this.dateTimePicker2.Location = new System.Drawing.Point(352, 93);
+            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(200, 22);
+            this.dateTimePicker2.Size = new System.Drawing.Size(151, 20);
             this.dateTimePicker2.TabIndex = 10;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(365, 66);
+            this.label1.Location = new System.Drawing.Point(274, 54);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(49, 17);
+            this.label1.Size = new System.Drawing.Size(38, 13);
             this.label1.TabIndex = 11;
             this.label1.Text = "Desde";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(365, 115);
+            this.label2.Location = new System.Drawing.Point(274, 93);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(45, 17);
+            this.label2.Size = new System.Drawing.Size(35, 13);
             this.label2.TabIndex = 12;
             this.label2.Text = "Hasta";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(265, 185);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(44, 13);
+            this.label3.TabIndex = 13;
+            this.label3.Text = "Nombre";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(439, 185);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(44, 13);
+            this.label4.TabIndex = 14;
+            this.label4.Text = "Apellido";
+            // 
+            // txtname
+            // 
+            this.txtname.Location = new System.Drawing.Point(316, 182);
+            this.txtname.Name = "txtname";
+            this.txtname.Size = new System.Drawing.Size(100, 20);
+            this.txtname.TabIndex = 15;
+            // 
+            // txtape
+            // 
+            this.txtape.Location = new System.Drawing.Point(489, 182);
+            this.txtape.Name = "txtape";
+            this.txtape.Size = new System.Drawing.Size(100, 20);
+            this.txtape.TabIndex = 16;
+            // 
             // Bitacora
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(947, 764);
+            this.ClientSize = new System.Drawing.Size(710, 621);
+            this.Controls.Add(this.txtape);
+            this.Controls.Add(this.txtname);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dateTimePicker2);
@@ -188,7 +240,6 @@ namespace TP_DIPLOMA
             this.Controls.Add(this.cmbusuarios);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.dataGridView1);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Bitacora";
             this.Text = "Desde";
             this.Load += new System.EventHandler(this.Bitacora_Load);
@@ -213,5 +264,9 @@ namespace TP_DIPLOMA
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtname;
+        private System.Windows.Forms.TextBox txtape;
     }
 }

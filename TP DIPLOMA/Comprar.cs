@@ -20,13 +20,28 @@ namespace TP_DIPLOMA
 
         private void Comprar_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'tPMODELOSDataSet17.proveedores' Puede moverla o quitarla según sea necesario.
-            this.proveedoresTableAdapter.Fill(this.tPMODELOSDataSet17.proveedores);
-            // TODO: esta línea de código carga datos en la tabla 'tPMODELOSDataSet16.PROV_PROD' Puede moverla o quitarla según sea necesario.
-            //this.pROV_PRODTableAdapter.Fill(this.tPMODELOSDataSet16.PROV_PROD);
+            comboBox1.DataSource = gestorproveedores.listrarprovs(); // Suponiendo que listar() devuelve una lista de objetos Proveedores
+            comboBox1.DisplayMember = "Nombre";  // Esto mostrará el nombre del proveedor en el ComboBox
+            comboBox1.ValueMember = "ID_proveedor";    // Esto utilizará Idprov como el valor seleccionado
+            
+            // Inicializar la lista de productos aquí, después de que gestorprod esté disponible
+            listaProductos = gestorprod.listar();
+
+            // Limpiar el ComboBox de productos al inicio
+            comboBox2.DataSource = null;
+
+            // Asignar el evento para cargar los productos relacionados cuando se cambie el proveedor
+            comboBox1.SelectedIndexChanged += ComboBox1_SelectedIndexChanged;
+        }
+        List<BE.Maestros.Productos> listaProductos;
+        private void ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        { 
+
+            // Cargar los productos relacionados en el ComboBox de productos
+            
+           
 
         }
-
         BE.Maestros.Productos prod = new BE.Maestros.Productos();
         BLL.Maestros.Productos gestorprod = new BLL.Maestros.Productos();
         BE.Maestros.Proveedores proveedores = new BE.Maestros.Proveedores();
@@ -42,7 +57,7 @@ namespace TP_DIPLOMA
             int idprov = int.Parse(comboBox1.SelectedValue.ToString());
             foreach (BE.AuxiliarRelaionarPP item in gestorPP.listrarPP())//agregar toda la consulta en las capas, la logica es tirar un listar de todo y usar un if para cuando item.idprov sea igual al valor de la combo.
             {
-                if (item.Proveedor==idprov)
+                if (item.Proveedor == idprov)
                 {
                     comboBox2.Items.Add(item.Producto);
                 }
@@ -62,28 +77,100 @@ namespace TP_DIPLOMA
                 dataGridView1.Columns.Insert(columnIndex, uninstallButtonColumn);
             }
         }
-
-        private void comboBox1_SelectedValueChanged(object sender, EventArgs e)
+        private void comboBox1_SelectedIndexChanged_1(object sender, EventArgs e)
         {
+            
+            string name = comboBox1.SelectedText;
+            //comboBox1.Enabled = false;
+            //cargarprodsrelacionados();
+            // Obtener el id del proveedor seleccionado
            
+
+            foreach (BE.Maestros.Proveedores item in gestorproveedores.listrarprovs())
+            {
+                if (item.Nombre == name)
+                {
+                    idProveedorSeleccionado = item.Idprov;
+                }
+            }
+
+
+            // Obtener los productos relacionados con ese proveedor usando LINQ
+            //var productosRelacionados = (from rel in gestorPP.listrarPP() // Lista de la tabla PROV_PROD
+            //                             join prod in listaProductos on rel.Producto equals prod.ID_producto
+            //                             where rel.Proveedor == idProveedorSeleccionado
+            //                             select new
+            //                             {<
+            //                                 ProductoId = prod.ID_producto,
+            //                                 ProductoNombre = prod.ID_producto  // Cambia a la propiedad correcta del producto
+            //                             }).ToList();
+            foreach (BE.AuxiliarRelaionarPP item in gestorPP.listrarPP())
+            {
+                if (item.Proveedor == idProveedorSeleccionado)
+                {
+                    
+                }
+            }
+
         }
 
+        int idProveedorSeleccionado = 0;
         private void comboBox1_DropDown(object sender, EventArgs e)
         {
-            comboBox1.Enabled = false;
-            cargarprodsrelacionados();
+            
+            string name = comboBox1.SelectedText;
+            
+            //cargarprodsrelacionados();
+            // Obtener el id del proveedor seleccionado
+            
+
+            foreach (BE.Maestros.Proveedores item in gestorproveedores.listrarprovs())
+            {
+                if (item.Nombre == name)
+                {
+                    idProveedorSeleccionado = item.Idprov;
+                }
+            }
+
+            //comboBox1.Enabled = false;
+            // Obtener los productos relacionados con ese proveedor usando LINQ
+
+
+            Lennarcmb2();
+            
+
+
+
 
         }
+        List<int> Prods = new List<int>();
+        public void Lennarcmb2()
+        {
+            Prods.Clear();
+            foreach (BE.AuxiliarRelaionarPP item in gestorPP.listrarPP())
+            {
+                if (item.Proveedor == idProveedorSeleccionado)
+                {
+                    Prods.Add(item.Producto);
+                }
+            }
 
+            comboBox2.DataSource = Prods;
+            
+        }
+        int IDPP = 0;
         private void btnagregarcarrito_Click(object sender, EventArgs e)
         {
-            BE.compra orden = new BE.compra(int.Parse(comboBox1.SelectedValue.ToString()), int.Parse(comboBox2.SelectedItem.ToString()), DateTime.Now, int.Parse(controlUsuario1.Texto));
+            ///agregar idprov
+            int idP = idProveedorSeleccionado;
+            
+            BE.compra orden = new BE.compra(idP, IDPP, DateTime.Now, int.Parse(controlUsuario1.Texto));
 
-            orden.Idprov = int.Parse(comboBox1.Text);
-            orden.Idprod = int.Parse(comboBox2.Text);
+            orden.Idprov = idP;
+            orden.Idprod = IDPP;
             orden.Fecha = DateTime.Now;
             orden.Cant = int.Parse(controlUsuario1.Texto);
-
+            
             GetCarrito.agregaralista(orden);
 
             enlazar();
@@ -113,43 +200,45 @@ namespace TP_DIPLOMA
         BLL.Bitacora GetBitacora = new BLL.Bitacora();
         public void LLenarbitacoraC()
         {
-            var idreg=0;
-            string consulta = "INSERT INTO BitacoraCambios (Idpedido, NickUsuario, Fecha, Modulo, Operacion, Criticidad, Estado) VALUES ('" + detalles.ID_pedido+"','"+ SingletonSesion.Instancia.Usuario.usuario + "','" + DateTime.Now + "','" + "Cotizaciones', 'Generar colicitud de cotizacion',' Baja','0')";
+            var idreg = 0;
+            string consulta = "INSERT INTO BitacoraCambios (Idpedido, NickUsuario, Fecha, Modulo, Operacion, Criticidad, Estado) VALUES ('" + detalles.ID_pedido + "','" + SingletonSesion.Instancia.Usuario.usuario + "','" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "','" + "Cotizaciones', 'Generar colicitud de cotizacion',' Baja','0')";
             GetBitacora.Consultar(consulta);
             foreach (BE.Bitacora item in GetBitacora.listacambios())
             {
-                 idreg = item.IDREG;
+                idreg = item.IDREG;
             }
             //var idreg = GetBitacora.listacambios();
-            string historico = "INSERT INTO CotizacionCambios (IDRegistro,Idpedido, Idprov, Usuario, Estado, descrip, criticidad, modulo, cotizacion, FechaGen, FechaAct, FechaBitacora) values('"+idreg +"','"+ detalles.ID_pedido + "','" + Cotizacion.ID_idprov + "','" + SingletonSesion.Instancia.Usuario.usuario + "','" + "0', 'Generar colicitud de cotizacion', 'baja', 'Cotizaciones','0" + "','" + Cotizacion.Fechagen + "','" + Cotizacion.Fechaact + "','" + DateTime.Now+"')";
-            GetBitacora.Consultar(historico);
+            //string historico = "INSERT INTO CotizacionCambios (IDRegistro,Idpedido, Idprov, Usuario, Estado, descrip, criticidad, modulo, cotizacion, FechaGen, FechaAct, FechaBitacora) values('" + idreg + "','" + detalles.ID_pedido + "','" + Cotizacion.ID_idprov + "','" + SingletonSesion.Instancia.Usuario.usuario + "','" + "0', 'Generar colicitud de cotizacion', 'baja', 'Cotizaciones','0" + "','" + Cotizacion.Fechagen + "','" + Cotizacion.Fechaact + "','" + DateTime.Now + "')";
+            //GetBitacora.Consultar(historico);
         }
         private void btnfactura_Click(object sender, EventArgs e)
         {
-            Cotizacion.ID_idprov = int.Parse(comboBox1.SelectedValue.ToString());
+            Cotizacion.ID_idprov = idProveedorSeleccionado;
             Cotizacion.Estado = 0;
             Cotizacion.Fechaact = DateTime.Now;
             Cotizacion.Fechagen = DateTime.Now;
             Cotizacion.Cotizaciones = 0.0;
+            Cotizacion.DVH = 0;
 
             var idpedido = int.Parse(pedidos.cotizacion(Cotizacion));
-            
+
             try
             {
                 foreach (BE.compra item in GetCarrito.ordencompra())
                 {
                     detalles.ID_pedido = idpedido;
-                    detalles.ID_prov= Cotizacion.ID_idprov;
+                    detalles.ID_prov = Cotizacion.ID_idprov;
                     detalles.ID_producto = item.Idprod;
                     detalles.Cantidad = item.Cant;
                     detalles.Costo = 0.0;
+                    detalles.DVH = 0;
                     pedidos.ordencompra(detalles);
 
-                    
+
                 }
 
                 GetCarrito.vaciarlista();
-                LLenarbitacoraC();
+                //LLenarbitacoraC();
             }
             catch (Exception)
             {
@@ -157,11 +246,40 @@ namespace TP_DIPLOMA
                 throw;
             }
             MessageBox.Show("Solicitud generada exitosamente");
+            LLenarbitacoraC();
             comboBox1.Enabled = true;
             comboBox1.SelectedItem = null;
             comboBox2.SelectedItem = null;
             controlUsuario1.limpiar();
             enlazar();
+        }
+
+        private void comboBox2_SelectedValueChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void comboBox2_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (comboBox2.SelectedItem == null)
+                    return;
+
+                foreach (BE.AuxiliarRelaionarPP item in gestorPP.listrarPP())
+                {
+                    if (item.Producto == int.Parse(comboBox2.SelectedItem.ToString()))
+                    {
+                        IDPP = item.Producto;
+                    }
+                }
+            }
+            catch (Exception)
+            {
+
+                
+            }
+            
         }
     }
 }

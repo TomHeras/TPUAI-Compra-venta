@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace BLL.Negocio
 {
-   public class Pedidos
+    public class Pedidos
     {
         DAL.Negocio.pedidos mapper = new DAL.Negocio.pedidos();
 
@@ -86,6 +87,13 @@ namespace BLL.Negocio
         public void xmlcompra()
         {
             mapper.XMLcompra();
+        }
+
+
+
+        public List<BE.PedidoReport> ReporteCompras()
+        {
+            return mapper.ReporteCompras();
         }
     }
 }

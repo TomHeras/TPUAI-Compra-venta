@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace BLL.Maestros
 {
-   public class Proveedores
+    public class Proveedores
     {
         DAL.Maestros.Proveedores mapper = new DAL.Maestros.Proveedores();
-        
+
 
         public string altaprov(BE.Maestros.Proveedores prov)
         {
@@ -22,7 +22,7 @@ namespace BLL.Maestros
         {
             List<BE.Maestros.Proveedores> prov = mapper.listar();
             return prov;
-        } 
+        }
 
         public string editarprov(BE.Maestros.Proveedores prov)
         {

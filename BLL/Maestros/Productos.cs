@@ -18,7 +18,7 @@ namespace BLL.Maestros
             return fa;
         }
 
-        public string borrar_prod (BE.Maestros.Productos prod)// mapeo hacia la consulta de baja producto
+        public string borrar_prod(BE.Maestros.Productos prod)// mapeo hacia la consulta de baja producto
         {
             string fa;
             fa = mapper.bajaprod(prod);

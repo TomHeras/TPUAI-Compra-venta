@@ -37,15 +37,15 @@ namespace TP_DIPLOMA
             this.label4 = new System.Windows.Forms.Label();
             this.cmbusuarios = new System.Windows.Forms.ComboBox();
             this.cmbxcriticidad = new System.Windows.Forms.ComboBox();
-            this.tPMODELOSDataSet21 = new TP_DIPLOMA.TPMODELOSDataSet21();
+
             this.usuariosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.usuariosTableAdapter = new TP_DIPLOMA.TPMODELOSDataSet21TableAdapters.UsuariosTableAdapter();
+
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.checkBox3 = new System.Windows.Forms.CheckBox();
-            ((System.ComponentModel.ISupportInitialize)(this.tPMODELOSDataSet21)).BeginInit();
+
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -114,17 +114,13 @@ namespace TP_DIPLOMA
             // 
             // tPMODELOSDataSet21
             // 
-            this.tPMODELOSDataSet21.DataSetName = "TPMODELOSDataSet21";
-            this.tPMODELOSDataSet21.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // usuariosBindingSource
             // 
-            this.usuariosBindingSource.DataMember = "Usuarios";
-            this.usuariosBindingSource.DataSource = this.tPMODELOSDataSet21;
             // 
             // usuariosTableAdapter
             // 
-            this.usuariosTableAdapter.ClearBeforeFill = true;
+
             // 
             // dataGridView1
             // 
@@ -197,7 +193,7 @@ namespace TP_DIPLOMA
             this.Name = "BitacoraCambios";
             this.Text = "BitacoraCambios";
             this.Load += new System.EventHandler(this.BitacoraCambios_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.tPMODELOSDataSet21)).EndInit();
+
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
@@ -213,9 +209,9 @@ namespace TP_DIPLOMA
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox cmbusuarios;
         private System.Windows.Forms.ComboBox cmbxcriticidad;
-        private TPMODELOSDataSet21 tPMODELOSDataSet21;
+
         private System.Windows.Forms.BindingSource usuariosBindingSource;
-        private TPMODELOSDataSet21TableAdapters.UsuariosTableAdapter usuariosTableAdapter;
+
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;

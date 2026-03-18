@@ -39,7 +39,7 @@ namespace DAL
                 Bit.Fecha = DateTime.Parse(Registro["Fecha"].ToString());
                 Bit.Criticidad = Registro["Criticidad"].ToString();
                 Bit.Modulo = Registro["Modulo"].ToString();
-                
+
                 Lista.Add(Bit);
             }
             return Lista;
@@ -60,7 +60,7 @@ namespace DAL
             return lista;
         }
 
-       public List<BE.BitacoraCAbmios> Cambios()
+        public List<BE.BitacoraCAbmios> Cambios()
         {
             List<BE.BitacoraCAbmios> lista = new List<BE.BitacoraCAbmios>();
             DataTable tabla = Acceso.Leer("TrarBitacoraCambios", null);
@@ -69,14 +69,14 @@ namespace DAL
             {
                 BE.BitacoraCAbmios cambio = new BE.BitacoraCAbmios();
 
-                cambio.Idregistro= int.Parse(item["Idregistro"].ToString());
+                cambio.Idregistro = int.Parse(item["Idregistro"].ToString());
                 cambio.Idpedido = int.Parse(item["Idpedido"].ToString());
                 cambio.Usuario = item["NickUsuario"].ToString();
                 cambio.Fecha = DateTime.Parse(item["Fecha"].ToString());
                 cambio.Modulo = item["Modulo"].ToString();
                 cambio.Operacion = item["Operacion"].ToString();
                 cambio.Criticidad = item["Criticidad"].ToString();
-                cambio.Estado =int.Parse( item["Estado"].ToString());
+                cambio.Estado = int.Parse(item["Estado"].ToString());
                 lista.Add(cambio);
 
             }

@@ -33,7 +33,7 @@ namespace BE.Negocio
         {
             get { return fecha; }
             set { fecha = value; }
-        }     
+        }
 
         private int cantidad;
 
@@ -52,7 +52,7 @@ namespace BE.Negocio
         }
 
 
-        public Carrito( int IDcl, int IDprod, DateTime fecha,  int cantida, double costo)
+        public Carrito(int IDcl, int IDprod, DateTime fecha, int cantida, double costo)
         {
             //Idped = IDpedido;
             idcl = IDcl;
@@ -62,6 +62,6 @@ namespace BE.Negocio
             costo = Costo;
         }
 
-        
+
     }
 }

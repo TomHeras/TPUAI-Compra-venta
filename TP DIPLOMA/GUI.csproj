@@ -12,6 +12,8 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -33,8 +35,42 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DevExpress.WinterJoySkin, Version=1.0.3.0, Culture=neutral, PublicKeyToken=95fc6c5621878f0a, processorArchitecture=MSIL">
+      <HintPath>..\packages\DevExpress.Win.WinterJoySkin.1.0.3\lib\net452\DevExpress.WinterJoySkin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=10.0.0.5, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.10.0.5\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.5.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.6.1\lib\net462\System.Buffers.dll</HintPath>
+    </Reference>
     <Reference Include="System.Core" />
+    <Reference Include="System.IO.Pipelines, Version=10.0.0.5, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Pipelines.10.0.5\lib\net462\System.IO.Pipelines.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.5.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.6.3\lib\net462\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.6.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.6.1\lib\net462\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.1.2\lib\net462\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encodings.Web, Version=10.0.0.5, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encodings.Web.10.0.5\lib\net462\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=10.0.0.5, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Json.10.0.5\lib\net462\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.4.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.6.3\lib\net462\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -139,12 +175,6 @@
     <Compile Include="Maestros\Clientesfrm.Designer.cs">
       <DependentUpon>Clientesfrm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Maestros\Preciosfrm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Maestros\Preciosfrm.Designer.cs">
-      <DependentUpon>Preciosfrm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Maestros\Productosfrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -219,6 +249,18 @@
     <Compile Include="Reporte2.Designer.cs">
       <DependentUpon>Reporte2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reportes\FrmDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\FrmDashboard.Designer.cs">
+      <DependentUpon>FrmDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\FrmDashboardCompras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\FrmDashboardCompras.Designer.cs">
+      <DependentUpon>FrmDashboardCompras.cs</DependentUpon>
+    </Compile>
     <Compile Include="Restaurar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -230,121 +272,6 @@
     </Compile>
     <Compile Include="Serealizacion.Designer.cs">
       <DependentUpon>Serealizacion.cs</DependentUpon>
-    </Compile>
-    <Compile Include="TPMODELOSDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TPMODELOSDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="TPMODELOSDataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TPMODELOSDataSet1.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="TPMODELOSDataSet10.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TPMODELOSDataSet10.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="TPMODELOSDataSet11.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TPMODELOSDataSet11.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="TPMODELOSDataSet12.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TPMODELOSDataSet12.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="TPMODELOSDataSet13.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TPMODELOSDataSet13.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="TPMODELOSDataSet14.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TPMODELOSDataSet14.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="TPMODELOSDataSet15.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TPMODELOSDataSet15.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="TPMODELOSDataSet16.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TPMODELOSDataSet16.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="TPMODELOSDataSet17.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TPMODELOSDataSet17.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="TPMODELOSDataSet18.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TPMODELOSDataSet18.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="TPMODELOSDataSet19.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TPMODELOSDataSet19.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="TPMODELOSDataSet2.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TPMODELOSDataSet2.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="TPMODELOSDataSet20.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TPMODELOSDataSet20.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="TPMODELOSDataSet21.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TPMODELOSDataSet21.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="TPMODELOSDataSet22.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TPMODELOSDataSet22.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="TPMODELOSDataSet3.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TPMODELOSDataSet3.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="TPMODELOSDataSet4.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TPMODELOSDataSet4.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="TPMODELOSDataSet5.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TPMODELOSDataSet5.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="TPMODELOSDataSet6.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TPMODELOSDataSet6.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="TPMODELOSDataSet7.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TPMODELOSDataSet7.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="TPMODELOSDataSet8.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TPMODELOSDataSet8.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="TPMODELOSDataSet9.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TPMODELOSDataSet9.xsd</DependentUpon>
     </Compile>
     <EmbeddedResource Include="ABMusuarios.resx">
       <DependentUpon>ABMusuarios.cs</DependentUpon>
@@ -385,9 +312,6 @@
     <EmbeddedResource Include="Maestros\Clientesfrm.resx">
       <DependentUpon>Clientesfrm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Maestros\Preciosfrm.resx">
-      <DependentUpon>Preciosfrm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Maestros\Productosfrm.resx">
       <DependentUpon>Productosfrm.cs</DependentUpon>
     </EmbeddedResource>
@@ -426,12 +350,16 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Reporte1.resx">
       <DependentUpon>Reporte1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reporte2.resx">
       <DependentUpon>Reporte2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\FrmDashboardCompras.resx">
+      <DependentUpon>FrmDashboardCompras.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Restaurar.resx">
       <DependentUpon>Restaurar.cs</DependentUpon>
@@ -474,6 +402,7 @@
     <None Include="joincotizaciondetalle.xss">
       <DependentUpon>joincotizaciondetalle.xsd</DependentUpon>
     </None>
+    <None Include="packages.config" />
     <None Include="Properties\DataSources\BLL.Maestros.Clientes.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -484,259 +413,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="TPMODELOSDataSet.xsc">
-      <DependentUpon>TPMODELOSDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="TPMODELOSDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>TPMODELOSDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="TPMODELOSDataSet.xss">
-      <DependentUpon>TPMODELOSDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="TPMODELOSDataSet1.xsc">
-      <DependentUpon>TPMODELOSDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="TPMODELOSDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>TPMODELOSDataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="TPMODELOSDataSet1.xss">
-      <DependentUpon>TPMODELOSDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="TPMODELOSDataSet10.xsc">
-      <DependentUpon>TPMODELOSDataSet10.xsd</DependentUpon>
-    </None>
-    <None Include="TPMODELOSDataSet10.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>TPMODELOSDataSet10.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="TPMODELOSDataSet10.xss">
-      <DependentUpon>TPMODELOSDataSet10.xsd</DependentUpon>
-    </None>
-    <None Include="TPMODELOSDataSet11.xsc">
-      <DependentUpon>TPMODELOSDataSet11.xsd</DependentUpon>
-    </None>
-    <None Include="TPMODELOSDataSet11.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>TPMODELOSDataSet11.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="TPMODELOSDataSet11.xss">
-      <DependentUpon>TPMODELOSDataSet11.xsd</DependentUpon>
-    </None>
-    <None Include="TPMODELOSDataSet12.xsc">
-      <DependentUpon>TPMODELOSDataSet12.xsd</DependentUpon>
-    </None>
-    <None Include="TPMODELOSDataSet12.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>TPMODELOSDataSet12.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="TPMODELOSDataSet12.xss">
-      <DependentUpon>TPMODELOSDataSet12.xsd</DependentUpon>
-    </None>
-    <None Include="TPMODELOSDataSet13.xsc">
-      <DependentUpon>TPMODELOSDataSet13.xsd</DependentUpon>
-    </None>
-    <None Include="TPMODELOSDataSet13.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>TPMODELOSDataSet13.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="TPMODELOSDataSet13.xss">
-      <DependentUpon>TPMODELOSDataSet13.xsd</DependentUpon>
-    </None>
-    <None Include="TPMODELOSDataSet14.xsc">
-      <DependentUpon>TPMODELOSDataSet14.xsd</DependentUpon>
-    </None>
-    <None Include="TPMODELOSDataSet14.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>TPMODELOSDataSet14.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="TPMODELOSDataSet14.xss">
-      <DependentUpon>TPMODELOSDataSet14.xsd</DependentUpon>
-    </None>
-    <None Include="TPMODELOSDataSet15.xsc">
-      <DependentUpon>TPMODELOSDataSet15.xsd</DependentUpon>
-    </None>
-    <None Include="TPMODELOSDataSet15.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>TPMODELOSDataSet15.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="TPMODELOSDataSet15.xss">
-      <DependentUpon>TPMODELOSDataSet15.xsd</DependentUpon>
-    </None>
-    <None Include="TPMODELOSDataSet16.xsc">
-      <DependentUpon>TPMODELOSDataSet16.xsd</DependentUpon>
-    </None>
-    <None Include="TPMODELOSDataSet16.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>TPMODELOSDataSet16.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="TPMODELOSDataSet16.xss">
-      <DependentUpon>TPMODELOSDataSet16.xsd</DependentUpon>
-    </None>
-    <None Include="TPMODELOSDataSet17.xsc">
-      <DependentUpon>TPMODELOSDataSet17.xsd</DependentUpon>
-    </None>
-    <None Include="TPMODELOSDataSet17.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>TPMODELOSDataSet17.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="TPMODELOSDataSet17.xss">
-      <DependentUpon>TPMODELOSDataSet17.xsd</DependentUpon>
-    </None>
-    <None Include="TPMODELOSDataSet18.xsc">
-      <DependentUpon>TPMODELOSDataSet18.xsd</DependentUpon>
-    </None>
-    <None Include="TPMODELOSDataSet18.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>TPMODELOSDataSet18.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="TPMODELOSDataSet18.xss">
-      <DependentUpon>TPMODELOSDataSet18.xsd</DependentUpon>
-    </None>
-    <None Include="TPMODELOSDataSet19.xsc">
-      <DependentUpon>TPMODELOSDataSet19.xsd</DependentUpon>
-    </None>
-    <None Include="TPMODELOSDataSet19.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>TPMODELOSDataSet19.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="TPMODELOSDataSet19.xss">
-      <DependentUpon>TPMODELOSDataSet19.xsd</DependentUpon>
-    </None>
-    <None Include="TPMODELOSDataSet2.xsc">
-      <DependentUpon>TPMODELOSDataSet2.xsd</DependentUpon>
-    </None>
-    <None Include="TPMODELOSDataSet2.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>TPMODELOSDataSet2.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="TPMODELOSDataSet2.xss">
-      <DependentUpon>TPMODELOSDataSet2.xsd</DependentUpon>
-    </None>
-    <None Include="TPMODELOSDataSet20.xsc">
-      <DependentUpon>TPMODELOSDataSet20.xsd</DependentUpon>
-    </None>
-    <None Include="TPMODELOSDataSet20.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>TPMODELOSDataSet20.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="TPMODELOSDataSet20.xss">
-      <DependentUpon>TPMODELOSDataSet20.xsd</DependentUpon>
-    </None>
-    <None Include="TPMODELOSDataSet21.xsc">
-      <DependentUpon>TPMODELOSDataSet21.xsd</DependentUpon>
-    </None>
-    <None Include="TPMODELOSDataSet21.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>TPMODELOSDataSet21.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="TPMODELOSDataSet21.xss">
-      <DependentUpon>TPMODELOSDataSet21.xsd</DependentUpon>
-    </None>
-    <None Include="TPMODELOSDataSet22.xsc">
-      <DependentUpon>TPMODELOSDataSet22.xsd</DependentUpon>
-    </None>
-    <None Include="TPMODELOSDataSet22.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>TPMODELOSDataSet22.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="TPMODELOSDataSet22.xss">
-      <DependentUpon>TPMODELOSDataSet22.xsd</DependentUpon>
-    </None>
-    <None Include="TPMODELOSDataSet3.xsc">
-      <DependentUpon>TPMODELOSDataSet3.xsd</DependentUpon>
-    </None>
-    <None Include="TPMODELOSDataSet3.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>TPMODELOSDataSet3.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="TPMODELOSDataSet3.xss">
-      <DependentUpon>TPMODELOSDataSet3.xsd</DependentUpon>
-    </None>
-    <None Include="TPMODELOSDataSet4.xsc">
-      <DependentUpon>TPMODELOSDataSet4.xsd</DependentUpon>
-    </None>
-    <None Include="TPMODELOSDataSet4.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>TPMODELOSDataSet4.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="TPMODELOSDataSet4.xss">
-      <DependentUpon>TPMODELOSDataSet4.xsd</DependentUpon>
-    </None>
-    <None Include="TPMODELOSDataSet5.xsc">
-      <DependentUpon>TPMODELOSDataSet5.xsd</DependentUpon>
-    </None>
-    <None Include="TPMODELOSDataSet5.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>TPMODELOSDataSet5.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="TPMODELOSDataSet5.xss">
-      <DependentUpon>TPMODELOSDataSet5.xsd</DependentUpon>
-    </None>
-    <None Include="TPMODELOSDataSet6.xsc">
-      <DependentUpon>TPMODELOSDataSet6.xsd</DependentUpon>
-    </None>
-    <None Include="TPMODELOSDataSet6.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>TPMODELOSDataSet6.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="TPMODELOSDataSet6.xss">
-      <DependentUpon>TPMODELOSDataSet6.xsd</DependentUpon>
-    </None>
-    <None Include="TPMODELOSDataSet7.xsc">
-      <DependentUpon>TPMODELOSDataSet7.xsd</DependentUpon>
-    </None>
-    <None Include="TPMODELOSDataSet7.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>TPMODELOSDataSet7.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="TPMODELOSDataSet7.xss">
-      <DependentUpon>TPMODELOSDataSet7.xsd</DependentUpon>
-    </None>
-    <None Include="TPMODELOSDataSet8.xsc">
-      <DependentUpon>TPMODELOSDataSet8.xsd</DependentUpon>
-    </None>
-    <None Include="TPMODELOSDataSet8.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>TPMODELOSDataSet8.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="TPMODELOSDataSet8.xss">
-      <DependentUpon>TPMODELOSDataSet8.xsd</DependentUpon>
-    </None>
-    <None Include="TPMODELOSDataSet9.xsc">
-      <DependentUpon>TPMODELOSDataSet9.xsd</DependentUpon>
-    </None>
-    <None Include="TPMODELOSDataSet9.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>TPMODELOSDataSet9.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="TPMODELOSDataSet9.xss">
-      <DependentUpon>TPMODELOSDataSet9.xsd</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -756,7 +432,33 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Reportes\" />
+    <Content Include="Imagenes\Admin.png" />
+    <Content Include="Imagenes\ChatGPT Image 16 mar 2026, 16_53_48.png" />
+    <Content Include="Imagenes\Designer.png" />
+    <Content Include="Imagenes\Diseño %281%29.png" />
+    <Content Include="Imagenes\Diseño.ico" />
+    <Content Include="Imagenes\Diseño.png" />
+    <Content Include="Imagenes\Logo.png" />
+    <Content Include="Imagenes\logochico.png" />
+    <Content Include="Imagenes\pngimg.com - buttons_PNG1.png" />
+    <Content Include="Imagenes\Recuperar.jpg" />
+    <Content Include="Imagenes\Sesion.png" />
+    <Content Include="Imagenes\syt_logo_small.ico" />
+    <Content Include="Imagenes\syt_logo_small.png" />
+    <Content Include="Logo-SyT.png" />
+    <Content Include="Scripts\ReporteComprasDashboard.exe" />
+    <Content Include="Scripts\ReporteVentasDashboard.exe" />
+    <Content Include="Scripts\Reporte_inteligente.exe" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\System.ValueTuple.4.6.1\build\net471\System.ValueTuple.targets" Condition="Exists('..\packages\System.ValueTuple.4.6.1\build\net471\System.ValueTuple.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\System.ValueTuple.4.6.1\build\net471\System.ValueTuple.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\System.ValueTuple.4.6.1\build\net471\System.ValueTuple.targets'))" />
+  </Target>
 </Project>

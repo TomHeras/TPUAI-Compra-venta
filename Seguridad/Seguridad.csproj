@@ -49,6 +49,7 @@
     <Compile Include="Composite\Patente.cs" />
     <Compile Include="Composite\Patente_Usuario.cs" />
     <Compile Include="Composite\Tipopatente.cs" />
+    <Compile Include="Digitos.cs" />
     <Compile Include="Encriptador.cs" />
     <Compile Include="MultiIdioma\Etiqueta.cs" />
     <Compile Include="MultiIdioma\Idiomas.cs" />

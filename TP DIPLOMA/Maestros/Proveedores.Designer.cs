@@ -37,17 +37,17 @@ namespace TP_DIPLOMA.Maestros
             this.label1 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.stockBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tPMODELOSDataSet15 = new TP_DIPLOMA.TPMODELOSDataSet15();
+
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnagregar = new System.Windows.Forms.Button();
             this.btnprod_prov = new System.Windows.Forms.Button();
             this.btneditar = new System.Windows.Forms.Button();
             this.btnborrar = new System.Windows.Forms.Button();
             this.lblidcl = new System.Windows.Forms.Label();
-            this.stockTableAdapter = new TP_DIPLOMA.TPMODELOSDataSet15TableAdapters.StockTableAdapter();
+
             this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.stockBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tPMODELOSDataSet15)).BeginInit();
+
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -106,14 +106,7 @@ namespace TP_DIPLOMA.Maestros
             // 
             // stockBindingSource
             // 
-            this.stockBindingSource.DataMember = "Stock";
-            this.stockBindingSource.DataSource = this.tPMODELOSDataSet15;
-            // 
-            // tPMODELOSDataSet15
-            // 
-            this.tPMODELOSDataSet15.DataSetName = "TPMODELOSDataSet15";
-            this.tPMODELOSDataSet15.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
+
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -178,7 +171,7 @@ namespace TP_DIPLOMA.Maestros
             // 
             // stockTableAdapter
             // 
-            this.stockTableAdapter.ClearBeforeFill = true;
+
             // 
             // button1
             // 
@@ -211,7 +204,7 @@ namespace TP_DIPLOMA.Maestros
             this.Text = "Proveedores";
             this.Load += new System.EventHandler(this.Proveedores_Load);
             ((System.ComponentModel.ISupportInitialize)(this.stockBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tPMODELOSDataSet15)).EndInit();
+
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -230,9 +223,9 @@ namespace TP_DIPLOMA.Maestros
         private System.Windows.Forms.Button btneditar;
         private System.Windows.Forms.Button btnborrar;
         private System.Windows.Forms.Label lblidcl;
-        private TPMODELOSDataSet15 tPMODELOSDataSet15;
+
         private System.Windows.Forms.BindingSource stockBindingSource;
-        private TPMODELOSDataSet15TableAdapters.StockTableAdapter stockTableAdapter;
+
         private System.Windows.Forms.Button button1;
     }
 }

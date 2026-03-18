@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BE.Maestros
 {
-   public class Proveedores
+    public class Proveedores
     {
         private int idprov;
 
@@ -48,6 +48,15 @@ namespace BE.Maestros
             get { return idasig; }
             set { idasig = value; }
         }
+
+        private int dvh;
+
+        public int DDVH
+        {
+            get { return dvh; }
+            set { dvh = value; }
+        }
+
 
     }
 }

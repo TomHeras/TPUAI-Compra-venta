@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Seguridad.Singleton;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Seguridad.Singleton;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace TP_DIPLOMA.Negocio
 {
@@ -22,10 +23,12 @@ namespace TP_DIPLOMA.Negocio
         BE.Cotizacion coti = new BE.Cotizacion();
         BLL.Negocio.Pedidos gestorpedidos = new BLL.Negocio.Pedidos();
         BLL.Bitacora bitacora = new BLL.Bitacora();
+        BLL.Maestros.Productos gestorProd = new BLL.Maestros.Productos();
+        BE.Maestros.Productos produ = new BE.Maestros.Productos();
         private void DetallesCompras_Load(object sender, EventArgs e)
         {
             // TODO: esta línea de código carga datos en la tabla 'tPMODELOSDataSet20.estados' Puede moverla o quitarla según sea necesario.
-            this.estadosTableAdapter.Fill(this.tPMODELOSDataSet20.estados);
+            //this.estadosTableAdapter.Fill(this.tPMODELOSDataSet20.estados);
             enlazar();
         }
 
@@ -52,14 +55,14 @@ namespace TP_DIPLOMA.Negocio
         public void LLenarbitacoraC()
         {
             var idreg = 0;
-            string consulta = "INSERT INTO BitacoraCambios (Idpedido, NickUsuario, Fecha, Modulo, Operacion, Criticidad, Estado) VALUES ('" + coti.ID_pedido + "','" + SingletonSesion.Instancia.Usuario.usuario + "','" + DateTime.Now + "','" + "Cotizaciones', 'Generar colicitud de cotizacion',' Baja','2')";
+            string consulta = "INSERT INTO BitacoraCambios (Idpedido, NickUsuario, Fecha, Modulo, Operacion, Criticidad, Estado) VALUES ('" + coti.ID_pedido + "','" + SingletonSesion.Instancia.Usuario.usuario + "','" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "','" + "Cotizaciones', 'Generar colicitud de cotizacion',' Baja','2')";
             bitacora.Consultar(consulta);
             foreach (BE.Bitacora item in bitacora.listacambios())
             {
                 idreg = item.IDREG;
             }
             //var idreg = GetBitacora.listacambios();
-            string historico = "INSERT INTO CotizacionCambios (IDRegistro,Idpedido, Idprov, Usuario, Estado, descrip, criticidad, modulo, cotizacion, FechaGen, FechaAct, FechaBitacora) values('" + idreg + "','" + coti.ID_pedido + "','" + coti.ID_idprov + "','" + SingletonSesion.Instancia.Usuario.usuario + "','" + "2', 'Generar colicitud de cotizacion', 'baja', 'Cotizaciones','" + coti.Cotizaciones + "','" + coti.Fechagen + "','" + coti.Fechaact + "','" + DateTime.Now + "')";
+            string historico = "INSERT INTO Cambioshistorico ( Idpedido, Tipo, Estado, Cotizacion, Usuario, Fecha) values('" + coti.ID_pedido + "','" + "Compras" + "','" + 2 + "','" + coti.Cotizaciones + "','" + SingletonSesion.Instancia.Usuario.usuario + "','" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "')";
             bitacora.Consultar(historico);
         }
         private void button2_Click(object sender, EventArgs e)//Actualizar estado a entregado
@@ -68,7 +71,7 @@ namespace TP_DIPLOMA.Negocio
             {
                 foreach (BE.Cotizacion item in gestorpedidos.traercotizaciones())
                 {
-                    if (item.ID_pedido==int.Parse(textBox1.Text))
+                    if (item.ID_pedido == int.Parse(textBox1.Text))
                     {
                         coti.ID_pedido = item.ID_pedido;
                         coti.ID_idprov = item.ID_idprov;
@@ -77,20 +80,26 @@ namespace TP_DIPLOMA.Negocio
                         coti.Fechaact = item.Fechaact;
                         coti.Estado = item.Estado;
 
+                        //foreach (BE.Maestros.Productos prods in )
+                        //{
+
+                        //}
+
                     }
                 }
                 string consulta = "Update Cotizacion set Estado= 2 where IDPEDIDO=" + int.Parse(textBox1.Text);
                 bitacora.Consultar(consulta);
                 LLenarbitacoraC();
-                MessageBox.Show("El Estado Fue cambiado con exito");
                 sumarprod();
+                MessageBox.Show("El Estado Fue cambiado con exito");
+                
 
             }
             catch (Exception)
             {
 
                 throw;
-            }           
+            }
         }
         public void sumarprod()
         {
@@ -98,18 +107,18 @@ namespace TP_DIPLOMA.Negocio
             BLL.Maestros.Productos productos = new BLL.Maestros.Productos();
             foreach (BE.ComprasDEt item in gestorpedidos.traerdetallepedido())
             {
-                if (item.ID_pedido==int.Parse(textBox1.Text))
+                if (item.ID_pedido == int.Parse(textBox1.Text))
                 {
                     pords.ID_producto = item.ID_producto;
-                    foreach  (BE.Maestros.Productos items in productos.listar())
+                    foreach (BE.Maestros.Productos items in productos.listar())
                     {
-                        if (items.ID_producto==pords.ID_producto)
+                        if (items.ID_producto == pords.ID_producto)
                         {
                             //pords.Cantidad = items.Cantidad;
-                            item.Cantidad =item.Cantidad +items.Cantidad;
+                            item.Cantidad = item.Cantidad + items.Cantidad;
                         }
                     }
-                    string consulta = "Update Stock set cantidad="+item.Cantidad+"where ID_producto="+pords.ID_producto;
+                    string consulta = "Update Stock set cantidad=" + item.Cantidad + "where ID_producto=" + pords.ID_producto;
                     bitacora.Consultar(consulta);
                 }
             }

@@ -23,6 +23,13 @@ namespace BE
             get { return idprov; }
             set { idprov = value; }
         }
+        private int DVh;
+
+        public int DVH
+        {
+            get { return DVh; }
+            set { DVh = value; }
+        }
 
         private int estado;
 

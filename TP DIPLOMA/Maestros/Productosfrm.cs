@@ -18,9 +18,9 @@ namespace TP_DIPLOMA.Maestros
         }
         BE.Maestros.Productos prod = new BE.Maestros.Productos();
         BLL.Maestros.Productos gestprod = new BLL.Maestros.Productos();
-        BE.Maestros.Precios prec = new BE.Maestros.Precios();
-        BLL.Maestros.Precios gestorpec = new BLL.Maestros.Precios();
-        
+        //BE.Maestros.Precios prec = new BE.Maestros.Precios();
+        //BLL.Maestros.Precios gestorpec = new BLL.Maestros.Precios();
+
         public void enlazar()
         {
             dataGridView1.DataSource = null;
@@ -56,30 +56,32 @@ namespace TP_DIPLOMA.Maestros
 
             if (ok != false)
             {
-            
-                BE.Maestros.Productos tmp = new BE.Maestros.Productos();
-                BE.Maestros.Precios tmp2 = new BE.Maestros.Precios();
 
-                
+                BE.Maestros.Productos tmp = new BE.Maestros.Productos();
+                //BE.Maestros.Precios tmp2 = new BE.Maestros.Precios();
+
+
                 tmp.Medidas = double.Parse(ctrlmedidas.Texto);
                 tmp.Cantidad = int.Parse(ctrlcantidad.Texto);
                 tmp.Tipo = ctrltipo.Texto;
+                tmp.Precio = double.Parse(ctlprecio.Texto);
+                tmp.DVH = 0;
                 gestprod.altaprod(tmp);
-                
-                
-                /////// procedimiento para cargar la lista de precios
-                gestprod.llenar();
-                gestprod.update0();
-                ///aca
 
 
-                DigitosVerificadores();
+                ///////// procedimiento para cargar la lista de precios
+                //gestprod.llenar();
+                //gestprod.update0();
+                /////aca
+
+
+                //DigitosVerificadores();
                 MessageBox.Show("El producto fue registrado  con exito!");
 
                 enlazar();
                 limpiar();
-               
-               
+
+
 
             }
         }
@@ -101,21 +103,7 @@ namespace TP_DIPLOMA.Maestros
             ///////
             //aca van los procedimientos de borrado para la lista de precios agregando un foreach 
 
-            foreach (BE.Maestros.Precios prec in gestorpec.Listar_precios())
-            {
-                try
-                {
-                    if (prec.Idprod==int.Parse(lblidprod.Text))
-                    {
-                        gestorpec.borrar_prec(prec);
-                    }
-                }
-                catch (Exception)
-                {
-
-                    throw;
-                }
-            }
+            
             ///
             MessageBox.Show("El producto fue borrado exitosamente!");
             enlazar();
@@ -154,7 +142,7 @@ namespace TP_DIPLOMA.Maestros
 
                 }
             }
-            if (ok!=false)
+            if (ok != false)
             {
 
                 foreach (BE.Maestros.Productos item in gestprod.listar())
@@ -167,36 +155,19 @@ namespace TP_DIPLOMA.Maestros
                             item.Medidas = double.Parse(ctrlmedidas.Texto);
                             item.Cantidad = int.Parse(ctrlcantidad.Texto);
                             item.Tipo = ctrltipo.Texto;
-
+                            item.Precio = double.Parse(ctlprecio.Texto);
                             gestprod.editar_prod(item);
                             ////////
                             //aca van los procedimientos de edicion para la lista de precios agregando un foreach 
-                            foreach (BE.Maestros.Precios prec in gestorpec.Listar_precios())
-                            {
-                                try
-                                {
-                                    if (prec.Idprod == int.Parse(lblidprod.Text))
-                                    {
-                                        prec.Medidas = item.Medidas;
-                                        prec.Tipo = prec.Tipo;
-                                        prec.Precio = prec.Precio;
-                                        prec.Detalles = prec.Detalles;
-                                        gestorpec.editar_precios(prec);
-                                    }
-                                }
-                                catch (Exception)
-                                {
-
-                                    throw;
-                                }
-                            }
-                            ///
-
-                            MessageBox.Show("El producto fue modificado exitosamente!");
-                            enlazar();
-                            limpiar();
 
                         }
+                        ///
+
+                        MessageBox.Show("El producto fue modificado exitosamente!");
+                        enlazar();
+                        limpiar();
+
+                    
                     }
                     catch (Exception)
                     {
@@ -204,8 +175,8 @@ namespace TP_DIPLOMA.Maestros
                         throw;
                     }
                 }
-                
-                
+
+
             }
         }
     }

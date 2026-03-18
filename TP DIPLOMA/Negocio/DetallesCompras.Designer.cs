@@ -35,11 +35,11 @@ namespace TP_DIPLOMA.Negocio
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.tPMODELOSDataSet20 = new TP_DIPLOMA.TPMODELOSDataSet20();
+
             this.estadosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.estadosTableAdapter = new TP_DIPLOMA.TPMODELOSDataSet20TableAdapters.estadosTableAdapter();
+
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tPMODELOSDataSet20)).BeginInit();
+
             ((System.ComponentModel.ISupportInitialize)(this.estadosBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -91,17 +91,16 @@ namespace TP_DIPLOMA.Negocio
             // 
             // tPMODELOSDataSet20
             // 
-            this.tPMODELOSDataSet20.DataSetName = "TPMODELOSDataSet20";
-            this.tPMODELOSDataSet20.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+
             // 
             // estadosBindingSource
             // 
             this.estadosBindingSource.DataMember = "estados";
-            this.estadosBindingSource.DataSource = this.tPMODELOSDataSet20;
+
             // 
             // estadosTableAdapter
             // 
-            this.estadosTableAdapter.ClearBeforeFill = true;
+
             // 
             // DetallesCompras
             // 
@@ -117,7 +116,7 @@ namespace TP_DIPLOMA.Negocio
             this.Text = "Detalles de Compras";
             this.Load += new System.EventHandler(this.DetallesCompras_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tPMODELOSDataSet20)).EndInit();
+
             ((System.ComponentModel.ISupportInitialize)(this.estadosBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -131,8 +130,8 @@ namespace TP_DIPLOMA.Negocio
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private TPMODELOSDataSet20 tPMODELOSDataSet20;
+
         private System.Windows.Forms.BindingSource estadosBindingSource;
-        private TPMODELOSDataSet20TableAdapters.estadosTableAdapter estadosTableAdapter;
+
     }
 }

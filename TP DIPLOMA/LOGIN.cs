@@ -13,6 +13,7 @@ using Seguridad.Composite;
 using Seguridad.MultiIdioma;
 using BLL;
 using BE;
+using DevExpress.UserSkins;
 
 namespace TP_DIPLOMA
 {
@@ -21,7 +22,7 @@ namespace TP_DIPLOMA
         public LOGIN()
         {
             InitializeComponent();
-         
+
         }
 
         BE.Usuario user = new BE.Usuario();
@@ -29,7 +30,7 @@ namespace TP_DIPLOMA
         BLL.Bitacora gestorbitacora = new BLL.Bitacora();
         BE.Bitacora BitacoraTemp;
 
-        
+
         private void Btnlogin_Click(object sender, EventArgs e)
         {
             bool ok = true, oki = true;
@@ -55,7 +56,7 @@ namespace TP_DIPLOMA
 
                 }
 
-               
+
 
             }
             if (ok != false && oki != false)
@@ -74,39 +75,85 @@ namespace TP_DIPLOMA
                             user.Usuarios = controlUsuario1.Texto;
                             user.Password = cotrolPass1.Texto;
                             user.Estado = true;
+                            break;
                         }
                         else
                         {
                             user.Usuarios = controlUsuario1.Texto;
                             user.Password = cotrolPass1.Texto;
                             user.Estado = false;
+                            break;
                         }
+                    }
+
+                }
+
+                if (user.Estado == true)
+                {
+                    
+                    MessageBox.Show(gestoruser.login(controlUsuario1.Texto, cotrolPass1.Texto), "Atención", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    if (SingletonSesion.Instancia.IsLogged())
+                    {
+                        
+                        if (Integridad()==true)
+                        {
+                            if (true)
+                            {
+                                ////Aca vamos a agregar la validacion de si es un usuario webmaster para poder hacer el backup/Restore
+                            }
+                            else
+                            {
+                                MessageBox.Show("No se puede ingresar en este momento, por favor couniquese con el administrador, muchas gracias!");
+                            }
+                        }
+                        else
+                        {
+                            
+                            CargarBitacora(controlUsuario1.Texto, "Inicio de sesion", "Baja", "LOGIN");
+                            Administracion adm = new Administracion();
+                            adm.Show();
+                            this.Hide();
+
+                        }
+
+
+
                     }
                     else
                     {
-                        user.Estado = true;
-                    }
-                }
+                        cont = cont + 1;
+                        if (cont >= 3)
+                        {
+                            BE.userauxiliar usaux = new BE.userauxiliar();
+                            usaux.Usuarios = controlUsuario1.Texto;
+                            usaux.Idusuario = user.Idusuario;
+                            usaux.Idioma2 = 1;
+                            usaux.Password = Encriptador.Hash(user.Password);
+                            usaux.Nombre = user.Nombre;
+                            usaux.Estado = false;
 
-                if (user.Estado==true)
-                {
-                    Digitos();                    
+
+                            gestoruser.EditarUsuario_estado(usaux);
+                            MessageBox.Show("El usario fue bloqueado por la cantidad de intentos");
+                            cont = 0;
+                        }
+                    }
                 }
                 else
                 {
                     MessageBox.Show("el usuario esta bloqueado");
-                    CargarBitacora(user.Usuarios, "Inicio de sesion", "Medio", "LOGIN");
+                    //CargarBitacora(user.Usuarios, "Inicio de sesion", "Medio", "LOGIN");
                 }
-                
-                
-                    
-               
+
+
+
+
             }
         }
 
         int cont = 0;
 
-        void CargarBitacora(string Nick, string Descripcion, string Criticidad, string modulo )
+        void CargarBitacora(string Nick, string Descripcion, string Criticidad, string modulo)
         {
             BitacoraTemp = new BE.Bitacora();
 
@@ -119,92 +166,65 @@ namespace TP_DIPLOMA
 
             gestorbitacora.InsertarBitacora(BitacoraTemp);
         }
-        int dv = 0, dvh=0;
+        int dv = 0, dvh = 0;
         BLL.Digitos DV = new BLL.Digitos();
 
-        public void Digitos()
-        {
-            dv=DV.ConsultarDVV("Usuarios");
-            dvh = DV.SumaDVV("UsuDVH", "Usuarios");
-            if (dv!=dvh)//veririfca DVV de usuarios
-            {
-                MessageBox.Show("La integridad fue comprometida, se recomienda restaurar");
-                gestoruser.login(controlUsuario1.Texto, cotrolPass1.Texto);
-                validarpermiso();
-
-                
-                    
-                        //Administracion adm = new Administracion();
-                        //adm.Show();
-                        //this.Hide();
-
-                        //CargarBitacora(user.Usuarios, "Inicio de sesion", "Baja", "LOGIN");
-                                                                        
-            }
-            else //Verifica DVV de pedidos
-            {
-                dv = DV.ConsultarDVV("Pedidosdet");
-                dvh = DV.SumaDVV("DVH", "Pedidosdet");
-                if (dv != dvh)
-                {
-                    
-                    MessageBox.Show("La integridad fue comprometida, se recomienda restaurar");
-                    //gestoruser.login(controlUsuario1.Texto, cotrolPass1.Texto);
-                    //gestoruser.Logout();
-                    validarpermiso();
-                }
-                else  //vreifica el DVH de PRecios
-                {
-                    dv = DV.ConsultarDVV("Precios");
-                    dvh = DV.SumaDVV("DVH", "Precios");
-                    if (dv != dvh)
-                    {
-                        MessageBox.Show("La integridad fue comprometida, se recomienda restaurar");
-                        gestoruser.login(controlUsuario1.Texto, cotrolPass1.Texto);
-                        validarpermiso();
-                    }
-                    else
-                    {
-                        MessageBox.Show(gestoruser.login(controlUsuario1.Texto, cotrolPass1.Texto), "Atención", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        if (SingletonSesion.Instancia.IsLogged())
-                        {
-                            Administracion adm = new Administracion();
-                            adm.Show();
-                            this.Hide();
-
-                            CargarBitacora(user.Usuarios, "Inicio de sesion", "Baja", "LOGIN");
-
-                        }
-                        else
-                        {
-                            cont = cont + 1;
-                            if (cont >= 3)
-                            {
-                                BE.userauxiliar usaux = new BE.userauxiliar();
-                                usaux.Usuarios = controlUsuario1.Texto;
-                                usaux.Idusuario = user.Idusuario;
-                                usaux.Idioma2 = 1;
-                                usaux.Password = Encriptador.Hash(user.Password);
-                                usaux.Nombre = user.Nombre;
-                                usaux.Estado = false;
+        //public void Digitos()
+        //{
+        //    dv=DV.ConsultarDVV("Usuarios");
+        //    dvh = DV.SumaDVV("UsuDVH", "Usuarios");
+        //    if (dv!=dvh)//veririfca DVV de usuarios
+        //    {
+        //        MessageBox.Show("La integridad fue comprometida, se recomienda restaurar");
+        //        gestoruser.login(controlUsuario1.Texto, cotrolPass1.Texto);
+        //        validarpermiso();
 
 
-                                gestoruser.EditarUsuario_estado(usaux);
-                                MessageBox.Show("El usario fue bloqueado por la cantidad de intentos");
-                                cont = 0;
-                            }
-                        }
-                        
-                    }
-                  
-                }
-            }
-            
-        }
+
+        //                //Administracion adm = new Administracion();
+        //                //adm.Show();
+        //                //this.Hide();
+
+        //                //CargarBitacora(user.Usuarios, "Inicio de sesion", "Baja", "LOGIN");
+
+        //    }
+        //    else //Verifica DVV de pedidos
+        //    {
+        //        dv = DV.ConsultarDVV("Pedidosdet");
+        //        dvh = DV.SumaDVV("DVH", "Pedidosdet");
+        //        if (dv != dvh)
+        //        {
+
+        //            MessageBox.Show("La integridad fue comprometida, se recomienda restaurar");
+        //            //gestoruser.login(controlUsuario1.Texto, cotrolPass1.Texto);
+        //            //gestoruser.Logout();
+        //            validarpermiso();
+        //        }
+        //        else  //vreifica el DVH de PRecios
+        //        {
+        //            dv = DV.ConsultarDVV("Precios");
+        //            dvh = DV.SumaDVV("DVH", "Precios");
+        //            if (dv != dvh)
+        //            {
+        //                MessageBox.Show("La integridad fue comprometida, se recomienda restaurar");
+        //                gestoruser.login(controlUsuario1.Texto, cotrolPass1.Texto);
+        //                validarpermiso();
+        //            }
+        //            else
+        //            {
+
+
+        //            }
+
+        //        }
+        //    }
+
+        //}
 
 
         BLL.Patentes gestorpatentes = new BLL.Patentes();
         Patente_Usuario permisos = new Patente_Usuario();
+       Seguridad.Digitos DVs = new Seguridad.Digitos();
         public void validarpermiso()
         {
             gestoruser.login(controlUsuario1.Texto, cotrolPass1.Texto);
@@ -229,7 +249,7 @@ namespace TP_DIPLOMA
                     {
                         MessageBox.Show("No posee los permisos para restaurar la base de datos, por favor comuniquese con soporte");
                         gestoruser.Logout();
-                    }                
+                    }
 
 
                 }
@@ -237,6 +257,43 @@ namespace TP_DIPLOMA
 
 
             }
+        }
+
+        bool Inter = false;
+        public bool Integridad()
+        {
+            int DVH = 0;
+            foreach (BE.Usuario item in gestoruser.Traer())
+            {
+                user.Idusuario = item.Idusuario;
+                user.Idioma = item.Idioma;
+                user.Nombre = item.Nombre;
+                user.Apellido = item.Apellido;
+                user.Mail = item.Mail;
+                user.Usuarios = item.Usuarios;
+                user.Password = item.Password;
+                user.Estado = item.Estado;
+                user.Baja_logica = item.Baja_logica;
+
+                string DV = $"{user.Idusuario}{user.Usuarios}{user.Nombre}{user.Apellido}{user.Password}{user.Mail}{user.Estado}{user.Baja_logica}";
+
+                DVH=DVH+DVs.ConvertToAscii(DV);
+                
+            }
+
+            int TrauUsu = gestoruser.DVH();
+            if (TrauUsu!=DVH)
+            {
+                Inter = true;
+            }
+            
+
+
+
+
+
+
+            return Inter;
         }
     }
 }

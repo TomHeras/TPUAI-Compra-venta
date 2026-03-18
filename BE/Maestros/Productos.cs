@@ -39,5 +39,22 @@ namespace BE.Maestros
             get { return tipo; }
             set { tipo = value; }
         }
+
+        private double precio;
+
+        public double Precio
+        {
+            get { return precio; }
+            set { precio = value; }
+        }
+
+        private int dvh;
+
+        public int DVH
+        {
+            get { return dvh; }
+            set { dvh = value; }
+        }
+
     }
 }
