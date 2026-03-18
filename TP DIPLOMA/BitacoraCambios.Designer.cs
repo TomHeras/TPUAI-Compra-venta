@@ -37,15 +37,35 @@ namespace TP_DIPLOMA
             this.label4 = new System.Windows.Forms.Label();
             this.cmbusuarios = new System.Windows.Forms.ComboBox();
             this.cmbxcriticidad = new System.Windows.Forms.ComboBox();
+<<<<<<< HEAD
 
             this.usuariosBindingSource = new System.Windows.Forms.BindingSource(this.components);
 
+=======
+<<<<<<< HEAD
+
+            this.usuariosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+
+=======
+           
+            this.usuariosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.checkBox3 = new System.Windows.Forms.CheckBox();
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+=======
+            
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -120,7 +140,15 @@ namespace TP_DIPLOMA
             // 
             // usuariosTableAdapter
             // 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+=======
+            
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
             // 
             // dataGridView1
             // 
@@ -193,7 +221,15 @@ namespace TP_DIPLOMA
             this.Name = "BitacoraCambios";
             this.Text = "BitacoraCambios";
             this.Load += new System.EventHandler(this.BitacoraCambios_Load);
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+=======
+           
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
@@ -209,9 +245,21 @@ namespace TP_DIPLOMA
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox cmbusuarios;
         private System.Windows.Forms.ComboBox cmbxcriticidad;
+<<<<<<< HEAD
 
         private System.Windows.Forms.BindingSource usuariosBindingSource;
 
+=======
+<<<<<<< HEAD
+
+        private System.Windows.Forms.BindingSource usuariosBindingSource;
+
+=======
+ 
+        private System.Windows.Forms.BindingSource usuariosBindingSource;
+        
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;

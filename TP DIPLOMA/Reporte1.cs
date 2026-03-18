@@ -1,6 +1,16 @@
+<<<<<<< HEAD
 ﻿using BE;
 using Seguridad.Singleton;
 using System;
+=======
+<<<<<<< HEAD
+﻿using BE;
+using Seguridad.Singleton;
+using System;
+=======
+﻿using System;
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,6 +28,10 @@ namespace TP_DIPLOMA
         {
             InitializeComponent();
         }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
 
         BLL.Negocio.Pedidos gestorpedi = new BLL.Negocio.Pedidos();
         BLL.Maestros.Productos gestorprd = new BLL.Maestros.Productos();
@@ -49,11 +63,31 @@ namespace TP_DIPLOMA
         //--------------------------------------------
         public void CalcularTotales()
         {
+<<<<<<< HEAD
+=======
+=======
+        BLL.Negocio.Pedidos gestorpedi = new BLL.Negocio.Pedidos();
+
+        int cant = 0, cont = 0;
+        double total = 0.0;
+        private void Reporte1_Load(object sender, EventArgs e)
+        {
+            // TODO: esta línea de código carga datos en la tabla 'tPMODELOSDataSet14.Reporte_prodRepo' Puede moverla o quitarla según sea necesario.
+            //this.reporte_prodRepoTableAdapter.Fill(this.tPMODELOSDataSet14.Reporte_prodRepo);
+            //// TODO: esta línea de código carga datos en la tabla 'tPMODELOSDataSet13.Reporta_prodVendidos' Puede moverla o quitarla según sea necesario.
+            //this.reporta_prodVendidosTableAdapter.Fill(this.tPMODELOSDataSet13.Reporta_prodVendidos);
+
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
             foreach (BE.Negocio.Pedido_det item in gestorpedi.listardetalles())
             {
                 cant += item.Cantidad;
                 total += item.Costo;
             }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
 
             foreach (BE.Negocio.Pedido_Cab item in gestorpedi.listarcabecera())
             {
@@ -69,10 +103,33 @@ namespace TP_DIPLOMA
             textBox1.Text = cont.ToString();
             textBox2.Text = cant.ToString();
             textBox3.Text = total.ToString("C");
+<<<<<<< HEAD
+=======
+=======
+            foreach (BE.Negocio.Pedido_Cab item in gestorpedi.listarcabecera())
+            {
+                cont += 1;
+            }
+
+            llenar();
+        }
+
+
+        public void llenar()
+        {
+            textBox2.Text = cant.ToString();
+            textBox1.Text = cont.ToString();
+            textBox3.Text = total.ToString();
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
 
             textBox1.Enabled = false;
             textBox2.Enabled = false;
             textBox3.Enabled = false;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
         }
 
         //--------------------------------------------
@@ -264,6 +321,12 @@ namespace TP_DIPLOMA
                 if (traducciones.ContainsKey(col.Name))
                     col.HeaderText = traducciones[col.Name].Texto;
             }
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
         }
     }
 }

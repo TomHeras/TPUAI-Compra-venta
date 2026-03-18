@@ -24,7 +24,15 @@ namespace TP_DIPLOMA.Maestros
         {
             dataGridView1.DataSource = null;
             dataGridView1.DataSource = gestorprov.listrarprovs();
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+=======
+           
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
         }
 
         public void enlazarcombo()
@@ -107,13 +115,29 @@ namespace TP_DIPLOMA.Maestros
 
         private void btneditar_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             if (controlUsuario2.Texto != "")
+=======
+<<<<<<< HEAD
+            if (controlUsuario2.Texto != "")
+=======
+            if (controlUsuario2.Texto!="")
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
             {
                 foreach (BE.Maestros.Proveedores item in gestorprov.listrarprovs())
                 {
                     try
                     {
+<<<<<<< HEAD
                         if (item.Idprov == int.Parse(lblidcl.Text))
+=======
+<<<<<<< HEAD
+                        if (item.Idprov == int.Parse(lblidcl.Text))
+=======
+                        if (item.Idprov==int.Parse(lblidcl.Text))
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
                         {
                             item.Nombre = controlUsuario3.Texto;
                             item.Direccion = controlUsuario2.Texto;
@@ -140,7 +164,15 @@ namespace TP_DIPLOMA.Maestros
         {
             BE.Maestros.Proveedores prov = new BE.Maestros.Proveedores();
             prov.Idprov = int.Parse(lblidcl.Text);
+<<<<<<< HEAD
             prov.IDasig = int.Parse(comboBox1.SelectedValue.ToString());
+=======
+<<<<<<< HEAD
+            prov.IDasig = int.Parse(comboBox1.SelectedValue.ToString());
+=======
+            prov.IDasig =int.Parse( comboBox1.SelectedValue.ToString());
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
 
             gestorprov.AsginarProd(prov);
             MessageBox.Show("El producto fue asignado al proveedor");

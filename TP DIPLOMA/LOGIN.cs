@@ -13,7 +13,14 @@ using Seguridad.Composite;
 using Seguridad.MultiIdioma;
 using BLL;
 using BE;
+<<<<<<< HEAD
 using DevExpress.UserSkins;
+=======
+<<<<<<< HEAD
+using DevExpress.UserSkins;
+=======
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
 
 namespace TP_DIPLOMA
 {
@@ -85,7 +92,15 @@ namespace TP_DIPLOMA
                             break;
                         }
                     }
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+=======
+                    
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
                 }
 
                 if (user.Estado == true)
@@ -94,6 +109,10 @@ namespace TP_DIPLOMA
                     MessageBox.Show(gestoruser.login(controlUsuario1.Texto, cotrolPass1.Texto), "Atención", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     if (SingletonSesion.Instancia.IsLogged())
                     {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
                         
                         if (Integridad()==true)
                         {
@@ -117,7 +136,21 @@ namespace TP_DIPLOMA
                         }
 
 
+<<<<<<< HEAD
 
+=======
+
+=======
+
+                        CargarBitacora(user.Usuarios, "Inicio de sesion", "Baja", "LOGIN");
+                        Administracion adm = new Administracion();
+                        adm.Show();
+                        this.Hide();
+
+                        
+
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
                     }
                     else
                     {
@@ -153,7 +186,15 @@ namespace TP_DIPLOMA
 
         int cont = 0;
 
+<<<<<<< HEAD
         void CargarBitacora(string Nick, string Descripcion, string Criticidad, string modulo)
+=======
+<<<<<<< HEAD
+        void CargarBitacora(string Nick, string Descripcion, string Criticidad, string modulo)
+=======
+        void CargarBitacora(string Nick, string Descripcion, string Criticidad, string modulo )
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
         {
             BitacoraTemp = new BE.Bitacora();
 
@@ -166,7 +207,15 @@ namespace TP_DIPLOMA
 
             gestorbitacora.InsertarBitacora(BitacoraTemp);
         }
+<<<<<<< HEAD
         int dv = 0, dvh = 0;
+=======
+<<<<<<< HEAD
+        int dv = 0, dvh = 0;
+=======
+        int dv = 0, dvh=0;
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
         BLL.Digitos DV = new BLL.Digitos();
 
         //public void Digitos()
@@ -179,14 +228,32 @@ namespace TP_DIPLOMA
         //        gestoruser.login(controlUsuario1.Texto, cotrolPass1.Texto);
         //        validarpermiso();
 
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+
+
+=======
+                
+                    
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
         //                //Administracion adm = new Administracion();
         //                //adm.Show();
         //                //this.Hide();
 
         //                //CargarBitacora(user.Usuarios, "Inicio de sesion", "Baja", "LOGIN");
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+=======
+                                                                        
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
         //    }
         //    else //Verifica DVV de pedidos
         //    {
@@ -194,7 +261,15 @@ namespace TP_DIPLOMA
         //        dvh = DV.SumaDVV("DVH", "Pedidosdet");
         //        if (dv != dvh)
         //        {
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+=======
+                    
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
         //            MessageBox.Show("La integridad fue comprometida, se recomienda restaurar");
         //            //gestoruser.login(controlUsuario1.Texto, cotrolPass1.Texto);
         //            //gestoruser.Logout();
@@ -212,6 +287,10 @@ namespace TP_DIPLOMA
         //            }
         //            else
         //            {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
 
 
         //            }
@@ -219,12 +298,31 @@ namespace TP_DIPLOMA
         //        }
         //    }
 
+<<<<<<< HEAD
+=======
+=======
+                        
+                        
+        //            }
+                  
+        //        }
+        //    }
+            
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
         //}
 
 
         BLL.Patentes gestorpatentes = new BLL.Patentes();
         Patente_Usuario permisos = new Patente_Usuario();
+<<<<<<< HEAD
        Seguridad.Digitos DVs = new Seguridad.Digitos();
+=======
+<<<<<<< HEAD
+       Seguridad.Digitos DVs = new Seguridad.Digitos();
+=======
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
         public void validarpermiso()
         {
             gestoruser.login(controlUsuario1.Texto, cotrolPass1.Texto);
@@ -249,7 +347,15 @@ namespace TP_DIPLOMA
                     {
                         MessageBox.Show("No posee los permisos para restaurar la base de datos, por favor comuniquese con soporte");
                         gestoruser.Logout();
+<<<<<<< HEAD
                     }
+=======
+<<<<<<< HEAD
+                    }
+=======
+                    }                
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
 
 
                 }
@@ -258,6 +364,10 @@ namespace TP_DIPLOMA
 
             }
         }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
 
         bool Inter = false;
         public bool Integridad()
@@ -295,5 +405,10 @@ namespace TP_DIPLOMA
 
             return Inter;
         }
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
     }
 }

@@ -35,6 +35,10 @@ namespace TP_DIPLOMA.Negocio
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.estadosBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
 
             this.estadosBindingSource = new System.Windows.Forms.BindingSource(this.components);
 
@@ -47,6 +51,23 @@ namespace TP_DIPLOMA.Negocio
 
             ((System.ComponentModel.ISupportInitialize)(this.estadosBindingSource)).BeginInit();
 
+<<<<<<< HEAD
+=======
+=======
+            
+            this.estadosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            
+            
+            this.button2 = new System.Windows.Forms.Button();
+            
+            this.button3 = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.estadosBindingSource1)).BeginInit();
+            
+            ((System.ComponentModel.ISupportInitialize)(this.estadosBindingSource)).BeginInit();
+            
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -93,16 +114,35 @@ namespace TP_DIPLOMA.Negocio
             // estadosBindingSource1
             // 
             this.estadosBindingSource1.DataMember = "estados";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
 
             // 
             // tPMODELOSDataSet10
             // 
 
 
+<<<<<<< HEAD
+=======
+=======
+            
+            // 
+            // tPMODELOSDataSet10
+            // 
+            
+           
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
             // 
             // estadosBindingSource
             // 
             this.estadosBindingSource.DataMember = "estados";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
 
             // 
             // tPMODELOSDataSet6
@@ -113,6 +153,21 @@ namespace TP_DIPLOMA.Negocio
             // estadosTableAdapter
             // 
 
+<<<<<<< HEAD
+=======
+=======
+            
+            // 
+            // tPMODELOSDataSet6
+            // 
+            
+            
+            // 
+            // estadosTableAdapter
+            // 
+            
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
             // 
             // button2
             // 
@@ -127,7 +182,15 @@ namespace TP_DIPLOMA.Negocio
             // 
             // estadosTableAdapter1
             // 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+=======
+            
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
             // 
             // button3
             // 
@@ -156,9 +219,21 @@ namespace TP_DIPLOMA.Negocio
             this.Load += new System.EventHandler(this.Facturasfrm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.estadosBindingSource1)).EndInit();
+<<<<<<< HEAD
 
             ((System.ComponentModel.ISupportInitialize)(this.estadosBindingSource)).EndInit();
 
+=======
+<<<<<<< HEAD
+
+            ((System.ComponentModel.ISupportInitialize)(this.estadosBindingSource)).EndInit();
+
+=======
+            
+            ((System.ComponentModel.ISupportInitialize)(this.estadosBindingSource)).EndInit();
+            
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -170,6 +245,10 @@ namespace TP_DIPLOMA.Negocio
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.ComboBox comboBox1;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
 
         private System.Windows.Forms.BindingSource estadosBindingSource;
 
@@ -177,6 +256,18 @@ namespace TP_DIPLOMA.Negocio
 
         private System.Windows.Forms.BindingSource estadosBindingSource1;
 
+<<<<<<< HEAD
+=======
+=======
+        
+        private System.Windows.Forms.BindingSource estadosBindingSource;
+        
+        private System.Windows.Forms.Button button2;
+        
+        private System.Windows.Forms.BindingSource estadosBindingSource1;
+        
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
         private System.Windows.Forms.Button button3;
     }
 }

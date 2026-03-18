@@ -16,6 +16,7 @@ namespace BE
             get { return idusuario; }
             set { idusuario = value; }
         }
+<<<<<<< HEAD
 
 
         private string usuario;
@@ -78,6 +79,81 @@ namespace BE
         public Iidioma Idioma { get; set; }
 
 
+=======
+
+
+        private string usuario;
+
+        public string Usuarios
+        {
+            get { return usuario; }
+            set { usuario = value; }
+        }
+
+        private string password;
+
+        public string Password
+        {
+            get { return password; }
+            set { password = value; }
+        }
+
+        private string nombre;
+
+        public string Nombre
+        {
+            get { return nombre; }
+            set { nombre = value; }
+        }
+
+        private string apellido;
+
+        public string Apellido
+        {
+            get { return apellido; }
+            set { apellido = value; }
+        }
+
+            private string apellido;
+
+<<<<<<< HEAD
+=======
+            public string Apellido
+            {
+            get { return apellido; }
+            set { apellido = value; }
+            }
+
+
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
+        private string mail;
+
+        public string Mail
+        {
+            get { return mail; }
+            set { mail = value; }
+        }
+
+        private bool estado;
+
+        public bool Estado
+        {
+            get { return estado; }
+            set { estado = value; }
+        }
+
+        private bool baja_logica;
+
+        public bool Baja_logica
+        {
+            get { return baja_logica; }
+            set { baja_logica = value; }
+        }
+
+        public Iidioma Idioma { get; set; }
+
+
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
         private int idioma2;
 
         public int Idioma2

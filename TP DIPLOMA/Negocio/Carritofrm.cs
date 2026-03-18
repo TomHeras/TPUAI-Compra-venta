@@ -61,18 +61,40 @@ namespace TP_DIPLOMA.Negocio
         BLL.Maestros.Productos gesprod = new BLL.Maestros.Productos();
         private void btnagregarcarrito_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
 
             BE.Negocio.Carrito carrito = new BE.Negocio.Carrito(int.Parse(comboBox1.SelectedIndex.ToString()), int.Parse(comboBox2.Text), DateTime.Now, int.Parse(txtcantidad.Text), double.Parse(controlUsuario2.Texto));
+=======
+<<<<<<< HEAD
+
+            BE.Negocio.Carrito carrito = new BE.Negocio.Carrito(int.Parse(comboBox1.SelectedIndex.ToString()), int.Parse(comboBox2.Text), DateTime.Now, int.Parse(txtcantidad.Text), double.Parse(controlUsuario2.Texto));
+=======
+            
+            BE.Negocio.Carrito carrito = new BE.Negocio.Carrito(int.Parse(comboBox1.SelectedIndex.ToString()), int.Parse(comboBox2.Text), DateTime.Now, int.Parse(txtcantidad.Text),double.Parse(controlUsuario2.Texto)  );
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
             var idcl = gestorcl.listar()[comboBox1.SelectedIndex].Idcl;
 
             carrito.Idcl = idcl;
             carrito.Idprod = int.Parse(comboBox2.Text);
             carrito.Fecha = DateTime.Now;
             carrito.Cant = int.Parse(txtcantidad.Text);
+<<<<<<< HEAD
 
             carrito.Costo = double.Parse(controlUsuario2.Texto);
 
 
+=======
+<<<<<<< HEAD
+
+            carrito.Costo = double.Parse(controlUsuario2.Texto);
+
+=======
+            
+            carrito.Costo = double.Parse(controlUsuario2.Texto);
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
+
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
             GetCarrito.Agregarcarrito(carrito);
             enlazar();
 
@@ -86,7 +108,15 @@ namespace TP_DIPLOMA.Negocio
         {
             try
             {
+<<<<<<< HEAD
                 if (comboBox1.Text != "")
+=======
+<<<<<<< HEAD
+                if (comboBox1.Text != "")
+=======
+                if (comboBox1.Text!="")
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
                 {
                     foreach (BE.Maestros.Productos item in gesprod.listar())
                     {
@@ -107,7 +137,15 @@ namespace TP_DIPLOMA.Negocio
                         }
                     }
                 }
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+=======
+                
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
             }
             catch (Exception)
             {
@@ -174,7 +212,14 @@ namespace TP_DIPLOMA.Negocio
                     detalle.Cantidad = item.Cant;
                     detalle.Costo = item.Costo;
                     detalle.DVH = 0;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
 
+=======
+                   
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
                     pedidos.Cargardet(detalle);
                     //DigitosVerificadores();
 
@@ -205,6 +250,7 @@ namespace TP_DIPLOMA.Negocio
         }
         BLL.Bitacora gestorbitacora = new BLL.Bitacora();
         BE.Bitacora BitacoraTemp;
+<<<<<<< HEAD
 
         void CargarBitacora(string Nick, string Descripcion, string Criticidad, string modulo)
         {
@@ -239,7 +285,80 @@ namespace TP_DIPLOMA.Negocio
 
                 throw;
             }
+=======
+<<<<<<< HEAD
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
 
+        void CargarBitacora(string Nick, string Descripcion, string Criticidad, string modulo)
+        {
+            BitacoraTemp = new BE.Bitacora();
+
+            BitacoraTemp.NickUsuario = Nick;
+            BitacoraTemp.Fecha = DateTime.Now;
+            //BitacoraTemp.Hora = DateTime.Parse( DateTime.Now.ToShortTimeString());
+            BitacoraTemp.Modulo = modulo;
+            BitacoraTemp.Descripcion = Descripcion;
+            BitacoraTemp.Criticidad = Criticidad;
+
+            gestorbitacora.InsertarBitacora(BitacoraTemp);
+        }
+
+        private void txtcantidad_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (txtcantidad.Text != "")
+                {
+                    int cantidad = int.Parse(txtcantidad.Text);
+                    controlUsuario2.Texto = (precio1 * cantidad).ToString();
+                }
+                else
+                {
+                    txtcantidad.Text = "0";
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+=======
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
+
+        void CargarBitacora(string Nick, string Descripcion, string Criticidad, string modulo)
+        {
+            BitacoraTemp = new BE.Bitacora();
+
+            BitacoraTemp.NickUsuario = Nick;
+            BitacoraTemp.Fecha = DateTime.Now;
+            //BitacoraTemp.Hora = DateTime.Parse( DateTime.Now.ToShortTimeString());
+            BitacoraTemp.Modulo = modulo;
+            BitacoraTemp.Descripcion = Descripcion;
+            BitacoraTemp.Criticidad = Criticidad;
+
+            gestorbitacora.InsertarBitacora(BitacoraTemp);
+        }
+
+        private void txtcantidad_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (txtcantidad.Text != "")
+                {
+                    int cantidad = int.Parse(txtcantidad.Text);
+                    controlUsuario2.Texto = (precio1 * cantidad).ToString();
+                }
+                else
+                {
+                    txtcantidad.Text = "0";
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            
         }
     }
 }

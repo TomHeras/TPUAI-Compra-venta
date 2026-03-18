@@ -70,6 +70,10 @@ namespace BLL
         
         public void InsertarDVV(string tabla, string columna)
         {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
             SqlConnection Conexion = new SqlConnection(@"Data Source=AR2482453W1\SQLEXPRESS;Initial Catalog=TPMODELOS;Integrated Security=True");
             Conexion.Open();
             string consulta = "update DVV set DVV.DVV_SUMA =  ( select sum (" + columna + ") from " + tabla + " ) " +
@@ -77,11 +81,27 @@ namespace BLL
             SqlCommand cmd = new SqlCommand(consulta, Conexion);
             cmd.ExecuteNonQuery();
             Conexion.Close();
+<<<<<<< HEAD
+=======
+=======
+            //SqlConnection Conexion = new SqlConnection(@"Data Source=AR2482453W1\SQLEXPRESS;Initial Catalog=TPMODELOS;Integrated Security=True");
+            //Conexion.Open();
+            //string consulta = "update DVV set DVV.DVV_SUMA =  ( select sum (" + columna + ") from " + tabla + " ) " +
+            //    "where DVV.DVV_TABLA = '" + tabla.ToString() + "'";
+            //SqlCommand cmd = new SqlCommand(consulta, Conexion);
+            //cmd.ExecuteNonQuery();
+            //Conexion.Close();
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
         }
 
         public int ConsultarDVV(string tabla)
         {
             int i = 0;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
             SqlConnection Conexion = new SqlConnection(@"Data Source=AR2482453W1\SQLEXPRESS;Initial Catalog=TPMODELOS;Integrated Security=True");
             Conexion.Open();
             string consulta = "select DVV_SUMA from DVV where DVV_TABLA = '" + tabla.ToString() + "'";
@@ -104,6 +124,33 @@ namespace BLL
             }
 
             Conexion.Close();
+<<<<<<< HEAD
+=======
+=======
+            //SqlConnection Conexion = new SqlConnection(@"Data Source=AR2482453W1\SQLEXPRESS;Initial Catalog=TPMODELOS;Integrated Security=True");
+            //Conexion.Open();
+            //string consulta = "select DVV_SUMA from DVV where DVV_TABLA = '" + tabla.ToString() + "'";
+            //SqlCommand cmd = new SqlCommand(consulta, Conexion);
+            //SqlDataReader dr = cmd.ExecuteReader();
+
+            //if (dr.HasRows)
+            //{
+            //    dr.Read();
+
+            //    try
+            //    {
+            //        i = dr.GetInt32(0);
+            //    }
+            //    catch
+            //    {
+            //        i = 0;
+            //    }
+
+            //}
+
+            //Conexion.Close();
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
             return i;
         }
         public void Consultar(string query)

@@ -41,9 +41,21 @@ namespace TP_DIPLOMA
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.idiomaBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.idiomaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+<<<<<<< HEAD
 
             this.label1 = new System.Windows.Forms.Label();
 
+=======
+<<<<<<< HEAD
+
+            this.label1 = new System.Windows.Forms.Label();
+
+=======
+            
+            this.label1 = new System.Windows.Forms.Label();
+            
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
             this.button2 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
@@ -51,7 +63,15 @@ namespace TP_DIPLOMA
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.idiomaBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.idiomaBindingSource)).BeginInit();
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+=======
+            
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
             this.SuspendLayout();
             // 
             // controlUsuario1
@@ -146,11 +166,22 @@ namespace TP_DIPLOMA
             // idiomaBindingSource
             // 
             this.idiomaBindingSource.DataMember = "Idioma";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
 
             // 
             // tPMODELOSDataSet7
             // 
             // 
+=======
+            
+            // 
+            // tPMODELOSDataSet7
+            // 
+             // 
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
             // label1
             // 
             this.label1.AutoSize = true;
@@ -162,7 +193,15 @@ namespace TP_DIPLOMA
             // 
             // idiomaTableAdapter
             // 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+=======
+            
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
             // 
             // button2
             // 
@@ -229,7 +268,15 @@ namespace TP_DIPLOMA
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.idiomaBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.idiomaBindingSource)).EndInit();
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+=======
+            
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -246,15 +293,35 @@ namespace TP_DIPLOMA
         private System.Windows.Forms.Label lblidcl;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label1;
+<<<<<<< HEAD
 
         private System.Windows.Forms.BindingSource idiomaBindingSource;
 
+=======
+<<<<<<< HEAD
+
+        private System.Windows.Forms.BindingSource idiomaBindingSource;
+
+=======
+        
+        private System.Windows.Forms.BindingSource idiomaBindingSource;
+       
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox comboBox2;
 
         private System.Windows.Forms.BindingSource idiomaBindingSource1;
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+=======
+       
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
         private ControlUsuario controlUsuarioApellido;
     }
 }

@@ -204,12 +204,27 @@ namespace TP_DIPLOMA.Negocio
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.BindingSource clientesBindingSource;
         private System.Windows.Forms.BindingSource clientesBindingSource1;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
 
         private System.Windows.Forms.BindingSource listarclientesBindingSource;
 
 
         private System.Windows.Forms.BindingSource listarprodBindingSource;
 
+<<<<<<< HEAD
+=======
+=======
+        
+        private System.Windows.Forms.BindingSource listarclientesBindingSource;
+        
+        
+        private System.Windows.Forms.BindingSource listarprodBindingSource;
+        
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnagregarcarrito;
@@ -217,6 +232,10 @@ namespace TP_DIPLOMA.Negocio
         private System.Windows.Forms.DataGridView dataGridView1;
         private ControlUsuario controlUsuario2;
         private System.Windows.Forms.ComboBox comboBox1;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
 
         private System.Windows.Forms.BindingSource clientesBindingSource2;
 
@@ -224,6 +243,18 @@ namespace TP_DIPLOMA.Negocio
         private System.Windows.Forms.BindingSource stockBindingSource;
 
 
+<<<<<<< HEAD
+=======
+=======
+        
+        private System.Windows.Forms.BindingSource clientesBindingSource2;
+        
+        
+        private System.Windows.Forms.BindingSource stockBindingSource;
+        
+        
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
         private System.Windows.Forms.BindingSource clientesBindingSource3;
 
         private System.Windows.Forms.BindingSource clientesBindingSource4;

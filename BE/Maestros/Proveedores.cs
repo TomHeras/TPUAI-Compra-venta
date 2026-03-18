@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace BE.Maestros
 {
+<<<<<<< HEAD
     public class Proveedores
+=======
+   public class Proveedores
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
     {
         private int idprov;
 

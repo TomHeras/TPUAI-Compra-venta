@@ -1,6 +1,16 @@
+<<<<<<< HEAD
 ﻿using BE;
 using Seguridad.Singleton;
 using System;
+=======
+<<<<<<< HEAD
+﻿using BE;
+using Seguridad.Singleton;
+using System;
+=======
+﻿using System;
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,10 +19,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
 using Seguridad;
 using Seguridad.Composite;
 using Seguridad.MultiIdioma;
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
 
 namespace TP_DIPLOMA
 {
@@ -23,6 +42,10 @@ namespace TP_DIPLOMA
             InitializeComponent();
         }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
         BE.PedidoReport coti=new BE.PedidoReport();
         BLL.Traductor tradu = new BLL.Traductor();
         private void Reporte2_Load(object sender, EventArgs e)
@@ -126,6 +149,15 @@ namespace TP_DIPLOMA
             }
 
 
+<<<<<<< HEAD
+=======
+=======
+        private void Reporte2_Load(object sender, EventArgs e)
+        {
+            // TODO: esta línea de código carga datos en la tabla 'tPMODELOSDataSet22.levantarjoin' Puede moverla o quitarla según sea necesario.
+            //this.levantarjoinTableAdapter.Fill(this.tPMODELOSDataSet22.levantarjoin);
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
 
         }
     }

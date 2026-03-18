@@ -53,7 +53,15 @@ namespace TP_DIPLOMA
                 //var idiomas = 
 
                 // Establece la fuente de datos
+<<<<<<< HEAD
                 comboBox1.DataSource = GetTraductor.ObtenerIdiomas();
+=======
+<<<<<<< HEAD
+                comboBox1.DataSource = GetTraductor.ObtenerIdiomas();
+=======
+                comboBox1.DataSource = GetTraductor.ObtenerIdiomas(); 
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
 
                 // Configura DisplayMember y ValueMember
                 comboBox1.DisplayMember = "Nombre"; // La propiedad que se muestra en el ComboBox
@@ -67,9 +75,18 @@ namespace TP_DIPLOMA
             {
                 MessageBox.Show("Error al cargar datos: " + ex.Message);
             }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
 
 
             enlazar();
+=======
+        
+
+        enlazar();
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -93,15 +110,31 @@ namespace TP_DIPLOMA
             }
 
         }
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+=======
+        
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
         private void button1_Click(object sender, EventArgs e)///Alta usuario
         {
             if (controlUsuario2.Texto == "")
             {
                 controlUsuario2.Texto = controlUsuario1.Texto + "." + controlUsuarioApellido.Texto;
             }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
 
             bool ok = true;
+=======
+            
+                bool ok = true;
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
             foreach (Control ctr in this.Controls)
             {
                 if (ctr is ControlUsuario)
@@ -122,6 +155,10 @@ namespace TP_DIPLOMA
                 try
                 {
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
                     user.Idioma = new Idiomas()
                     {
                         Id = comboBox1.SelectedIndex + 1
@@ -140,6 +177,7 @@ namespace TP_DIPLOMA
 
 
                     if (validarciones() == false)
+<<<<<<< HEAD
                     {
                         gestorusuarios.crearusuario(user);
                         int ID = gestorusuarios.ID();
@@ -155,6 +193,48 @@ namespace TP_DIPLOMA
                         MessageBox.Show("El usuario fue creado con exito!");
 
 
+=======
+=======
+                            user.Idioma = new Idiomas()
+                            {
+                                Id = comboBox1.SelectedIndex+1
+                            };
+                    
+                            user.Usuarios = controlUsuario2.Texto;
+                            user.Nombre = controlUsuario1.Texto;
+                            user.Apellido = controlUsuarioApellido.Texto;
+                            var pass = controlUsuario3.Texto;
+                            user.Password = Encriptador.Hash(pass);
+                            user.Mail = controlUsuario4.Texto;
+                            user.Estado = true;
+                            user.Baja_logica = false;
+                            user.UsuDVH = 0;
+                    
+                   
+
+                    if (validarciones()==false )
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
+                    {
+                        gestorusuarios.crearusuario(user);
+                        int ID = gestorusuarios.ID();
+
+                        string DV = $"{ID}{user.Usuarios}{user.Nombre}{user.Apellido}{user.Password}{user.Mail}{user.Estado}{user.Baja_logica}";
+                        Digitos D = new Digitos();
+                        int Digito=D.ConvertToAscii(DV);
+                        string Consulta = "UPDATE Usuarios set UsuDVH=" + Digito + " where Idusu=" + ID;
+                        gestorusuarios.Consultar(Consulta);
+
+                        String actDVV = " UPDATE DVV SET DVV_SUMA = (SELECT SUM(UsuDVH) FROM Usuarios) WHERE DVV_TABLA='Usuarios'";
+                        gestorusuarios.Consultar(actDVV);
+                        MessageBox.Show("El usuario fue creado con exito!");
+<<<<<<< HEAD
+
+
+=======
+                       
+                       
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
                         limpiar();
                         enlazar();
 
@@ -177,8 +257,16 @@ namespace TP_DIPLOMA
                 }
             }
         }
+        
 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
         bool validarciones()
         {
             bool valis = false;

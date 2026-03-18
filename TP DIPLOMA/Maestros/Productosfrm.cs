@@ -67,14 +67,38 @@ namespace TP_DIPLOMA.Maestros
                 tmp.Precio = double.Parse(ctlprecio.Texto);
                 tmp.DVH = 0;
                 gestprod.altaprod(tmp);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
+=======
+                
+                
+                ///////// procedimiento para cargar la lista de precios
+                //gestprod.llenar();
+                //gestprod.update0();
+                /////aca
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
 
                 ///////// procedimiento para cargar la lista de precios
                 //gestprod.llenar();
                 //gestprod.update0();
                 /////aca
 
+<<<<<<< HEAD
+                ///////// procedimiento para cargar la lista de precios
+                //gestprod.llenar();
+                //gestprod.update0();
+                /////aca
 
+
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
                 //DigitosVerificadores();
                 MessageBox.Show("El producto fue registrado  con exito!");
 

@@ -54,7 +54,15 @@ namespace TP_DIPLOMA
                 dataGridView1.DataSource = DS;
                 dataGridView1.DataMember = "Compras";
             }
+<<<<<<< HEAD
             else if (textBox1.Text == "C:\\Facultad\\ventas.xml")
+=======
+<<<<<<< HEAD
+            else if (textBox1.Text == "C:\\Facultad\\ventas.xml")
+=======
+            else if (textBox1.Text == "C:\\FacultadI\\ventas.xml")
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
             {
                 DS.ReadXml("C:\\Facultad\\ventas.xml");
                 dataGridView1.DataSource = DS;

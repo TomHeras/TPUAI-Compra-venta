@@ -81,9 +81,28 @@ namespace DAL
         {
             List<BE.Usuario> ListaUsuarios = new List<BE.Usuario>();
             DataTable tabla = acceso.Leer("traernicks", null);
+<<<<<<< HEAD
 
             foreach (DataRow registro in tabla.Rows)
             {
+=======
+<<<<<<< HEAD
+=======
+
+            foreach (DataRow registro in tabla.Rows)
+            {
+                BE.Usuario usu = new BE.Usuario();                
+                usu.Nombre = registro["Usunick"].ToString();                
+                ListaUsuarios.Add(usu);
+            }
+
+            return ListaUsuarios;
+        }
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
+
+            foreach (DataRow registro in tabla.Rows)
+            {
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
                 BE.Usuario usu = new BE.Usuario();
                 usu.Nombre = registro["Usunick"].ToString();
                 ListaUsuarios.Add(usu);
@@ -209,6 +228,10 @@ namespace DAL
             // 2. Asignar el Idusu al objeto usuario
             usu.Idusuario = nuevoIdusu;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
             ////// 3. Calcular el DVH
             //usu.UsuDVH = ObtenerDVH(usu.Idusuario);
 
@@ -218,6 +241,20 @@ namespace DAL
             //parametersUpdate[1] = new SqlParameter("UsuDVH", usu.UsuDVH);
 
             //fa = acceso.Escribir("ActualizarUsuarioDVH", parametersUpdate);
+<<<<<<< HEAD
+=======
+=======
+            //// 3. Calcular el DVH
+            usu.UsuDVH = ObtenerDVH(usu.Idusuario);
+
+            //// 4. Actualizar el registro con el DVH calculado
+            SqlParameter[] parametersUpdate = new SqlParameter[2];
+            parametersUpdate[0] = new SqlParameter("Idusu", usu.Idusuario);
+            parametersUpdate[1] = new SqlParameter("UsuDVH", usu.UsuDVH);
+
+            fa = acceso.Escribir("ActualizarUsuarioDVH", parametersUpdate);
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
             return fa;
 
         }
@@ -229,6 +266,16 @@ namespace DAL
         {
             int ultimoIdusu = 0; // Valor predeterminado si no se encuentra ningún ID
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+        public int ObtenerUltimoIdUsuario()
+        {
+            int ultimoIdusu = 0; // Valor predeterminado si no se encuentra ningún ID
+
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
             // Consulta SQL para obtener el último Idusu
             string query = "SELECT TOP 1 Idusu FROM Usuarios ORDER BY Idusu DESC";
 
@@ -374,7 +421,15 @@ namespace DAL
             string fm;
 
             SqlParameter[] parameters = new SqlParameter[7];
+<<<<<<< HEAD
             parameters[0] = new SqlParameter("@Idusu", useer.Idusuario);
+=======
+<<<<<<< HEAD
+            parameters[0] = new SqlParameter("@Idusu", useer.Idusuario);
+=======
+            parameters[0] =new SqlParameter("@Idusu",useer.Idusuario);
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
             parameters[1] = new SqlParameter("@nick", useer.Usuarios);
             parameters[2] = new SqlParameter("@pass", useer.Password);
             parameters[3] = new SqlParameter("@estado", useer.Estado);
@@ -390,7 +445,15 @@ namespace DAL
         public int DV()
         {
             int total = 0;
+<<<<<<< HEAD
             string query = "Select DVV_SUMA FROM DVV WHERE DVV_TABLA='Usuarios'";
+=======
+<<<<<<< HEAD
+            string query = "Select DVV_SUMA FROM DVV WHERE DVV_TABLA='Usuarios'";
+=======
+            string query = "SELECT SUM(dbo.CalcularDVHUsuario( IdIdioma,    Usunom,    UsuApe,    Usunick,    Usupass,    Usumail,    Usuestado,    UsubajaL )) AS Total FROM Usuarios";
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
 
 
             var cnn = new SqlConnection(acceso.crearconeion());
@@ -418,6 +481,10 @@ namespace DAL
 
             return total;
         }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
 
         public int ObtenerUltimoId()
         {
@@ -442,5 +509,10 @@ namespace DAL
         }
 
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
     }
 }

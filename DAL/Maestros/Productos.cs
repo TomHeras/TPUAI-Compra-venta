@@ -61,7 +61,15 @@ namespace DAL.Maestros
                 sto.Medidas = double.Parse(registro["medidas"].ToString());
                 sto.Cantidad = int.Parse(registro["cantidad"].ToString());
                 sto.Tipo = registro["Tipo"].ToString();
+<<<<<<< HEAD
                 sto.Precio = double.Parse(registro["precio"].ToString());
+=======
+<<<<<<< HEAD
+                sto.Precio = double.Parse(registro["precio"].ToString());
+=======
+                sto.Precio= double.Parse(registro["precio"].ToString());
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
                 stok.Add(sto);
             }
             return stok;
@@ -86,7 +94,15 @@ namespace DAL.Maestros
 
         public void llenar()
         {
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+=======
+            
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
             acces.Leer("llenartabla", null);
             acces.ejecutarconsulta("update Precios set DVH=0 ");
         }

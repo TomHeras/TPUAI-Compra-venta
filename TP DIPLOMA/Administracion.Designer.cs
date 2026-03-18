@@ -54,12 +54,21 @@ namespace TP_DIPLOMA
             this.facturacionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.facturasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cobrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+<<<<<<< HEAD
             this.comprasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ordenDeCompraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ordenesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.detallesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ordenesDeCompraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.comprasToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> ae908eba2451935d0e21c831547748aa93a071bd
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
             this.maestrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.stockToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.productosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -68,8 +77,20 @@ namespace TP_DIPLOMA
             this.serealizacionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reporteDeVentasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+<<<<<<< HEAD
             this.reporteDeComprasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reporteDashboardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+=======
+<<<<<<< HEAD
+            this.reporteDeComprasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reporteDashboardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+=======
+<<<<<<< HEAD
+            this.reporteDeComprasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+=======
+>>>>>>> ae908eba2451935d0e21c831547748aa93a071bd
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
             this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.cotizaYDetalle1 = new TP_DIPLOMA.CotizaYDetalle();
@@ -95,7 +116,15 @@ namespace TP_DIPLOMA
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+<<<<<<< HEAD
             this.menuStrip1.Size = new System.Drawing.Size(1056, 28);
+=======
+<<<<<<< HEAD
+            this.menuStrip1.Size = new System.Drawing.Size(1056, 28);
+=======
+            this.menuStrip1.Size = new System.Drawing.Size(1056, 24);
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
             this.menuStrip1.TabIndex = 4;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -179,9 +208,20 @@ namespace TP_DIPLOMA
             this.tsmabmusuarios,
             this.bitacoraToolStripMenuItem,
             this.respaldosToolStripMenuItem});
+<<<<<<< HEAD
             this.smiseguridad.Image = global::TP_DIPLOMA.Properties.Resources.Admin;
             this.smiseguridad.Name = "smiseguridad";
             this.smiseguridad.Size = new System.Drawing.Size(120, 24);
+=======
+<<<<<<< HEAD
+            this.smiseguridad.Image = global::TP_DIPLOMA.Properties.Resources.Admin;
+            this.smiseguridad.Name = "smiseguridad";
+            this.smiseguridad.Size = new System.Drawing.Size(120, 24);
+=======
+            this.smiseguridad.Name = "smiseguridad";
+            this.smiseguridad.Size = new System.Drawing.Size(100, 20);
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
             this.smiseguridad.Tag = "seguridad";
             this.smiseguridad.Text = "Administracion";
             // 
@@ -246,7 +286,15 @@ namespace TP_DIPLOMA
             this.ventasToolStripMenuItem,
             this.facturacionToolStripMenuItem});
             this.negocioToolStripMenuItem.Name = "negocioToolStripMenuItem";
+<<<<<<< HEAD
             this.negocioToolStripMenuItem.Size = new System.Drawing.Size(53, 24);
+=======
+<<<<<<< HEAD
+            this.negocioToolStripMenuItem.Size = new System.Drawing.Size(53, 24);
+=======
+            this.negocioToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
             this.negocioToolStripMenuItem.Tag = "negocio";
             this.negocioToolStripMenuItem.Text = "Ventas";
             // 
@@ -294,13 +342,22 @@ namespace TP_DIPLOMA
             this.cobrosToolStripMenuItem.Text = "Cobros";
             this.cobrosToolStripMenuItem.Click += new System.EventHandler(this.cobrosToolStripMenuItem_Click);
             // 
+<<<<<<< HEAD
             // comprasToolStripMenuItem
             // 
             this.comprasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ordenDeCompraToolStripMenuItem,
             this.comprasToolStripMenuItem1});
             this.comprasToolStripMenuItem.Name = "comprasToolStripMenuItem";
+<<<<<<< HEAD
             this.comprasToolStripMenuItem.Size = new System.Drawing.Size(67, 24);
+=======
+<<<<<<< HEAD
+            this.comprasToolStripMenuItem.Size = new System.Drawing.Size(67, 24);
+=======
+            this.comprasToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
             this.comprasToolStripMenuItem.Text = "Compras";
             // 
             // ordenDeCompraToolStripMenuItem
@@ -341,6 +398,14 @@ namespace TP_DIPLOMA
             this.comprasToolStripMenuItem1.Text = "Compras";
             this.comprasToolStripMenuItem1.Click += new System.EventHandler(this.comprasToolStripMenuItem1_Click);
             // 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> ae908eba2451935d0e21c831547748aa93a071bd
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
             // maestrosToolStripMenuItem
             // 
             this.maestrosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -358,43 +423,90 @@ namespace TP_DIPLOMA
             this.stockToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.productosToolStripMenuItem});
             this.stockToolStripMenuItem.Name = "stockToolStripMenuItem";
+<<<<<<< HEAD
             this.stockToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+=======
+<<<<<<< HEAD
+            this.stockToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+=======
+            this.stockToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
             this.stockToolStripMenuItem.Text = "Stock";
             // 
             // productosToolStripMenuItem
             // 
             this.productosToolStripMenuItem.Name = "productosToolStripMenuItem";
-            this.productosToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
+            this.productosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.productosToolStripMenuItem.Text = "Productos";
             this.productosToolStripMenuItem.Click += new System.EventHandler(this.productosToolStripMenuItem_Click);
             // 
             // clientesToolStripMenuItem
             // 
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
+<<<<<<< HEAD
             this.clientesToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+=======
+<<<<<<< HEAD
+            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+=======
+            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
             this.clientesToolStripMenuItem.Text = "Clientes";
             this.clientesToolStripMenuItem.Click += new System.EventHandler(this.clientesToolStripMenuItem_Click);
             // 
             // proveedoresToolStripMenuItem
             // 
             this.proveedoresToolStripMenuItem.Name = "proveedoresToolStripMenuItem";
+<<<<<<< HEAD
             this.proveedoresToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+=======
+<<<<<<< HEAD
+            this.proveedoresToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+=======
+            this.proveedoresToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
             this.proveedoresToolStripMenuItem.Text = "Proveedores";
             this.proveedoresToolStripMenuItem.Click += new System.EventHandler(this.proveedoresToolStripMenuItem_Click);
             // 
             // serealizacionToolStripMenuItem
             // 
             this.serealizacionToolStripMenuItem.Name = "serealizacionToolStripMenuItem";
+<<<<<<< HEAD
             this.serealizacionToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+=======
+<<<<<<< HEAD
+            this.serealizacionToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+=======
+            this.serealizacionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
             this.serealizacionToolStripMenuItem.Text = "Serealizacion";
             this.serealizacionToolStripMenuItem.Click += new System.EventHandler(this.serealizacionToolStripMenuItem_Click);
             // 
             // reportesToolStripMenuItem
             // 
             this.reportesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+<<<<<<< HEAD
             this.reporteDeVentasToolStripMenuItem,
             this.reporteDeComprasToolStripMenuItem,
             this.reporteDashboardToolStripMenuItem});
+=======
+<<<<<<< HEAD
+            this.reporteDeVentasToolStripMenuItem,
+            this.reporteDeComprasToolStripMenuItem,
+            this.reporteDashboardToolStripMenuItem});
+=======
+<<<<<<< HEAD
+            this.reporteDeVentasToolStripMenuItem,
+            this.reporteDeComprasToolStripMenuItem});
+=======
+            this.reporteDeVentasToolStripMenuItem});
+>>>>>>> ae908eba2451935d0e21c831547748aa93a071bd
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
             this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
             this.reportesToolStripMenuItem.Size = new System.Drawing.Size(65, 24);
             this.reportesToolStripMenuItem.Tag = "Reportes";
@@ -403,13 +515,28 @@ namespace TP_DIPLOMA
             // reporteDeVentasToolStripMenuItem
             // 
             this.reporteDeVentasToolStripMenuItem.Name = "reporteDeVentasToolStripMenuItem";
+<<<<<<< HEAD
             this.reporteDeVentasToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
             this.reporteDeVentasToolStripMenuItem.Text = "Reporte de Productos";
+=======
+<<<<<<< HEAD
+            this.reporteDeVentasToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
+            this.reporteDeVentasToolStripMenuItem.Text = "Reporte de Productos";
+=======
+<<<<<<< HEAD
+            this.reporteDeVentasToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
+            this.reporteDeVentasToolStripMenuItem.Text = "Reporte de Ventas";
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
             this.reporteDeVentasToolStripMenuItem.Click += new System.EventHandler(this.reporteDeVentasToolStripMenuItem_Click);
             // 
             // reporteDeComprasToolStripMenuItem
             // 
             this.reporteDeComprasToolStripMenuItem.Name = "reporteDeComprasToolStripMenuItem";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
             this.reporteDeComprasToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
             this.reporteDeComprasToolStripMenuItem.Text = "Dashboard Ventas";
             this.reporteDeComprasToolStripMenuItem.Click += new System.EventHandler(this.reporteDeComprasToolStripMenuItem_Click);
@@ -421,6 +548,21 @@ namespace TP_DIPLOMA
             this.reporteDashboardToolStripMenuItem.Text = "Dashboard Compras";
             this.reporteDashboardToolStripMenuItem.Click += new System.EventHandler(this.reporteDashboardToolStripMenuItem_Click);
             // 
+<<<<<<< HEAD
+=======
+=======
+            this.reporteDeComprasToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
+            this.reporteDeComprasToolStripMenuItem.Text = "Reporte de Compras";
+            this.reporteDeComprasToolStripMenuItem.Click += new System.EventHandler(this.reporteDeComprasToolStripMenuItem_Click);
+            // 
+=======
+            this.reporteDeVentasToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
+            this.reporteDeVentasToolStripMenuItem.Text = "Reporte de Ventas";
+            this.reporteDeVentasToolStripMenuItem.Click += new System.EventHandler(this.reporteDeVentasToolStripMenuItem_Click);
+            // 
+>>>>>>> ae908eba2451935d0e21c831547748aa93a071bd
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
             // ayudaToolStripMenuItem
             // 
             this.ayudaToolStripMenuItem.Name = "ayudaToolStripMenuItem";
@@ -435,7 +577,14 @@ namespace TP_DIPLOMA
             // 
             // statusStrip1
             // 
+<<<<<<< HEAD
             this.statusStrip1.BackgroundImage = global::TP_DIPLOMA.Properties.Resources.Logo_SyT;
+=======
+<<<<<<< HEAD
+            this.statusStrip1.BackgroundImage = global::TP_DIPLOMA.Properties.Resources.Logo_SyT;
+=======
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
             this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.lblSession,
@@ -524,6 +673,13 @@ namespace TP_DIPLOMA
         private System.Windows.Forms.ToolStripMenuItem carritoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem facturasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cobrosToolStripMenuItem;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
         private System.Windows.Forms.ToolStripMenuItem bitacoraToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reporteDeVentasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem comprasToolStripMenuItem;
@@ -537,8 +693,19 @@ namespace TP_DIPLOMA
         private System.Windows.Forms.ToolStripMenuItem ordenesDeCompraToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem serealizacionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reporteDeComprasToolStripMenuItem;
+<<<<<<< HEAD
         private System.Windows.Forms.ToolStripMenuItem reporteDashboardToolStripMenuItem;
         private CotizaYDetalle cotizaYDetalle1;
+=======
+<<<<<<< HEAD
+        private System.Windows.Forms.ToolStripMenuItem reporteDashboardToolStripMenuItem;
+        private CotizaYDetalle cotizaYDetalle1;
+=======
+=======
+        private System.Windows.Forms.ToolStripMenuItem reporteDeVentasToolStripMenuItem;
+>>>>>>> ae908eba2451935d0e21c831547748aa93a071bd
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
     }
 }
 

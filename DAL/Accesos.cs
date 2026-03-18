@@ -20,6 +20,7 @@ namespace DAL
         {
             
             var cs = new SqlConnectionStringBuilder();
+<<<<<<< HEAD
 
             if (Environment.MachineName=="TOOM")
             {
@@ -30,6 +31,29 @@ namespace DAL
                 cs.ConnectionString = UAI;
             }
 
+=======
+<<<<<<< HEAD
+
+            if (Environment.MachineName=="TOOM")
+            {
+                cs.ConnectionString = host;
+            }
+            else
+            {
+                cs.ConnectionString = UAI;
+            }
+=======
+            //cs.IntegratedSecurity = true;
+            //cs.DataSource = ".";
+            //cs.InitialCatalog = "MyCompany";
+            cs.ConnectionString = @"Data Source=DESKTOP-QI5JC7C\TOOM;Initial Catalog=TPDIPLOMA;Integrated Security=True";//revisar  base de datos
+            //AR2482453W1\SQLEXPRESS CAMBIAR ESTE PARA LA BASE DE DATOS DE LA NOTEBOOK
+            //DESKTOP-QI5JC7C\TOOM Escritorio
+            //////DESKTOP-81ATIN0\SQLEXPRESS Note MERK
+            // CAMBIAR CONECTIONG STRING DE LAS COMBOBOX SINO PINCHA
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
+
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
                 //cs.ConnectionString = @"Data Source=TOOm;Initial Catalog=TPDIPLOMA;Integrated Security=True";
                                                                                                              
            
@@ -38,12 +62,23 @@ namespace DAL
 
         public void abrirconexion()
         {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
             
                 conexion.ConnectionString= crearconeion();
                 conexion.Open();
             
            
             
+<<<<<<< HEAD
+=======
+=======
+            conexion.ConnectionString = @"Data Source=Data Source=DESKTOP-QI5JC7C\TOOM;Initial Catalog=TPDIPLOMA;Integrated Security=True";
+            conexion.Open();
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
         }
         public void cerrarconexion()
         {
@@ -98,7 +133,15 @@ namespace DAL
 
         public void ejecutarconsulta(string consulta)
         {
+<<<<<<< HEAD
             //conexion.Open();
+=======
+<<<<<<< HEAD
+            //conexion.Open();
+=======
+            cerrarconexion();
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
             abrirconexion();
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = conexion;
@@ -106,18 +149,39 @@ namespace DAL
             cmd.ExecuteNonQuery();
             cerrarconexion();
         }
+        
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
 
         public DataSet EjecutarConsultaDStabla(string consulta, string tabla)
         {
             DataSet DS = new DataSet();
             SqlCommand Com = new SqlCommand();
             //conexion.Open();
+<<<<<<< HEAD
+=======
+=======
+        public DataSet EjecutarConsultaDStabla( string consulta, string tabla)
+        {
+            DataSet DS = new DataSet();
+            SqlCommand Com = new SqlCommand();
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
             abrirconexion();
             DS = new DataSet();
             SqlDataAdapter DA = new SqlDataAdapter(consulta, conexion);
             DA.Fill(DS, tabla);
+<<<<<<< HEAD
             //conexion.Close();
+=======
+<<<<<<< HEAD
+            //conexion.Close();
+=======
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
             cerrarconexion();
             return DS;
         }

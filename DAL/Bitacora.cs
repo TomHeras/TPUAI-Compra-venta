@@ -39,7 +39,15 @@ namespace DAL
                 Bit.Fecha = DateTime.Parse(Registro["Fecha"].ToString());
                 Bit.Criticidad = Registro["Criticidad"].ToString();
                 Bit.Modulo = Registro["Modulo"].ToString();
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+=======
+                
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
                 Lista.Add(Bit);
             }
             return Lista;
@@ -60,7 +68,15 @@ namespace DAL
             return lista;
         }
 
+<<<<<<< HEAD
         public List<BE.BitacoraCAbmios> Cambios()
+=======
+<<<<<<< HEAD
+        public List<BE.BitacoraCAbmios> Cambios()
+=======
+       public List<BE.BitacoraCAbmios> Cambios()
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
         {
             List<BE.BitacoraCAbmios> lista = new List<BE.BitacoraCAbmios>();
             DataTable tabla = Acceso.Leer("TrarBitacoraCambios", null);
@@ -69,14 +85,30 @@ namespace DAL
             {
                 BE.BitacoraCAbmios cambio = new BE.BitacoraCAbmios();
 
+<<<<<<< HEAD
                 cambio.Idregistro = int.Parse(item["Idregistro"].ToString());
+=======
+<<<<<<< HEAD
+                cambio.Idregistro = int.Parse(item["Idregistro"].ToString());
+=======
+                cambio.Idregistro= int.Parse(item["Idregistro"].ToString());
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
                 cambio.Idpedido = int.Parse(item["Idpedido"].ToString());
                 cambio.Usuario = item["NickUsuario"].ToString();
                 cambio.Fecha = DateTime.Parse(item["Fecha"].ToString());
                 cambio.Modulo = item["Modulo"].ToString();
                 cambio.Operacion = item["Operacion"].ToString();
                 cambio.Criticidad = item["Criticidad"].ToString();
+<<<<<<< HEAD
                 cambio.Estado = int.Parse(item["Estado"].ToString());
+=======
+<<<<<<< HEAD
+                cambio.Estado = int.Parse(item["Estado"].ToString());
+=======
+                cambio.Estado =int.Parse( item["Estado"].ToString());
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
                 lista.Add(cambio);
 
             }

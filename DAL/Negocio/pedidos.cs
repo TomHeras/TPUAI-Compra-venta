@@ -22,7 +22,15 @@ namespace DAL.Negocio
             parametros[2] = new SqlParameter("@fechagen", cab.Fechagen);
             parametros[3] = new SqlParameter("@fechaact", cab.Fechaact);
             parametros[4] = new SqlParameter("@DVH", cab.DVH);
+<<<<<<< HEAD
             idpedido = acces.escribir("cargarcabecera", parametros);
+=======
+<<<<<<< HEAD
+            idpedido = acces.escribir("cargarcabecera", parametros);
+=======
+            idpedido = acces.escribir("cargarcabecera", parametros); 
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
 
             return idpedido;
         }
@@ -32,11 +40,25 @@ namespace DAL.Negocio
             string fa;
 
             SqlParameter[] parametros = new SqlParameter[6];
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
             parametros[0] = new SqlParameter("@Idpedido", detalle.ID_pedido);
             parametros[1] = new SqlParameter("@Idcliente", detalle.ID_clientes);
             parametros[2] = new SqlParameter("@Idproducto", detalle.ID_producto);
             parametros[3] = new SqlParameter("@cantidad", detalle.Cantidad);
             parametros[4] = new SqlParameter("@costo", detalle.Costo);
+<<<<<<< HEAD
+=======
+=======
+            parametros[0] = new SqlParameter("@Idpedido",detalle.ID_pedido);
+            parametros[1] = new SqlParameter("@Idcliente",detalle.ID_clientes);
+            parametros[2] = new SqlParameter("@Idproducto",detalle.ID_producto);
+            parametros[3] = new SqlParameter("@cantidad",detalle.Cantidad);
+            parametros[4] = new SqlParameter("@costo",detalle.Costo);
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
             parametros[5] = new SqlParameter("@DVH", detalle.DVH);
 
             fa = acces.Escribir("cargardetalle", parametros);
@@ -103,13 +125,28 @@ namespace DAL.Negocio
         {
             string idpedido;
 
+<<<<<<< HEAD
             SqlParameter[] parametros = new SqlParameter[6];
+=======
+<<<<<<< HEAD
+            SqlParameter[] parametros = new SqlParameter[6];
+=======
+            SqlParameter[] parametros = new SqlParameter[5];
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
             parametros[0] = new SqlParameter("@Idprov", cab.ID_idprov);
             parametros[1] = new SqlParameter("@estado", cab.Estado);
             parametros[2] = new SqlParameter("@fechagen", cab.Fechagen);
             parametros[3] = new SqlParameter("@fechaact", cab.Fechaact);
             parametros[4] = new SqlParameter("@cotizar", cab.Cotizaciones);
+<<<<<<< HEAD
             parametros[5] = new SqlParameter("@DVH", cab.DVH);
+=======
+<<<<<<< HEAD
+            parametros[5] = new SqlParameter("@DVH", cab.DVH);
+=======
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
             idpedido = acces.escribir("cargarcotizacion", parametros);
 
             return idpedido;
@@ -119,14 +156,32 @@ namespace DAL.Negocio
         {
             string fa;
 
+<<<<<<< HEAD
             SqlParameter[] parametros = new SqlParameter[6];
+=======
+<<<<<<< HEAD
+            SqlParameter[] parametros = new SqlParameter[6];
+=======
+            SqlParameter[] parametros = new SqlParameter[5];
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
             parametros[0] = new SqlParameter("@Idpedido", detalle.ID_pedido);
             parametros[1] = new SqlParameter("@Idprov", detalle.ID_prov);
             parametros[2] = new SqlParameter("@Idproducto", detalle.ID_producto);
             parametros[3] = new SqlParameter("@cantidad", detalle.Cantidad);
             parametros[4] = new SqlParameter("@precio", detalle.Costo);
+<<<<<<< HEAD
             parametros[5] = new SqlParameter("@DVH", detalle.DVH);
 
+=======
+<<<<<<< HEAD
+            parametros[5] = new SqlParameter("@DVH", detalle.DVH);
+
+=======
+            
+            
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
 
             fa = acces.Escribir("ordendecompra", parametros);
 
@@ -141,7 +196,15 @@ namespace DAL.Negocio
             foreach (DataRow item in tabla1.Rows)
             {
                 BE.ComprasDEt detalle = new BE.ComprasDEt();
+<<<<<<< HEAD
                 detalle.ID_pedido = int.Parse(item["IDPEDIDO"].ToString());
+=======
+<<<<<<< HEAD
+                detalle.ID_pedido = int.Parse(item["IDPEDIDO"].ToString());
+=======
+                detalle.ID_pedido=int.Parse(item["IDPEDIDO"].ToString());
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
                 detalle.ID_prov = int.Parse(item["IDPROV"].ToString());
                 detalle.ID_producto = int.Parse(item["IDPROD"].ToString());
                 detalle.Cantidad = int.Parse(item["Cantidad"].ToString());
@@ -190,6 +253,10 @@ namespace DAL.Negocio
             acces.cerrarconexion();
             DS.WriteXml("C:/Facultad/Compras.xml");
         }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
 
 
        
@@ -217,5 +284,10 @@ namespace DAL.Negocio
         }
 
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
     }
 }

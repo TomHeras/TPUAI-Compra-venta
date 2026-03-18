@@ -37,17 +37,38 @@ namespace TP_DIPLOMA.Maestros
             this.label1 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.stockBindingSource = new System.Windows.Forms.BindingSource(this.components);
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+=======
+            
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnagregar = new System.Windows.Forms.Button();
             this.btnprod_prov = new System.Windows.Forms.Button();
             this.btneditar = new System.Windows.Forms.Button();
             this.btnborrar = new System.Windows.Forms.Button();
             this.lblidcl = new System.Windows.Forms.Label();
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
 
             this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.stockBindingSource)).BeginInit();
 
+<<<<<<< HEAD
+=======
+=======
+            
+            this.button1 = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.stockBindingSource)).BeginInit();
+            
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -106,7 +127,15 @@ namespace TP_DIPLOMA.Maestros
             // 
             // stockBindingSource
             // 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+=======
+             
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -171,7 +200,15 @@ namespace TP_DIPLOMA.Maestros
             // 
             // stockTableAdapter
             // 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+=======
+            
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
             // 
             // button1
             // 
@@ -204,7 +241,15 @@ namespace TP_DIPLOMA.Maestros
             this.Text = "Proveedores";
             this.Load += new System.EventHandler(this.Proveedores_Load);
             ((System.ComponentModel.ISupportInitialize)(this.stockBindingSource)).EndInit();
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+=======
+            
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -223,9 +268,21 @@ namespace TP_DIPLOMA.Maestros
         private System.Windows.Forms.Button btneditar;
         private System.Windows.Forms.Button btnborrar;
         private System.Windows.Forms.Label lblidcl;
+<<<<<<< HEAD
 
         private System.Windows.Forms.BindingSource stockBindingSource;
 
+=======
+<<<<<<< HEAD
+
+        private System.Windows.Forms.BindingSource stockBindingSource;
+
+=======
+        
+        private System.Windows.Forms.BindingSource stockBindingSource;
+        
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
         private System.Windows.Forms.Button button1;
     }
 }

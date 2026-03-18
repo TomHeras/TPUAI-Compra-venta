@@ -88,6 +88,10 @@ namespace BLL.Negocio
         {
             mapper.XMLcompra();
         }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
 
 
 
@@ -95,5 +99,10 @@ namespace BLL.Negocio
         {
             return mapper.ReporteCompras();
         }
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
     }
 }

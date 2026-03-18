@@ -17,6 +17,10 @@ namespace BE
         }
 
         private int id_prov;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
         private int dvh;
 
         public int DVH
@@ -24,6 +28,11 @@ namespace BE
             get { return dvh; }
             set { dvh = value; }
         }
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
 
         public int ID_prov
         {
@@ -44,7 +53,15 @@ namespace BE
 
         public int Cantidad
         {
+<<<<<<< HEAD
             get { return cantidad; }
+=======
+<<<<<<< HEAD
+            get { return cantidad; }
+=======
+            get     { return cantidad; }
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
             set { cantidad = value; }
         }
 

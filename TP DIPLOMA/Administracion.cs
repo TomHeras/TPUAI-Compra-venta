@@ -30,7 +30,7 @@ namespace TP_DIPLOMA
         public Administracion()
         {
             InitializeComponent();
-            validarpermisos();
+            //validarpermisos();
 
             GetUsuarios = new BLL.Usuarios();
             permisos = new Patente_Usuario();
@@ -66,7 +66,15 @@ namespace TP_DIPLOMA
                     tooltripgestionidioma.Visible = gestorpatentes.BuscarPermisos(Tipopatente.puedervergestionaridioma, permisos);
                     tooltriplista.Visible = gestorpatentes.BuscarPermisos(Tipopatente.puedervergestionaridioma, permisos);
                     //propio de todos los usuarios
+<<<<<<< HEAD
                     //cambiarClaveToolStripMenuItem.Visible = gestorpatentes.BuscarPermisos(Tipopatente.puedecambiarclave, permisos);
+=======
+<<<<<<< HEAD
+                    //cambiarClaveToolStripMenuItem.Visible = gestorpatentes.BuscarPermisos(Tipopatente.puedecambiarclave, permisos);
+=======
+                    cambiarClaveToolStripMenuItem.Visible = gestorpatentes.BuscarPermisos(Tipopatente.puedecambiarclave, permisos);
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
 
                     //solo usuarios tipo admin
                     smiseguridad.Visible = gestorpatentes.BuscarPermisos(Tipopatente.puedeaccederseguridad, permisos);
@@ -79,15 +87,42 @@ namespace TP_DIPLOMA
 
                     negocioToolStripMenuItem.Visible = gestorpatentes.BuscarPermisos(Tipopatente.puedeaccedernegocio, permisos);
 
+<<<<<<< HEAD
                     cobrosToolStripMenuItem.Visible = gestorpatentes.BuscarPermisos(Tipopatente.puederverventas, permisos);
                     carritoToolStripMenuItem.Visible = gestorpatentes.BuscarPermisos(Tipopatente.puedervercarrito, permisos);
                     facturacionToolStripMenuItem.Visible = gestorpatentes.BuscarPermisos(Tipopatente.puedeverfacturacion, permisos);
+=======
+<<<<<<< HEAD
+                    cobrosToolStripMenuItem.Visible = gestorpatentes.BuscarPermisos(Tipopatente.puederverventas, permisos);
+                    carritoToolStripMenuItem.Visible = gestorpatentes.BuscarPermisos(Tipopatente.puedervercarrito, permisos);
+                    facturacionToolStripMenuItem.Visible = gestorpatentes.BuscarPermisos(Tipopatente.puedeverfacturacion, permisos);
+=======
+<<<<<<< HEAD
+                    cobrosToolStripMenuItem.Visible = gestorpatentes.BuscarPermisos(Tipopatente.puederverventas, permisos);
+                    carritoToolStripMenuItem.Visible = gestorpatentes.BuscarPermisos(Tipopatente.puedervercarrito, permisos);
+                    facturacionToolStripMenuItem.Visible = gestorpatentes.BuscarPermisos(Tipopatente.puedeverfacturacion, permisos);
+=======
+                    cobrosToolStripMenuItem.Visible= gestorpatentes.BuscarPermisos(Tipopatente.puederverventas, permisos);
+                    carritoToolStripMenuItem.Visible= gestorpatentes.BuscarPermisos(Tipopatente.puedervercarrito, permisos);
+                    facturacionToolStripMenuItem.Visible= gestorpatentes.BuscarPermisos(Tipopatente.puedeverfacturacion, permisos);
+                    comprasToolStripMenuItem.Visible= gestorpatentes.BuscarPermisos(Tipopatente.puedevercompras, permisos);
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
 
 
                     maestrosToolStripMenuItem.Visible = gestorpatentes.BuscarPermisos(Tipopatente.puedeaccedermaestros, permisos);
                     stockToolStripMenuItem.Visible = gestorpatentes.BuscarPermisos(Tipopatente.puedeaccedermaestros, permisos);
                     productosToolStripMenuItem.Visible = gestorpatentes.BuscarPermisos(Tipopatente.puederverproudctos, permisos);
                     
+<<<<<<< HEAD
+=======
+
+
+                    maestrosToolStripMenuItem.Visible = gestorpatentes.BuscarPermisos(Tipopatente.puedeaccedermaestros, permisos);
+                    stockToolStripMenuItem.Visible = gestorpatentes.BuscarPermisos(Tipopatente.puedeaccedermaestros, permisos);
+                    productosToolStripMenuItem.Visible = gestorpatentes.BuscarPermisos(Tipopatente.puederverproudctos, permisos);
+                    //preciosToolStripMenuItem.Visible = gestorpatentes.BuscarPermisos(Tipopatente.puedeverprecios, permisos);
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
 
                     clientesToolStripMenuItem.Visible = gestorpatentes.BuscarPermisos(Tipopatente.puedervercl, permisos);
                     proveedoresToolStripMenuItem.Visible = gestorpatentes.BuscarPermisos(Tipopatente.puederverprov, permisos);
@@ -137,6 +172,16 @@ namespace TP_DIPLOMA
         private void Administracion_Load(object sender, EventArgs e)
         {
             SingletonSesion.Instancia.SuscribirObservador(this);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+            
+>>>>>>> ae908eba2451935d0e21c831547748aa93a071bd
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
         }
 
         private void Administracion_FormClosing(object sender, FormClosingEventArgs e)
@@ -430,6 +475,13 @@ namespace TP_DIPLOMA
             password.Show();
         }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
         private void bitacoraToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
 
@@ -527,6 +579,10 @@ namespace TP_DIPLOMA
 
         private void reporteDeComprasToolStripMenuItem_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
             //Reporte2 compas = new Reporte2();
             //compas.MdiParent = this;
             //compas.Show();
@@ -540,6 +596,21 @@ namespace TP_DIPLOMA
             FrmDashboardCompras Dash = new FrmDashboardCompras();
             Dash.MdiParent= this;
             Dash.Show();
+<<<<<<< HEAD
+=======
+=======
+            Reporte2 compas = new Reporte2();
+            compas.MdiParent = this;
+            compas.Show();
+=======
+        private void reporteDeVentasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Reportes.Reporte_Ventas venta = new Reportes.Reporte_Ventas();
+            venta.MdiParent = this;
+            venta.Show();
+>>>>>>> ae908eba2451935d0e21c831547748aa93a071bd
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
         }
     }
 }

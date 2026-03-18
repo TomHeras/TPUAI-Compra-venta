@@ -33,7 +33,15 @@ namespace TP_DIPLOMA
             this.Cotizaciones = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.traercotizacionesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+=======
+            
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
             this.levantarjoinBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cotizaYDetalle = new TP_DIPLOMA.CotizaYDetalle();
             this.joincotizaciondetalle = new TP_DIPLOMA.joincotizaciondetalle();
@@ -56,7 +64,15 @@ namespace TP_DIPLOMA
             this.button3 = new System.Windows.Forms.Button();
             
             this.estadosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+<<<<<<< HEAD
  
+=======
+<<<<<<< HEAD
+ 
+=======
+           
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
@@ -200,7 +216,14 @@ namespace TP_DIPLOMA
             // 
             // traercotizacionesTableAdapter
             // 
+<<<<<<< HEAD
             
+=======
+<<<<<<< HEAD
+            
+=======
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
             // 
             // label3
             // 
@@ -239,12 +262,22 @@ namespace TP_DIPLOMA
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // tPMODELOSDataSet19
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
             // 
             // 
             // estadosTableAdapter
             // 
             
             // 
+<<<<<<< HEAD
+=======
+=======
+            
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
             // label4
             // 
             this.label4.AutoSize = true;

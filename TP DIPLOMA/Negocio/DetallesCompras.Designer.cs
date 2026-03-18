@@ -35,11 +35,25 @@ namespace TP_DIPLOMA.Negocio
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
 
             this.estadosBindingSource = new System.Windows.Forms.BindingSource(this.components);
 
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
 
+<<<<<<< HEAD
+=======
+=======
+           
+            this.estadosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
             ((System.ComponentModel.ISupportInitialize)(this.estadosBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -91,16 +105,38 @@ namespace TP_DIPLOMA.Negocio
             // 
             // tPMODELOSDataSet20
             // 
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+=======
+           
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
             // 
             // estadosBindingSource
             // 
             this.estadosBindingSource.DataMember = "estados";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
 
             // 
             // estadosTableAdapter
             // 
 
+<<<<<<< HEAD
+=======
+=======
+            
+            // 
+            // estadosTableAdapter
+            // 
+            
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
             // 
             // DetallesCompras
             // 
@@ -116,7 +152,15 @@ namespace TP_DIPLOMA.Negocio
             this.Text = "Detalles de Compras";
             this.Load += new System.EventHandler(this.DetallesCompras_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+=======
+            
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
             ((System.ComponentModel.ISupportInitialize)(this.estadosBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -130,8 +174,20 @@ namespace TP_DIPLOMA.Negocio
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+<<<<<<< HEAD
 
         private System.Windows.Forms.BindingSource estadosBindingSource;
 
+=======
+<<<<<<< HEAD
+
+        private System.Windows.Forms.BindingSource estadosBindingSource;
+
+=======
+       
+        private System.Windows.Forms.BindingSource estadosBindingSource;
+        
+>>>>>>> b6f6eb6522076e877aedbb1cd33213bc145936f8
+>>>>>>> 1f4b423563f794f30b19a98afdd3824efffd224b
     }
 }
